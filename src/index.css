@@ -1,4 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 
 body {
   margin: 0;
@@ -8,6 +13,7 @@ body {
   font-family: 'Roboto Mono';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-color: rgb(92, 46, 126, 0.4); */
 }
 
 ::selection {
@@ -18,6 +24,11 @@ body {
 ::-moz-selection {
   background-color: #5c2e7e;
   color: #fff;
+}
+
+a:not(.active):hover,
+.active {
+  color: #D09CFA;
 }
 
 /* code {

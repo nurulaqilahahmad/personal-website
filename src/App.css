@@ -1,5 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
+  background-color: #221F3B;
 }
 
 .App-logo {
@@ -14,7 +19,7 @@
 }
 
 .App-header {
-  background-color: #221F3B;
+  /* background-color: #000000; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -31,7 +36,7 @@
   background: rgb(92, 46, 126, 0.4);
   padding: 0.5rem 1rem;
   border-radius: 2rem;
-  transition: 0.4s;
+  transition: 0.2s;
 }
 
 .App-link:hover {
