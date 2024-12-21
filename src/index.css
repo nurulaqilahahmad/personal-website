@@ -17,18 +17,18 @@ body {
 }
 
 ::selection {
-  background-color: #5c2e7e;
+  background-color: #7D12FF;
   color: #fff;
 }
 
 ::-moz-selection {
-  background-color: #5c2e7e;
+  background-color: #7D12FF;
   color: #fff;
 }
 
 a:not(.active):hover,
 .active {
-  color: #D09CFA;
+  color: #7D12FF;
 }
 
 /* code {

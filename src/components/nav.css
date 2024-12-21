@@ -1,15 +1,15 @@
 nav .logo {
     border-radius: 0.75rem;
     border-width: 4px;
-    border-color: #D09CFA;
+    border-color: #7D12FF;
     transition: 0.4s;
-    color: #D09CFA;
+    color: #7D12FF;
 }
 
 nav .logo:hover {
     border-radius: 3rem;
-    background-color: #D09CFA;
-    color: rgb(92, 46, 126);
+    background-color: #7D12FF;
+    color: white;
 }
 
 nav .menu {
@@ -29,6 +29,11 @@ nav ul {
     transition: none; /* No transition on larger screens */
 }
 
+nav ul li a {
+    display: flex;
+    align-items: center;
+}
+
 nav ul li.close-menu {
     display: none;
     padding-top: 1.8rem;
@@ -37,7 +42,21 @@ nav ul li.close-menu {
     justify-content: end;
 }
 
-@media (max-width: 604px) {
+nav .resume-download {
+    border-width: 2px;
+    border-color: #7D12FF;
+    font-weight: 700;
+    background-color: #7D12FF;
+    color: white;
+    transition: 0.4s;
+}
+
+nav .resume-download:hover {
+    background-color: transparent;
+    color: #7D12FF;
+}
+
+@media (max-width: 710px) {
     nav .menu {
         display: flex;
     }

@@ -1,7 +1,8 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import './nav.css';
 import { Link, NavLink } from "react-router-dom";
-import logo from '../aqilah-logo.png';
+import { Button } from "./ui/button"
+import { HStack } from "@chakra-ui/react"
 import { Text } from "@chakra-ui/react";
 import { IconButton } from "@chakra-ui/react"
 import { IoListCircleOutline, IoInformationCircleOutline } from "react-icons/io5";
@@ -17,31 +18,36 @@ export const Nav = () => {
             <Link to="/">
                 <div className="logo"><Text className="text-2xl font-bold px-3 py-2">Q</Text></div>
             </Link>
-            <div className="menu" onClick={() => setOpenMenu(!openMenu) }>
+            <div className="menu" onClick={() => setOpenMenu(!openMenu)}>
                 <IconButton color="#D09CFA" aria-label="Menu">
                     <RiMenu5Fill />
                 </IconButton>
             </div>
             <ul className={openMenu ? "open" : ""}>
                 <li className="close-menu">
-                    <IconButton aria-label="Close" onClick={() => setOpenMenu(false) }>
+                    <IconButton aria-label="Close" onClick={() => setOpenMenu(false)}>
                         <IoMdClose />
                     </IconButton>
                 </li>
                 <li>
-                    <NavLink className="duration-500" to="/about"><IconButton color="#D09CFA" aria-label="About">
+                    <NavLink className="duration-500" to="/about"><IconButton color="#7D12FF" aria-label="About">
                         <HiOutlineUserCircle />
                     </IconButton>About</NavLink>
                 </li>
                 <li>
-                    <NavLink className="duration-500" to="/projects"><IconButton color="#D09CFA" aria-label="Projects">
+                    <NavLink className="duration-500" to="/projects"><IconButton color="#7D12FF" aria-label="Projects">
                         <IoListCircleOutline />
                     </IconButton>Projects</NavLink>
                 </li>
                 <li>
-                    <NavLink className="duration-500" to="/contact"><IconButton color="#D09CFA" aria-label="Contact">
+                    <NavLink className="duration-500" to="/contact"><IconButton color="#7D12FF" aria-label="Contact">
                         <IoInformationCircleOutline />
                     </IconButton>Contact</NavLink>
+                </li>
+                <li>
+                    <NavLink className="duration-500"><HStack>
+                        <Button className="resume-download px-3">Resume/CV</Button>
+                    </HStack></NavLink>
                 </li>
             </ul>
         </nav>
