@@ -15,7 +15,7 @@ export const Nav = () => {
     return (
         <nav className="flex justify-between align-center px-10 py-8 sticky top-0">
             <Link to="/">
-                <div className="rounded-xl border-4 border-[#D09CFA]"><Text className="text-2xl font-bold px-3 py-2" color="#D09CFA">Q</Text></div>
+                <div className="logo"><Text className="text-2xl font-bold px-3 py-2">Q</Text></div>
             </Link>
             <div className="menu" onClick={() => setOpenMenu(!openMenu) }>
                 <IconButton color="#D09CFA" aria-label="Menu">
