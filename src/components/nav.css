@@ -73,7 +73,8 @@ nav .resume-download:hover {
         right: 0;
         width: 80%;
         height: 100vh;
-        background-color: rgba(92, 46, 126, 0.1);
+        /* background-color: rgba(92, 46, 126, 0.4); */
+        background-color: rgba(44, 31, 59, 0.4);
         flex-direction: column;
         align-items: start;
         backdrop-filter: blur(15px); /* Creates the acrylic blur effect */

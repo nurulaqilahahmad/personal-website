@@ -19,7 +19,7 @@ export const Nav = () => {
                 <div className="logo"><Text className="text-2xl font-bold px-3 py-2">Q</Text></div>
             </Link>
             <div className="menu" onClick={() => setOpenMenu(!openMenu)}>
-                <IconButton color="#D09CFA" aria-label="Menu">
+                <IconButton color="#7D12FF" aria-label="Menu">
                     <RiMenu5Fill />
                 </IconButton>
             </div>
