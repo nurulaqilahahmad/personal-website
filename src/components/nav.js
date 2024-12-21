@@ -10,8 +10,25 @@ import { HiOutlineUserCircle } from "react-icons/hi2";
 import { IoMdClose } from "react-icons/io";
 import { RiMenu5Fill } from "react-icons/ri";
 
+const PDF_FILE_URL = '../resume-nurul-aqilah-ahmad.pdf';
+
 export const Nav = () => {
     const [openMenu, setOpenMenu] = useState(false);
+
+    const downloadFileAtUrl= (url) => {
+        // const filename = url.split("/").pop();
+        const aTag = document.createElement('a');
+        aTag.href = url;
+        aTag.setAttribute('download', 'Resume - Nurul Aqilah Ahmad');
+        document.body.appendChild(aTag);
+        aTag.click();
+        aTag.remove();
+    }
+
+    // const openPDF = () => {
+    //     const pdfUrl = "./files/resume-nurul-aqilah-ahmad.pdf";
+    //     window.open(pdfUrl, "_blank");
+    // };
 
     return (
         <nav className="flex justify-between align-center px-10 py-8 sticky top-0">
@@ -46,7 +63,7 @@ export const Nav = () => {
                 </li>
                 <li>
                     <NavLink className="duration-500"><HStack>
-                        <Button className="primary-btn px-3">Resume/CV</Button>
+                        <Button className="primary-btn px-3" onClick={() => {downloadFileAtUrl(PDF_FILE_URL)}}>Resume/CV</Button>
                     </HStack></NavLink>
                 </li>
             </ul>
