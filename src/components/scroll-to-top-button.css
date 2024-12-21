@@ -1,0 +1,20 @@
+.scrollToTopBtn {
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2.75rem;
+    background-color: rgba(125,18,255,0.4);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 15px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px); /* Creates the acrylic blur effect */
+    -webkit-backdrop-filter: blur(15px); /* For Safari compatibility */
+    transition: 0.4s;
+}
+
+.scrollToTopBtn:hover {
+    background-color: #7D12FF;
+}

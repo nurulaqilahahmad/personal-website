@@ -6,6 +6,7 @@ import { Nav } from "./components/nav";
 import { Routes, Route } from "react-router-dom";
 import { Home, About, Projects, Contact } from "./pages/index";
 import { Text } from '@chakra-ui/react';
+import { ScrollToTopButton } from "./components/scroll-to-top-button";
 
 function App({ Component, pageProps }) {
   return (
@@ -41,6 +42,7 @@ function App({ Component, pageProps }) {
           Learn React
         </a> */}
       </header>
+      <ScrollToTopButton />
     </div>
   );
 }
