@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import './nav.css';
+import '../index.css';
 import { Link, NavLink } from "react-router-dom";
 import { Button } from "./ui/button"
-import { HStack } from "@chakra-ui/react"
-import { Text } from "@chakra-ui/react";
+import { HStack, Text } from "@chakra-ui/react"
 import { IconButton } from "@chakra-ui/react"
 import { IoListCircleOutline, IoInformationCircleOutline } from "react-icons/io5";
 import { HiOutlineUserCircle } from "react-icons/hi2";
@@ -46,7 +46,7 @@ export const Nav = () => {
                 </li>
                 <li>
                     <NavLink className="duration-500"><HStack>
-                        <Button className="resume-download px-3">Resume/CV</Button>
+                        <Button className="primary-btn px-3">Resume/CV</Button>
                     </HStack></NavLink>
                 </li>
             </ul>

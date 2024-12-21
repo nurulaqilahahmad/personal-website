@@ -1,3 +1,13 @@
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it's above other content */
+    width: 100%;
+    
+    backdrop-filter: blur(15px); /* Creates the acrylic blur effect */
+        -webkit-backdrop-filter: blur(15px); /* For Safari compatibility */
+}
+
 nav .logo {
     border-radius: 0.75rem;
     border-width: 4px;
