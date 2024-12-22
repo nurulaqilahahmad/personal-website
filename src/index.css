@@ -31,6 +31,28 @@ a:not(.active):hover,
   color: #7D12FF;
 }
 
+.link {
+  color: #7D12FF;
+  position: relative;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  background: #7D12FF;
+  transform: translateX(-50%);
+  transform-origin: center;
+  transition: width 0.4s;
+}
+
+.link:hover:after {
+  width: 100%;
+}
+
 .primary-btn {
   border-width: 2px;
   border-color: #7D12FF;
@@ -44,6 +66,10 @@ a:not(.active):hover,
 .primary-btn:hover {
   background-color: transparent;
   color: #7D12FF;
+}
+
+.indent {
+  padding: 0 2.5rem;
 }
 
 /* code {
