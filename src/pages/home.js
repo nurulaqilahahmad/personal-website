@@ -15,7 +15,7 @@ export const Home = () => {
                     <Text className="text-xl font-bold" color="#7D12FF">Hello World! My name is</Text>
                 </div>
                 <div className="primary-flex">
-                    <Text className="text-6xl font-bold">Nurul Aqilah Ahmad</Text>
+                    <Text className="text-6xl font-bold">Nurul Aqilah Ahmad<span className="text-[#7D12FF]">.</span></Text>
                 </div>
                 <div className="primary-flex">
                     <Text className="text-xl">A motivated and dedicated individual with a passion for programming seeks hands-on experience with a team of professionals. Strong foundation in software development concepts and eagerness to learn new technologies.</Text>
