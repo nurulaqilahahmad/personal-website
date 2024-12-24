@@ -23,6 +23,7 @@
     "react-loaders": "^3.0.1",
     "react-router-dom": "^6.28.0",
     "react-scripts": "5.0.1",
+    "react-simple-typewriter": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -53,12 +54,14 @@
     "tailwindcss": "^3.4.15",
     "typescript": "^5.7.2"
   },
-    "compilerOptions": {
-      "module": "ESNext",
-      "moduleResolution": "Bundler",
-      "skipLibCheck": true,
-      "paths": {
-        "@/*": ["./src/*"]
-      }
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
     }
+  }
 }

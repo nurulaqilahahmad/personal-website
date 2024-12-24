@@ -26,6 +26,12 @@ body {
   color: #fff;
 }
 
+.title {
+  font-size: 3.75rem; /* 60px */
+  line-height: 4;
+  font-weight: 700;
+}
+
 a:not(.active):hover,
 .active {
   color: #7D12FF;
@@ -70,6 +76,16 @@ a:not(.active):hover,
 
 .indent {
   padding: 0 2.5rem;
+}
+
+.primary-flex {
+  padding: 0 10rem;
+}
+
+@media (max-width: 710px) {
+  .primary-flex {
+      padding: 0rem;
+  }
 }
 
 /* code {

@@ -12,7 +12,7 @@ export const Home = () => {
             <title>Home – Nurul Aqilah Ahmad</title>
             <div className="flex flex-col justify-center items-start text-left inset-x-full py-40 gap-10">
                 <div className="primary-flex">
-                    <Text className="text-xl font-bold" color="#7D12FF">Hello, I'm</Text>
+                    <Text className="text-xl font-bold" color="#7D12FF">Hello World! My name is</Text>
                 </div>
                 <div className="primary-flex">
                     <Text className="text-6xl font-bold">Nurul Aqilah Ahmad</Text>

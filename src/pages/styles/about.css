@@ -1,0 +1,9 @@
+.rowToCol {
+    flex-direction: row;
+}
+
+@media (max-width: 1872px) {
+    .rowToCol {
+        flex-direction: column;
+    }
+}

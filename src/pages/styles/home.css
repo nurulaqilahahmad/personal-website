@@ -1,9 +1,0 @@
-.primary-flex {
-    padding: 0 10rem;
-}
-
-@media (max-width: 710px) {
-    .primary-flex {
-        padding: 0rem;
-    }
-}
