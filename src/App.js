@@ -3,6 +3,7 @@ import './App.css';
 import { Button } from "./components/ui/button"
 import { HStack } from "@chakra-ui/react"
 import { Nav } from "./components/nav";
+import { Footer } from "./components/footer";
 import { Routes, Route } from "react-router-dom";
 import { Home, About, Projects, Contact } from "./pages/index";
 import { Text } from '@chakra-ui/react';
@@ -18,31 +19,8 @@ function App({ Component, pageProps }) {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        {/* <HStack>
-          <Button>Click me</Button>
-          <Button>Click me</Button>
-        </HStack> */}
-
-        {/* <h1 className="bg-red-500">
-          Hello world!
-        </h1> */}
-
-
-        {/* <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p> */}
-        {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-      </header>
       <ScrollToTopButton />
+      <Footer></Footer>
     </div>
   );
 }

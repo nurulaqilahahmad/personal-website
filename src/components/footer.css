@@ -1,0 +1,14 @@
+footer ul li a:hover {
+    color: #7D12FF;
+}
+
+/* Default styling for the icon */
+.social-icon {
+    font-size: 24px; /* Set the default size */
+    transition: transform 0.3s ease; /* Smooth animation */
+}
+
+/* Hover effect */
+.social-link:hover .social-icon {
+    transform: scale(1.2); /* Increase size by 20% */
+}

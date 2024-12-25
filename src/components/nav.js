@@ -25,11 +25,6 @@ export const Nav = () => {
         aTag.remove();
     }
 
-    // const openPDF = () => {
-    //     const pdfUrl = "./files/resume-nurul-aqilah-ahmad.pdf";
-    //     window.open(pdfUrl, "_blank");
-    // };
-
     return (
         <nav className="flex justify-between align-center px-10 py-8 sticky top-0">
             <Link to="/">

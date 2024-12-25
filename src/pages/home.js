@@ -22,6 +22,8 @@ export const Home = () => {
                         <Button className="primary-btn px-3">Check out my projects!</Button>
                     </HStack></NavLink>
                 </div>
+
+                
             </div>
 
         </div>
