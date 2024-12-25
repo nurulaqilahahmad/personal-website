@@ -14,19 +14,27 @@ export const About = () => {
     });
     return (
         <div className="indent">
+
             <title>About – Nurul Aqilah Ahmad</title>
+
             <Text className="title">{title}<Cursor cursorColor="#7D12FF" /></Text>
-            <div className="primary-flex flex rowToCol">
-                <div className="flex flex-row gap-4">
-                    <div className="flex justify-center items-center">
-                        <img src={aqilahPassport} width="450px"></img>
+
+            <div className="flex flex-col justify-center items-center text-left inset-x-full py-40 gap-10 primary-flex">
+                <div className="rowToCol gap-10 w-2/4">
+                    <div className="flex justify-center items-start w-2/4">
+                        <img src={aqilahPassport} width="300px"></img>
                     </div>
-                    <div className="text-left">
-                        <Text className="text-xl">Hi, I'm Nurul Aqilah Ahmad. Inspired by my father, I was enthusiastic to deep dive into the world of Information Technology.</Text>
-                        <Text className="text-xl">Hi, I'm Nurul Aqilah Ahmad. Inspired by my father, I was enthusiastic to deep dive into the world of Information Technology.</Text>
+                    <div className="text-left w-2/4">
+                        <Text className="description-text">
+                        Hi, I'm Nurul Aqilah Ahmad. Inspired by my father, I was enthusiastic to deep dive into the world of Information Technology.
+                        <br></br>
+                        <br></br>
+                        Persevere during university years, then managed to be working at well-established <a href="https://www.milradius.com.my/" className="link">IT company</a>.
+                        </Text>
                     </div>
                 </div>
             </div>
+
         </div>
     );
 }

@@ -28,8 +28,20 @@ body {
 
 .title {
   font-size: 3.75rem; /* 60px */
-  line-height: 4;
+  /* line-height: 4; */
   font-weight: 700;
+  padding: 6rem 0;
+}
+
+img {
+  border: none; /* Optional: Removes default borders */
+  outline: 3px solid #7D12FF; /* Border color and thickness */
+  outline-offset: 10px; /* Space between the image and the border */
+  transition: 0.4s;
+}
+
+img:hover {
+  outline-offset: 20px; /* Space between the image and the border */
 }
 
 a:not(.active):hover,
@@ -78,13 +90,38 @@ a:not(.active):hover,
   padding: 0 2.5rem;
 }
 
-.primary-flex {
-  padding: 0 10rem;
+.description-text {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
 }
+
+.rowToCol {
+  display: flex;
+  flex-direction: row;
+}
+
+/* .primary-flex {
+  padding: 0 10rem;
+} */
 
 @media (max-width: 710px) {
   .primary-flex {
       padding: 0rem;
+  }
+
+  .indent {
+    padding: 0 0.5rem;
+  }
+
+  .description-text {
+    font-size: 1rem; /* 16px */
+    line-height: 1.5rem; /* 24px */
+  }
+
+  .rowToCol {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
   }
 }
 
