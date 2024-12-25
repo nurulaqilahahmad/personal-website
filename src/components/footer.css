@@ -1,3 +1,7 @@
+.mobile-footer {
+    display: none;
+}
+
 footer ul li a:hover {
     color: #7D12FF;
 }
@@ -11,4 +15,14 @@ footer ul li a:hover {
 /* Hover effect */
 .social-link:hover .social-icon {
     transform: scale(1.2); /* Increase size by 20% */
+}
+
+@media (max-width: 710px) {
+    .web-footer {
+        display: none;
+    }
+    
+    .mobile-footer {
+        display: flex;
+    }
 }
