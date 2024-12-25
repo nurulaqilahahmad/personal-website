@@ -90,6 +90,10 @@ a:not(.active):hover,
   padding: 0 2.5rem;
 }
 
+article {
+  width: clamp(200px, 90%, 1920px);
+}
+
 .description-text {
   font-size: 1.25rem; /* 20px */
   line-height: 1.75rem; /* 28px */
@@ -108,6 +112,22 @@ a:not(.active):hover,
   padding: 4rem;
   background: rgba(44, 31, 59, 0.4);
   border-radius: 0.4rem;
+}
+
+.slideUpAnim {
+  transform: translateY(100%);
+  animation: slideUp 0.9s ease-out forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 710px) {
