@@ -104,6 +104,12 @@ a:not(.active):hover,
   padding: 0 10rem;
 } */
 
+.flex-box {
+  padding: 4rem;
+  background: rgba(44, 31, 59, 0.4);
+  border-radius: 0.4rem;
+}
+
 @media (max-width: 710px) {
   .primary-flex {
       padding: 0rem;

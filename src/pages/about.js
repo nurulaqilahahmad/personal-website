@@ -19,7 +19,7 @@ export const About = () => {
 
             <Text className="title">{title}<Cursor cursorColor="#7D12FF" /></Text>
 
-            <div className="flex flex-col justify-center items-center text-left inset-x-full py-40 gap-10 primary-flex">
+            <div className="flex flex-col justify-center items-center text-left inset-x-full py-10 gap-10 primary-flex">
                 <div className="rowToCol gap-10 w-2/4">
                     <div className="flex justify-center items-start w-2/4">
                         <img src={aqilahPassport} width="300px"></img>
