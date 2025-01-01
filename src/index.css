@@ -27,21 +27,26 @@ body {
 }
 
 .title {
-  font-size: 3.75rem; /* 60px */
+  font-size: 3.75rem;
+  /* 60px */
   /* line-height: 4; */
   font-weight: 700;
   padding: 6rem 0;
 }
 
 img {
-  border: none; /* Optional: Removes default borders */
-  outline: 3px solid #7D12FF; /* Border color and thickness */
-  outline-offset: 10px; /* Space between the image and the border */
+  border: none;
+  /* Optional: Removes default borders */
+  outline: 3px solid #7D12FF;
+  /* Border color and thickness */
+  outline-offset: 10px;
+  /* Space between the image and the border */
   transition: 0.4s;
 }
 
 img:hover {
-  outline-offset: 20px; /* Space between the image and the border */
+  outline-offset: 20px;
+  /* Space between the image and the border */
 }
 
 a:not(.active):hover,
@@ -95,8 +100,10 @@ article {
 }
 
 .description-text {
-  font-size: 1.25rem; /* 20px */
-  line-height: 1.75rem; /* 28px */
+  font-size: 1.25rem;
+  /* 20px */
+  line-height: 1.75rem;
+  /* 28px */
 }
 
 .rowToCol {
@@ -104,14 +111,16 @@ article {
   flex-direction: row;
 }
 
-/* .primary-flex {
-  padding: 0 10rem;
-} */
+.primary-flex {
+  width: 50%;
+}
 
 .flex-box {
   padding: 4rem;
   background: rgba(44, 31, 59, 0.4);
   border-radius: 0.4rem;
+  backdrop-filter: blur(15px);  /* Creates the acrylic blur effect */
+  -webkit-backdrop-filter: blur(15px);  /* For Chrome compatibility */
 }
 
 .slideUpAnim {
@@ -124,24 +133,23 @@ article {
     transform: translateY(100%);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
   }
 }
 
-@media (max-width: 710px) {
-  .primary-flex {
-      padding: 0rem;
-  }
-
+@media (max-width: 767px) {
   .indent {
-    padding: 0 0.5rem;
+    padding: 0;
   }
 
   .description-text {
-    font-size: 1rem; /* 16px */
-    line-height: 1.5rem; /* 24px */
+    font-size: 1rem;
+    /* 16px */
+    line-height: 1.5rem;
+    /* 24px */
   }
 
   .rowToCol {
@@ -150,6 +158,32 @@ article {
     width: 100vw;
   }
 }
+
+@media (max-width: 1200px) {
+  .primary-flex {
+    width: 90%;
+  }
+}
+
+section {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+section.animate {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+section.animate.animActive {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* #second {
+  display: none;
+} */
 
 /* code {
   

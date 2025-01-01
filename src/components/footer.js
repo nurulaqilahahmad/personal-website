@@ -10,7 +10,7 @@ export const Footer = () => {
             <div className="flex flex-row justify-between align-center py-10 web-footer">
                 <ul className="flex flex-row justify-center items-center gap-2">
                     <li>
-                        <hr className="w-20 border text-white"></hr>
+                        <hr className="w-20 text-white"></hr>
                     </li>
                     <li>
                         <a href="mailto:nrlaqilahahmd@gmail.com" className="transition duration-[0.4s]">nrlaqilahahmd@gmail.com</a>
@@ -32,7 +32,7 @@ export const Footer = () => {
                         </a>
                     </li>
                     <li>
-                        <hr className="w-20 border text-white"></hr>
+                        <hr className="w-20 text-white"></hr>
                     </li>
                 </ul>
             </div>

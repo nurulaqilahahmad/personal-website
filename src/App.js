@@ -7,31 +7,30 @@ import { ScrollToTopButton } from "./components/scroll-to-top-button";
 
 function App({ Component, pageProps }) {
 
-  document.addEventListener('mousemove', (e) => {
-    const xPos = e.pageX;
-    const yPos = e.pageY;
-    console.log(xPos, yPos);
-    let m = document.querySelector('.App-cursor');
-    // Get its dimensions
-    const cursorWidth = m.offsetWidth;
-    const cursorHeight = m.offsetHeight;
+  // document.addEventListener('mousemove', (e) => {
+  //   const xPos = e.pageX;
+  //   const yPos = e.pageY;
+  //   console.log(xPos, yPos);
+  //   let m = document.querySelector('.App-cursor');
+  //   // Get its dimensions
+  //   const cursorWidth = m.offsetWidth;
+  //   const cursorHeight = m.offsetHeight;
 
-    // Calculate the center position of the cursor
-    const centerX = xPos - cursorWidth / 2;
-    const centerY = yPos - cursorHeight / 2;
+  //   // Calculate the center position of the cursor
+  //   const centerX = xPos - cursorWidth / 2;
+  //   const centerY = yPos - cursorHeight / 2;
 
-    // Constrain the cursor position within the viewport
-    const constrainedX = Math.max(0, Math.min(window.innerWidth - cursorWidth, centerX));
-    const constrainedY = Math.max(0, Math.min(window.innerHeight - cursorHeight, centerY));
+  //   // Constrain the cursor position within the viewport
+  //   const constrainedX = Math.max(0, Math.min(window.innerWidth - cursorWidth, centerX));
+  //   const constrainedY = Math.max(0, Math.min(window.innerHeight - cursorHeight, centerY));
 
-    // Apply the constrained position
-    m.style.left = `${constrainedX}px`;
-    m.style.top = `${constrainedY}px`;
-  });
+  //   // Apply the constrained position
+  //   m.style.left = `${constrainedX}px`;
+  //   m.style.top = `${constrainedY}px`;
+  // });
 
   return (
     <div className="App">
-      <div className="App-cursor"></div>
       <Nav></Nav>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -41,9 +40,6 @@ function App({ Component, pageProps }) {
       </Routes>
       <ScrollToTopButton />
       <Footer></Footer>
-      <script>
-
-      </script>
     </div>
   );
 }

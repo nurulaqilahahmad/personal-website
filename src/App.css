@@ -59,7 +59,7 @@
   width: 40rem;
   height: 40rem;
   background-color: rgb(44, 31, 59); /* No solid fill */
-  box-shadow: 0 0 30px 20px rgb(44, 31, 59); /* Blurred shadow */
+  box-shadow: 0 0 50px 40px rgb(44, 31, 59); /* Blurred shadow */
   z-index: -1;
   border-radius: 100%;
   mix-blend-mode: color;

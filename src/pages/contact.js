@@ -18,13 +18,13 @@ export const Contact = () => {
 
             <Text className="title">{title}<Cursor cursorColor="#7D12FF" /></Text>
 
-            <div className="flex flex-col justify-center items-center text-left inset-x-full py-10 gap-10 primary-flex">
-                <div className="flex flex-col w-2/4 gap-10 flex-box">
-                    <div className="flex flex-row gap-5 align-center">
+            <div className="flex flex-col justify-center items-center text-left inset-x-full py-10 gap-10">
+                <div className="flex flex-col gap-10 flex-box primary-flex">
+                    <div className="flex flex-row gap-5 justify-start items-center">
                         <IoLocationOutline color="#7D12FF" />
                         <Text className="description-text">I am based in Sungai Buloh, Selangor.</Text>
                     </div>
-                    <div className="flex flex-row gap-5 align-center">
+                    <div className="flex flex-row gap-5 justify-start items-center">
                         <IoMailOutline  color="#7D12FF" />
                         <Text className="description-text">Email me at <a href="mailto:nrlaqilahahmd@gmail.com" className="link">nrlaqilahahmd@gmail.com</a>.</Text>
                     </div>
