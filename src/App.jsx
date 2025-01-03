@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import { Nav } from "./components/nav";
 import { Footer } from "./components/footer";
