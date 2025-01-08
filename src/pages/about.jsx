@@ -6,6 +6,7 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import aqilahPassport from '../images/aqilah-passport.jpg';
 import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
 import { BiRename, BiCalendar, BiCurrentLocation } from "react-icons/bi";
+import { VscTriangleDown } from "react-icons/vsc";
 
 export const About = () => {
     const [title] = useTypewriter({
@@ -14,6 +15,22 @@ export const About = () => {
         typeSpeed: 120,
         deleteSpeed: 80,
     });
+
+    // const workIconLink = document.querySelectorAll('.icon-link');
+    const workDescription = document.querySelectorAll('.work-description');
+    for (let i = 1; i < workDescription.length; i++) {
+        workDescription[i].style.display = 'none';
+    }
+    function openWorkDesc(index) {
+        for (let i = 0; i < workDescription.length; i++) {
+            if(i == index) {
+                workDescription[i].style.display = 'flex';
+            } else {
+                workDescription[i].style.display = 'none';
+            }
+        }
+    }
+
     return (
         <div className="indent">
 
@@ -23,8 +40,8 @@ export const About = () => {
 
             <section className="flex flex-col justify-center items-center text-left py-10 gap-10">
                 <div className="rowToCol gap-20 primary-flex">
-                    <div className="flex flex-col justify-center items-center w-2/4">
-                        <img src={aqilahPassport} width="200px" style={{ zIndex:'1' }}></img>
+                    <div className="flex flex-col justify-center items-center">
+                        <img src={aqilahPassport} width="200px" style={{ zIndex: '1' }}></img>
                         <div className="flex flex-col gap-10 flex-box primary-flex w-full">
                             <div className="flex flex-row gap-5 justify-start items-center">
                                 <BiRename color="#7D12FF" />
@@ -41,7 +58,7 @@ export const About = () => {
                         </div>
                     </div>
                     <div className="text-left w-2/4">
-                        <Text className="">
+                        <Text className="description-text">
                             Hi, I'm Aqilah.
                             <br></br>
                             <br></br>
@@ -57,45 +74,42 @@ export const About = () => {
             <section className="flex flex-col justify-center items-center text-left py-40 gap-10">
                 <div className="flex flex-col gap-10 primary-flex justify-center items-center">
                     <div className="flex flex-row justify-between items-center gap-5 w-full">
-                        <Text className="text-nowrap font-bold" color="#7D12FF">Profile</Text>
-                        <hr className="w-full border-violet-400"></hr>
-                    </div>
-                    <div className="flex flex-col gap-10 flex-box primary-flex w-full">
-                        <div className="flex flex-row gap-5 justify-start items-center">
-                            <BiRename color="#7D12FF" />
-                            <Text className="description-text">Nurul Aqilah Binti Ahmad</Text>
-                        </div>
-                        <div className="flex flex-row gap-5 justify-start items-center">
-                            <BiCalendar color="#7D12FF" />
-                            <Text className="description-text">9<sup>th</sup> June 2000</Text>
-                        </div>
-                        <div className="flex flex-row gap-5 justify-start items-center">
-                            <BiCurrentLocation color="#7D12FF" />
-                            <Text className="description-text">Sungai Buloh, Selangor</Text>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className="flex flex-col justify-center items-center text-left py-40 gap-10">
-                <div className="flex flex-col gap-10 primary-flex justify-center items-center">
-                    <div className="flex flex-row justify-between items-center gap-5 w-full">
                         <hr className="w-full border-violet-400"></hr>
                         <Text className="text-nowrap font-bold" color="#7D12FF">Employment History</Text>
                         <hr className="w-full border-violet-400"></hr>
                     </div>
-                    <div className="flex flex-col gap-10 flex-box primary-flex w-full">
-                        <div className="flex flex-row gap-5 justify-start items-center">
-                            <BiRename color="#7D12FF" />
-                            <Text className="description-text">Nurul Aqilah Binti Ahmad</Text>
+                    <div className="flex flex-col gap-10 primary-flex w-full">
+                        <div className="flex flex-col px-5 gap-4">
+                            <div className="flex flex-row justify-between items-center w-full">
+                                <div className="flex flex-col gap-2">
+                                    <Text className="text-xl text-nowrap font-bold">Software Developer @ <a href="" className="link">Millennium Radius</a></Text>
+                                    <Text className="text-nowrap">June 2024 - Present</Text>
+                                </div>
+                                <VscTriangleDown className="icon-link"/>
+                            </div>
+                            <article className="work-description">
+                                <ul className="list-marker">
+                                    <li>Develop system</li>
+                                    <li>Develop system</li>
+                                    <li>Develop system</li>
+                                </ul>
+                            </article>
                         </div>
-                        <div className="flex flex-row gap-5 justify-start items-center">
-                            <BiCalendar color="#7D12FF" />
-                            <Text className="description-text">9<sup>th</sup> June 2000</Text>
-                        </div>
-                        <div className="flex flex-row gap-5 justify-start items-center">
-                            <BiCurrentLocation color="#7D12FF" />
-                            <Text className="description-text">Sungai Buloh, Selangor</Text>
+                        <div className="flex flex-col px-5 gap-4">
+                            <div className="flex flex-row justify-between items-center w-full">
+                                <div className="flex flex-col gap-2">
+                                    <Text className="text-xl text-nowrap font-bold">Website Developer @ <a href="" className="link">Freelance</a></Text>
+                                    <Text className="text-nowrap">May 2024 - Present</Text>
+                                </div>
+                                <VscTriangleDown className="icon-link" />
+                            </div>
+                            <article className="work-description">
+                                <ul className="list-marker">
+                                    <li>Develop system</li>
+                                    <li>Develop system</li>
+                                    <li>Develop system</li>
+                                </ul>
+                            </article>
                         </div>
                     </div>
                 </div>

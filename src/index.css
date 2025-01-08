@@ -181,6 +181,15 @@ section.animate.animActive {
   transform: translateY(0);
 }
 
+.icon-link {
+  transition: 0.4s;
+}
+
+.icon-link:hover {
+  color: #7D12FF;
+  cursor: pointer;
+}
+
 /* #second {
   display: none;
 } */
