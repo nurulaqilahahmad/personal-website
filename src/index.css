@@ -86,9 +86,24 @@ a:not(.active):hover,
   padding: 0rem 0.75rem;
 }
 
+.secondary-btn {
+  border-width: 2px;
+  border-color: #7D12FF;
+  font-weight: 700;
+  background-color: transparent;
+  color: #7D12FF;
+  transition: 0.4s;
+  padding: 0rem 0.75rem;
+}
+
 .primary-btn:hover {
   background-color: transparent;
   color: #7D12FF;
+}
+
+.secondary-btn:hover {
+  background-color: #7D12FF;
+  color: white;
 }
 
 .indent {

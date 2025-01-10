@@ -113,6 +113,16 @@ export const Home = () => {
                 </div>
             </section>
 
+            <section className="flex flex-col justify-center items-center lg:py-40 py-20 gap-10">
+                <div className="flex flex-col gap-10 primary-flex justify-center items-center">
+                    <Text className="font-bold" color="#7D12FF">Let's Keep In Touch!</Text>
+                    <Text className="w-1/2">I've still got lots of things to learn and master. Advices and motivations are welcomed.</Text>
+                    <NavLink className="duration-500" to="mailto:nrlaqilahahmd@gmail.com" style={{ display: 'inline-block', width: 'fit-content' }}><HStack>
+                        <Button className="secondary-btn px-3">Say Hello</Button>
+                    </HStack></NavLink>
+                </div>
+            </section>
+
         </div>
     );
 }
