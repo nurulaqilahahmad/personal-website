@@ -123,6 +123,14 @@ article {
   -webkit-backdrop-filter: blur(15px);  /* For Chrome compatibility */
 }
 
+.flex-box-primary {
+  padding: 2rem;
+  background: rgba(44, 31, 59, 0.4);
+  border-radius: 0.4rem;
+  backdrop-filter: blur(15px);  /* Creates the acrylic blur effect */
+  -webkit-backdrop-filter: blur(15px);  /* For Chrome compatibility */
+}
+
 .slideUpAnim {
   transform: translateY(100%);
   animation: slideUp 0.9s ease-out forwards;
