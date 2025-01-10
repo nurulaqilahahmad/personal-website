@@ -5,6 +5,7 @@ import '../index.css';
 import './styles/home.css';
 import { NavLink } from "react-router-dom";
 import { ImArrowUpRight2 } from "react-icons/im";
+import projectPic from "../image.png";
 
 export const Home = () => {
 
@@ -50,9 +51,9 @@ export const Home = () => {
             <section className="flex flex-col justify-center items-center text-left lg:py-40 py-20 gap-10">
                 <div className="flex flex-col gap-10 w-[80%]">
                     <div className="flex flex-row justify-between items-center gap-5 w-full">
-                        <hr className="w-full border-[rgb(167,139,250,0.4)]"></hr>
+                        <hr className="w-full border-[rgba(167,139,250,0.4)]"></hr>
                         <Text className="text-nowrap font-bold" color="#7D12FF">What Do I Do</Text>
-                        <hr className="w-full border-[rgb(167,139,250,0.4)]"></hr>
+                        <hr className="w-full border-[rgba(167,139,250,0.4)]"></hr>
                     </div>
                     <div className="flex lg:flex-row flex-col gap-10 primary-flex w-full flex-wrap">
                         <div className="flex flex-col flex-box-primary gap-10 hover:scale-110 duration-[0.4s] md:min-h-96" style={{ flex: '5%' }}>
@@ -107,8 +108,50 @@ export const Home = () => {
             <section className="flex flex-col justify-center items-center text-left lg:py-40 py-20 gap-10">
                 <div className="flex flex-col gap-10 primary-flex">
                     <div className="flex flex-row justify-between items-center gap-5 w-full">
-                        <hr className="w-full border-[rgb(167,139,250,0.4)]"></hr>
+                        <hr className="w-full border-[rgba(167,139,250,0.4)]"></hr>
                         <Text className="text-nowrap font-bold" color="#7D12FF">Projects I've Done</Text>
+                    </div>
+                    <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-110 duration-[0.4s]">
+                        <div className="flex flex-col sm:flex-col lg:flex-row gap-10">
+                            <div>
+                                <img src={projectPic} alt="" className="lg:w-[450px] md:w-full sm:w-full" width={450} style={{ cursor: 'pointer' }} />
+                            </div>
+                            <div className="flex flex-col gap-10 lg:w-[60%] md:w-full sm:w-full">
+                                <Text className="text-2xl font-bold">Medical Supply System</Text>
+                                <Text className="">A web application to provide medical facilities such as face masks, hand gloves, PPE and non-surgical gowns for hospitals, clinics or other medical centres.</Text>
+                                <div className="flex flex-row gap-2 flex-wrap">
+                                    <Text className="text-selector ">HTML</Text>
+                                    <Text className="text-selector ">PHP</Text>
+                                    <Text className="text-selector ">Bootstrap</Text>
+                                    <Text className="text-selector ">MySQL</Text>
+                                    <Text className="text-selector ">MySQL</Text>
+                                    <Text className="text-selector ">MySQL</Text>
+                                    <Text className="text-selector ">MySQL</Text>
+                                    <Text className="text-selector ">MySQL</Text>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-110 duration-[0.4s]">
+                        <div className="flex flex-col sm:flex-col lg:flex-row gap-10">
+                            <div>
+                                <img src={projectPic} alt="" className="lg:w-[450px] md:w-full sm:w-full" width={450} style={{ cursor: 'pointer' }} />
+                            </div>
+                            <div className="flex flex-col gap-10 lg:w-[60%] md:w-full sm:w-full">
+                                <Text className="text-2xl font-bold">Medical Supply System</Text>
+                                <Text className="">A web application to provide medical facilities such as face masks, hand gloves, PPE and non-surgical gowns for hospitals, clinics or other medical centres.</Text>
+                                <div className="flex flex-row gap-2 flex-wrap">
+                                    <Text className="text-selector ">HTML</Text>
+                                    <Text className="text-selector ">PHP</Text>
+                                    <Text className="text-selector ">Bootstrap</Text>
+                                    <Text className="text-selector ">MySQL</Text>
+                                    <Text className="text-selector ">MySQL</Text>
+                                    <Text className="text-selector ">MySQL</Text>
+                                    <Text className="text-selector ">MySQL</Text>
+                                    <Text className="text-selector ">MySQL</Text>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

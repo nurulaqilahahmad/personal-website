@@ -10,7 +10,7 @@ export const Footer = () => {
             <div className="flex flex-row justify-between align-center py-10 web-footer">
                 <ul className="flex flex-row justify-center items-center gap-2">
                     <li>
-                        <hr className="w-20 text-white"></hr>
+                        <hr className="w-20 border-[rgba(250,250,250,0.4)]"></hr>
                     </li>
                     <li>
                         <a href="mailto:nrlaqilahahmd@gmail.com" className="transition duration-[0.4s]">nrlaqilahahmd@gmail.com</a>
@@ -32,13 +32,13 @@ export const Footer = () => {
                         </a>
                     </li>
                     <li>
-                        <hr className="w-20 text-white"></hr>
+                        <hr className="w-20 border-[rgba(250,250,250,0.4)]"></hr>
                     </li>
                 </ul>
             </div>
 
             <div className="flex flex-row justify-between align-center items-center py-10 mobile-footer">
-                <hr className="w-20 border text-white"></hr>
+                <hr className="w-20 border border-[rgba(250,250,250,0.4)]"></hr>
                 <ul className="flex flex-row justify-center items-center gap-2">
                     <li>
                         <a href="mailto:nrlaqilahahmd@gmail.com" className="social-link">
@@ -62,7 +62,7 @@ export const Footer = () => {
                         </a>
                     </li>
                 </ul>
-                <hr className="w-20 border text-white"></hr>
+                <hr className="w-20 border border-[rgba(250,250,250,0.4)]"></hr>
             </div>
 
         </footer>

@@ -213,6 +213,15 @@ section.animate.animActive {
   cursor: pointer;
 }
 
+.text-selector {
+  color: #7D12FF;
+  background-color: rgba(44, 31, 59, 0.6);
+  font-size: 1rem;
+  padding: 0 0.5rem;
+  width: fit-content;
+  border-radius: 0.2rem;
+}
+
 /* #second {
   display: none;
 } */
