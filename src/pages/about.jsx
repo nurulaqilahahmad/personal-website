@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 import '../index.css';
 import './styles/about.css';
 import { Text, HStack } from "@chakra-ui/react";
@@ -7,6 +8,8 @@ import aqilahPassport from '../images/aqilah-passport.jpg';
 import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
 import { BiRename, BiCalendar, BiCurrentLocation } from "react-icons/bi";
 import { VscTriangleDown } from "react-icons/vsc";
+import { EmploymentHistory } from "../components/employment-history";
+import globalApi from "../services/global-api";
 
 export const About = () => {
     const [title] = useTypewriter({
@@ -29,6 +32,15 @@ export const About = () => {
                 workDescription[i].style.display = 'none';
             }
         }
+    }
+
+    useEffect(()=>{
+        getEmploymentHistory();
+    },[])
+    const getEmploymentHistory = () => {
+        globalApi.getEmploymentHistory().then(resp=>{
+            console.log(resp);
+        })
     }
 
     return (
@@ -72,6 +84,7 @@ export const About = () => {
             </section>
 
             <section className="flex flex-col justify-center items-center text-left py-40 gap-10">
+                <EmploymentHistory/>
                 <div className="flex flex-col gap-10 primary-flex justify-center items-center">
                     <div className="flex flex-row justify-between items-center gap-5 w-full">
                         <hr className="w-full border-violet-400"></hr>

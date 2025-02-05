@@ -56,7 +56,7 @@ export const Home = () => {
                         <hr className="w-full border-[rgba(167,139,250,0.4)]"></hr>
                     </div>
                     <div className="flex lg:flex-row flex-col gap-10 primary-flex w-full flex-wrap">
-                        <div className="flex flex-col flex-box-primary gap-10 hover:scale-110 duration-[0.4s] md:min-h-96" style={{ flex: '5%' }}>
+                        <div className="flex flex-col flex-box-primary gap-10 hover:scale-110 duration-[0.4s] md:min-h-96 w-full" style={{ flex: '5%' }}>
                             <Text className="text-xl font-bold"><span className="text-[#7D12FF]">01. </span>Web</Text>
                             <Text className="flex grow">Built web applications that includes CRUD operations to cater stakeholders' needs.</Text>
                             <div className="flex justify-end">
@@ -65,7 +65,7 @@ export const Home = () => {
                                 </HStack></NavLink>
                             </div>
                         </div>
-                        <div className="flex flex-col flex-box-primary gap-10 hover:scale-110 duration-[0.4s] md:min-h-96" style={{ flex: '5%' }}>
+                        <div className="flex flex-col flex-box-primary gap-10 hover:scale-110 duration-[0.4s] md:min-h-96 w-full" style={{ flex: '5%' }}>
                             <Text className="text-xl font-bold"><span className="text-[#7D12FF]">02. </span>Mobile</Text>
                             <Text className="flex grow">Developed mobile applications for portable use.</Text>
                             <div className="flex justify-end">
@@ -74,7 +74,7 @@ export const Home = () => {
                                 </HStack></NavLink>
                             </div>
                         </div>
-                        <div className="flex flex-col flex-box-primary gap-10 hover:scale-110 duration-[0.4s] md:min-h-96" style={{ flex: '5%' }}>
+                        <div className="flex flex-col flex-box-primary gap-10 hover:scale-110 duration-[0.4s] md:min-h-96 w-full" style={{ flex: '5%' }}>
                             <Text className="text-xl font-bold"><span className="text-[#7D12FF]">03. </span>Game</Text>
                             <Text className="flex grow">Focused on game elements and code its functionality to build fun.</Text>
                             <div className="flex justify-end">
@@ -83,7 +83,7 @@ export const Home = () => {
                                 </HStack></NavLink>
                             </div>
                         </div>
-                        <div className="flex flex-col flex-box-primary gap-10 hover:scale-110 duration-[0.4s] md:min-h-96" style={{ flex: '5%' }}>
+                        <div className="flex flex-col flex-box-primary gap-10 hover:scale-110 duration-[0.4s] md:min-h-96 w-full" style={{ flex: '5%' }}>
                             <Text className="text-xl font-bold"><span className="text-[#7D12FF]">04. </span>VR / AR</Text>
                             <Text className="flex grow">Created virtual environment to be able to gain rare experiences.</Text>
                             <div className="flex justify-end">
@@ -92,7 +92,7 @@ export const Home = () => {
                                 </HStack></NavLink>
                             </div>
                         </div>
-                        <div className="flex flex-col flex-box-primary gap-10 hover:scale-110 duration-[0.4s] md:min-h-96" style={{ flex: '5%' }}>
+                        <div className="flex flex-col flex-box-primary gap-10 hover:scale-110 duration-[0.4s] md:min-h-96 w-full" style={{ flex: '5%' }}>
                             <Text className="text-xl font-bold"><span className="text-[#7D12FF]">05. </span>Design</Text>
                             <Text className="flex grow">Brainstormed design ideas that follow stakeholders' needs while complying usability.</Text>
                             <div className="flex justify-end">

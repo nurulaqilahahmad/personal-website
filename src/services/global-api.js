@@ -1,6 +1,6 @@
 const { gql, default: request } = require("graphql-request")
 
-const MASTER_URL = 'https://ap-south-1.cdn.hygraph.com/content/'+process.env.PUBLIC_MASTER_URL_KEY+'/master'
+const MASTER_URL='https://ap-south-1.cdn.hygraph.com/v2/'+process.env.PUBLIC_MASTER_URL_KEY+'/master'
 
 const getEmploymentHistory = async() => {
     const query = gql `
