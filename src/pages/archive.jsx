@@ -32,7 +32,7 @@ export const Archive = () => {
             <title>Archive – Nurul Aqilah Ahmad</title>
 
             <section className="flex flex-col justify-center items-center text-left lg:py-10 gap-10">
-                <div className="flex flex-col gap-10 w-[80%]">
+                <div className="flex flex-col w-[80%]">
 
                     <div>
                         <Text className="text-left text-[#7D12FF] hover:font-bold hover:cursor-pointer duration-[0.4s]" onClick={()=>goBack()} style={{width: 'fit-content'}}>{"< Back"}</Text>
