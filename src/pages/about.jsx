@@ -53,7 +53,7 @@ export const About = () => {
             <section className="flex flex-col justify-center items-center text-left py-10 gap-10">
                 <div className="rowToCol gap-20 primary-flex">
                     <div className="flex flex-col justify-center items-center">
-                        <img src={aqilahPassport} width="200px" style={{ zIndex: '1' }}></img>
+                        <img src={aqilahPassport} className="wBorderImg" width="200px" style={{ zIndex: '1' }}></img>
                         <div className="flex flex-col gap-10 flex-box primary-flex w-full">
                             <div className="flex flex-row gap-5 justify-start items-center">
                                 <BiRename color="#7D12FF" />

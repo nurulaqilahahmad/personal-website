@@ -154,8 +154,8 @@ export const Home = () => {
                         </div>
                     </div>
                     <div className="flex justify-center pt-5">
-                        <NavLink className="duration-500" to="/projects" style={{ display: 'inline-block', width: 'fit-content' }}><HStack>
-                            <Button className="primary-btn px-3">View All Archive</Button>
+                        <NavLink className="duration-500" to="/archive" style={{ display: 'inline-block', width: 'fit-content' }}><HStack>
+                            <Button className="primary-btn px-3">View Archive</Button>
                         </HStack></NavLink>
                     </div>
                 </div>

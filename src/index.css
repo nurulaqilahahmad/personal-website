@@ -34,7 +34,13 @@ body {
   padding: 6rem 0;
 }
 
-img {
+.heading-1 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 4rem 0;
+}
+
+img.wBorderImg {
   border: none;
   /* Optional: Removes default borders */
   outline: 3px solid #7D12FF;
@@ -44,7 +50,7 @@ img {
   transition: 0.4s;
 }
 
-img:hover {
+img.wBorderImg:hover {
   outline-offset: 20px;
   /* Space between the image and the border */
 }
@@ -186,6 +192,10 @@ article {
   .primary-flex {
     width: 90%;
   }
+}
+
+.borderColumn {
+  border-bottom: 0.1rem rgba(167,139,250,0.4) solid;
 }
 
 section {
