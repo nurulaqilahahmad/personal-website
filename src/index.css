@@ -222,6 +222,17 @@ section.animate.animActive {
   border-radius: 0.2rem;
 }
 
+ul.list-marker {
+  list-style-position: outside;
+  padding: 0px;
+}
+
+ul.list-marker li::marker {
+  content: "▶ ";
+  font-size: 0.9rem;
+  color: #7D12FF;
+}
+
 /* #second {
   display: none;
 } */
