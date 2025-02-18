@@ -59,7 +59,7 @@ export const Home = () => {
                             <Text className="text-xl font-bold"><span className="text-[#7D12FF]">01. </span>Web</Text>
                             <Text className="flex grow">Built web applications that includes CRUD operations to cater stakeholders' needs.</Text>
                             <div className="flex justify-end">
-                                <NavLink className="duration-500" to="/projects" style={{ display: 'inline-block', width: 'fit-content' }}><HStack>
+                                <NavLink className="duration-500" to="/projects#web" style={{ display: 'inline-block', width: 'fit-content' }}><HStack>
                                     <Button className="primary-btn px-4 py-4"><ImArrowUpRight2 /></Button>
                                 </HStack></NavLink>
                             </div>
@@ -153,8 +153,8 @@ export const Home = () => {
                         </div>
                     </div>
                     <div className="flex justify-center pt-5">
-                        <NavLink className="duration-500" to="/projects" style={{ display: 'inline-block', width: 'fit-content' }}><HStack>
-                            <Button className="primary-btn px-3">View All Archive</Button>
+                        <NavLink className="duration-500" to="/archive" style={{ display: 'inline-block', width: 'fit-content' }}><HStack>
+                            <Button className="primary-btn px-3">View Archive</Button>
                         </HStack></NavLink>
                     </div>
                 </div>
