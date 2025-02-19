@@ -19,12 +19,12 @@ body {
 }
 
 ::selection {
-  background-color: #7D12FF;
+  background-color: rgba(125, 18, 255, 0.4);
   color: #fff;
 }
 
 ::-moz-selection {
-  background-color: #7D12FF;
+  background-color: rgba(125, 18, 255, 0.4);
   color: #fff;
 }
 
