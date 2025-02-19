@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import '../index.css';
 import { Text, HStack } from "@chakra-ui/react";
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
@@ -7,7 +7,7 @@ import aqilahPassport from '../images/aqilah-passport.jpg';
 import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
 import { BiRename, BiCalendar, BiCurrentLocation } from "react-icons/bi";
 import { VscTriangleDown, VscTriangleUp } from "react-icons/vsc";
-import EmploymentHistoryList from "../components/employment-history-list";
+import EmploymentHistory from "../components/content/employment-history";
 import globalApi from "../services/global-api";
 
 export const About = () => {
@@ -33,12 +33,14 @@ export const About = () => {
     //     }
     // }
 
+    const[employmentHistory,setEmploymentHistory] = useState([]);
     useEffect(()=>{
         getEmploymentHistoryList();
     },[])
     const getEmploymentHistoryList = () => {
         globalApi.getEmploymentHistory().then(resp=>{
-            console.log(resp);
+            // console.log(resp.employmentHistories);
+            setEmploymentHistory(resp.employmentHistories);
         })
     }
 
@@ -85,13 +87,13 @@ export const About = () => {
             </section>
 
             <section className="flex flex-col justify-center items-center text-left py-40 gap-10">
-                
                 <div className="flex flex-col gap-10 primary-flex justify-center items-center">
                     <div className="flex flex-row justify-between items-center gap-5 w-full">
                         <hr className="w-full border-violet-400"></hr>
                         <Text className="text-nowrap font-bold" color="#7D12FF">Employment History</Text>
                         <hr className="w-full border-violet-400"></hr>
                     </div>
+                    <EmploymentHistory employmentHistory={employmentHistory} />
                     <div className="flex flex-col gap-10 primary-flex w-full">
                         <div className="flex flex-col px-5 gap-4">
                             <div className="flex flex-row justify-between items-center w-full">
