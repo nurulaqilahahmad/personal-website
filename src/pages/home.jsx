@@ -2,7 +2,6 @@ import React from "react";
 import { Text, HStack } from "@chakra-ui/react";
 import { Button } from "../components/ui/button";
 import '../index.css';
-import './styles/home.css';
 import { NavLink } from "react-router-dom";
 import { ImArrowUpRight2 } from "react-icons/im";
 import projectPic from "../image.png";
