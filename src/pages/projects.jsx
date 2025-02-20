@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import '../index.css';
 import { Text, HStack } from "@chakra-ui/react";
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
@@ -7,6 +7,8 @@ import { NavLink } from "react-router-dom";
 import { Button } from "../components/ui/button";
 import { Link, Tabs } from "@chakra-ui/react"
 import { BsWindow } from "react-icons/bs";
+import globalApi from "../services/global-api";
+import ProjectCategory from "../components/content/project-category";
 
 export const Projects = () => {
     const [title] = useTypewriter({
@@ -15,6 +17,17 @@ export const Projects = () => {
         typeSpeed: 120,
         deleteSpeed: 80,
     });
+
+const[projectCategory, setProjectCategory] = useState([]);
+    useEffect(()=>{
+        getProjectCategoryList();
+    },[])
+    const getProjectCategoryList = () => {
+        globalApi.getProjectCategory().then(resp=>{
+            setProjectCategory(resp.projectCategories);
+        })
+    }
+
     return (
         <div className="indent">
             <title>Projects – Nurul Aqilah Ahmad</title>
@@ -22,13 +35,21 @@ export const Projects = () => {
 
             <section className="flex flex-col justify-center items-center text-left pt-10 pb-[5.4rem] gap-10">
                 <div className="flex gap-10 w-[80%]">
-                    <Tabs.Root defaultValue="all">
+                    <Tabs.Root defaultValue="all" colorPalette={'purple'} variant={'line'}>
                         <Tabs.List className="pb-20">
                             <Tabs.Trigger value="all" asChild>
                                 <Link unstyled href="#all">
                                     All
                                 </Link>
                             </Tabs.Trigger>
+                            {projectCategory.map((projCat, index) => (
+                                <Tabs.Trigger value={projCat.subSlug} asChild>
+                                <Link unstyled href={"#"+projCat.subSlug} style={{ fontSize: '1rem' }}>
+                                <BsWindow color="#7D12FF" />
+                                    {projCat.name}
+                                </Link>
+                            </Tabs.Trigger>
+                            ))}
                             <Tabs.Trigger value="web" asChild>
                                 <Link unstyled href="#web" style={{ fontSize: '1rem' }}>
                                     <BsWindow color="#7D12FF" />
