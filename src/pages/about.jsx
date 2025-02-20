@@ -40,7 +40,7 @@ export const About = () => {
     const getEmploymentHistoryList = () => {
         globalApi.getEmploymentHistory().then(resp=>{
             // console.log(resp.employmentHistories);
-            setEmploymentHistory(resp.employmentHistories);
+            setEmploymentHistory(resp.employmentHistories.reverse());
         })
     }
 
@@ -94,7 +94,7 @@ export const About = () => {
                         <hr className="w-full border-violet-400"></hr>
                     </div>
                     <EmploymentHistory employmentHistory={employmentHistory} />
-                    <div className="flex flex-col gap-10 primary-flex w-full">
+                    {/* <div className="flex flex-col gap-10 primary-flex w-full">
                         <div className="flex flex-col px-5 gap-4">
                             <div className="flex flex-row justify-between items-center w-full">
                                 <div className="flex flex-col gap-2">
@@ -157,7 +157,7 @@ export const About = () => {
                                 </ul>
                             </article>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </section>
 
