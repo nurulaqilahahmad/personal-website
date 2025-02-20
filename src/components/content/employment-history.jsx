@@ -1,6 +1,5 @@
 import React from "react";
 import { Text, HStack } from "@chakra-ui/react";
-import { VscTriangleDown, VscTriangleUp } from "react-icons/vsc";
 import { format } from 'date-fns';
 import {
     AccordionItem,
@@ -8,7 +7,6 @@ import {
     AccordionItemTrigger,
     AccordionRoot,
 } from "../ui/accordion"
-import { isTemplateExpression } from "typescript";
 
 function EmploymentHistory({ employmentHistory }) {
     return (

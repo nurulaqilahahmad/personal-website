@@ -1,10 +1,13 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import { Text, HStack } from "@chakra-ui/react";
 import { Button } from "../components/ui/button";
 import '../index.css';
 import { NavLink } from "react-router-dom";
 import { ImArrowUpRight2 } from "react-icons/im";
 import projectPic from "../image.png";
+import globalApi from "../services/global-api";
+import ProjectCategory from "../components/content/project-category";
 
 export const Home = () => {
 
@@ -28,6 +31,16 @@ export const Home = () => {
             observer.observe(section);
         });
     });
+
+    const[projectCategory, setProjectCategory] = useState([]);
+    useEffect(()=>{
+        getProjectCategoryList();
+    },[])
+    const getProjectCategoryList = () => {
+        globalApi.getProjectCategory().then(resp=>{
+            setProjectCategory(resp.projectCategories);
+        })
+    }
 
     return (
 
@@ -54,53 +67,7 @@ export const Home = () => {
                         <Text className="text-nowrap font-bold" color="#7D12FF">What Do I Do</Text>
                         <hr className="w-full border-[rgba(167,139,250,0.4)]"></hr>
                     </div>
-                    <div className="flex lg:flex-row flex-col gap-10 primary-flex w-full flex-wrap">
-                        <div className="flex flex-col flex-box-primary gap-10 hover:scale-110 duration-[0.4s] md:min-h-96 w-full" style={{ flex: '5%' }}>
-                            <Text className="text-xl font-bold"><span className="text-[#7D12FF]">01. </span>Web</Text>
-                            <Text className="flex grow">Built web applications that includes CRUD operations to cater stakeholders' needs.</Text>
-                            <div className="flex justify-end">
-                                <NavLink className="duration-500" to="/projects#web" style={{ display: 'inline-block', width: 'fit-content' }}><HStack>
-                                    <Button className="primary-btn px-4 py-4"><ImArrowUpRight2 /></Button>
-                                </HStack></NavLink>
-                            </div>
-                        </div>
-                        <div className="flex flex-col flex-box-primary gap-10 hover:scale-110 duration-[0.4s] md:min-h-96 w-full" style={{ flex: '5%' }}>
-                            <Text className="text-xl font-bold"><span className="text-[#7D12FF]">02. </span>Mobile</Text>
-                            <Text className="flex grow">Developed mobile applications for portable use.</Text>
-                            <div className="flex justify-end">
-                                <NavLink className="duration-500" to="/projects" style={{ display: 'inline-block', width: 'fit-content' }}><HStack>
-                                    <Button className="primary-btn px-4 py-4"><ImArrowUpRight2 /></Button>
-                                </HStack></NavLink>
-                            </div>
-                        </div>
-                        <div className="flex flex-col flex-box-primary gap-10 hover:scale-110 duration-[0.4s] md:min-h-96 w-full" style={{ flex: '5%' }}>
-                            <Text className="text-xl font-bold"><span className="text-[#7D12FF]">03. </span>Game</Text>
-                            <Text className="flex grow">Focused on game elements and code its functionality to build fun.</Text>
-                            <div className="flex justify-end">
-                                <NavLink className="duration-500" to="/projects" style={{ display: 'inline-block', width: 'fit-content' }}><HStack>
-                                    <Button className="primary-btn px-4 py-4"><ImArrowUpRight2 /></Button>
-                                </HStack></NavLink>
-                            </div>
-                        </div>
-                        <div className="flex flex-col flex-box-primary gap-10 hover:scale-110 duration-[0.4s] md:min-h-96 w-full" style={{ flex: '5%' }}>
-                            <Text className="text-xl font-bold"><span className="text-[#7D12FF]">04. </span>VR / AR</Text>
-                            <Text className="flex grow">Created virtual environment to be able to gain rare experiences.</Text>
-                            <div className="flex justify-end">
-                                <NavLink className="duration-500" to="/projects" style={{ display: 'inline-block', width: 'fit-content' }}><HStack>
-                                    <Button className="primary-btn px-4 py-4"><ImArrowUpRight2 /></Button>
-                                </HStack></NavLink>
-                            </div>
-                        </div>
-                        <div className="flex flex-col flex-box-primary gap-10 hover:scale-110 duration-[0.4s] md:min-h-96 w-full" style={{ flex: '5%' }}>
-                            <Text className="text-xl font-bold"><span className="text-[#7D12FF]">05. </span>Design</Text>
-                            <Text className="flex grow">Brainstormed design ideas that follow stakeholders' needs while complying usability.</Text>
-                            <div className="flex justify-end">
-                                <NavLink className="duration-500" to="/projects" style={{ display: 'inline-block', width: 'fit-content' }}><HStack>
-                                    <Button className="primary-btn px-4 py-4"><ImArrowUpRight2 /></Button>
-                                </HStack></NavLink>
-                            </div>
-                        </div>
-                    </div>
+                    <ProjectCategory projectCategory={projectCategory} />
                 </div>
             </section>
 

@@ -25,6 +25,25 @@ const getEmploymentHistory = async () => {
   return result
 }
 
+const getProjectCategory = async () => {
+  const query = gql`
+    query ProjectCategory {
+      projectCategories {
+        id
+        name
+        description
+        icon
+        subSlug
+      }
+    }
+    `
+
+  const result = await request(MASTER_URL, query)
+
+  return result
+}
+
 export default {
-  getEmploymentHistory
+  getEmploymentHistory,
+  getProjectCategory
 }
