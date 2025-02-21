@@ -5,17 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from "./components/ui/provider"
 import { BrowserRouter } from 'react-router-dom';
-
+import ScrollToTop from './components/scroll-to-top'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <React.StrictMode>
-    <BrowserRouter>
-      <Provider>
+  // <React.StrictMode> - when using useEffect, it renders twice.
+  <BrowserRouter>
+    <Provider>
+      <ScrollToTop />
         <App />
-      </Provider>
-    </BrowserRouter>
+    </Provider>
+  </BrowserRouter>
   // </React.StrictMode>
 );
 
