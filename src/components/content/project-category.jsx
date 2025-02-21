@@ -8,7 +8,7 @@ function ProjectCategory({ projectCategory }) {
     return (
         <div className="flex lg:flex-row flex-col gap-10 primary-flex w-full flex-wrap">
             {projectCategory.map((projCat, index) => (
-                <div key={index} id={projCat.id} className="flex flex-col flex-box-primary gap-10 hover:scale-110 duration-[0.4s] md:min-h-96 w-full" style={{ flex: '5%' }}>
+                <div key={index} id={projCat.id} className="flex flex-col flex-box-primary gap-10 hover:scale-110 duration-[0.4s] md:min-h-96 w-full primary-hover" style={{ flex: '5%' }}>
                     <Text className="text-xl font-bold"><span className="text-[#7D12FF]">{String(index+1).padStart(2, '0')}. </span>{projCat.name}</Text>
                     <Text className="flex grow">{projCat.description}</Text>
                     <div className="flex justify-end">

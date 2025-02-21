@@ -77,12 +77,12 @@ export const Home = () => {
                         <hr className="w-full border-[rgba(167,139,250,0.4)]"></hr>
                         <Text className="text-nowrap font-bold" color="#7D12FF">Projects I've Done</Text>
                     </div>
-                    <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-110 duration-[0.4s]">
+                    <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-110 duration-[0.4s] primary-hover">
                         <div className="flex flex-col sm:flex-col lg:flex-row gap-10">
                             <div>
-                                <img src={projectPic} alt="" className="lg:w-[450px] md:w-full sm:w-full" width={450} style={{ cursor: 'pointer' }} />
+                                <img src={projectPic} alt="" className="lg:w-[450px] md:w-full sm:w-full" width={450} />
                             </div>
-                            <div className="flex flex-col gap-10 lg:w-[60%] md:w-full sm:w-full">
+                            <div className="flex flex-col gap-10 lg:w-[60%] md:w-full sm:w-full" style={{ cursor: 'pointer' }}>
                                 <Text className="text-2xl font-bold">Medical Supply System</Text>
                                 <Text className="">A web application to provide medical facilities such as face masks, hand gloves, PPE and non-surgical gowns for hospitals, clinics or other medical centres.</Text>
                                 <div className="flex flex-row gap-2 flex-wrap">
@@ -98,12 +98,12 @@ export const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-110 duration-[0.4s]">
+                    <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-110 duration-[0.4s] primary-hover">
                         <div className="flex flex-col sm:flex-col lg:flex-row gap-10">
                             <div>
-                                <img src={projectPic} alt="" className="lg:w-[450px] md:w-full sm:w-full" width={450} style={{ cursor: 'pointer' }} />
+                                <img src={projectPic} alt="" className="lg:w-[450px] md:w-full sm:w-full" width={450} />
                             </div>
-                            <div className="flex flex-col gap-10 lg:w-[60%] md:w-full sm:w-full">
+                            <div className="flex flex-col gap-10 lg:w-[60%] md:w-full sm:w-full" style={{ cursor: 'pointer' }}>
                                 <Text className="text-2xl font-bold">Medical Supply System</Text>
                                 <Text className="">A web application to provide medical facilities such as face masks, hand gloves, PPE and non-surgical gowns for hospitals, clinics or other medical centres.</Text>
                                 <div className="flex flex-row gap-2 flex-wrap">

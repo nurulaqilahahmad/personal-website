@@ -37,53 +37,27 @@ const[projectCategory, setProjectCategory] = useState([]);
                 <div className="flex gap-10 w-[80%]">
                     <Tabs.Root defaultValue="all" colorPalette={'purple'} variant={'line'}>
                         <Tabs.List className="pb-20">
-                            <Tabs.Trigger value="all" asChild>
+                            <Tabs.Trigger value="all" asChild className="duration-[0.4s]">
                                 <Link unstyled href="#all">
                                     All
                                 </Link>
                             </Tabs.Trigger>
                             {projectCategory.map((projCat, index) => (
-                                <Tabs.Trigger value={projCat.subSlug} asChild>
+                                <Tabs.Trigger value={projCat.subSlug} asChild className="duration-[0.4s]">
                                 <Link unstyled href={"#"+projCat.subSlug} style={{ fontSize: '1rem' }}>
-                                <BsWindow color="#7D12FF" />
+                                    {projCat.icon.html}
                                     {projCat.name}
                                 </Link>
                             </Tabs.Trigger>
                             ))}
-                            <Tabs.Trigger value="web" asChild>
-                                <Link unstyled href="#web" style={{ fontSize: '1rem' }}>
-                                    <BsWindow color="#7D12FF" />
-                                    Web
-                                </Link>
-                            </Tabs.Trigger>
-                            <Tabs.Trigger value="mobile" asChild>
-                                <Link unstyled href="#mobile" style={{ fontSize: '1rem' }}>
-                                    Mobile
-                                </Link>
-                            </Tabs.Trigger>
-                            <Tabs.Trigger value="game" asChild>
-                                <Link unstyled href="#game" style={{ fontSize: '1rem' }}>
-                                    Game
-                                </Link>
-                            </Tabs.Trigger>
-                            <Tabs.Trigger value="vr-ar" asChild>
-                                <Link unstyled href="#vr-ar" style={{ fontSize: '1rem' }}>
-                                    VR/AR
-                                </Link>
-                            </Tabs.Trigger>
-                            <Tabs.Trigger value="design" asChild>
-                                <Link unstyled href="#design" style={{ fontSize: '1rem' }}>
-                                    Design
-                                </Link>
-                            </Tabs.Trigger>
                         </Tabs.List>
 
                         <Tabs.Content value="all">
                             <div className="flex lg:flex-row flex-col gap-10 primary-flex w-full flex-wrap">
-                                <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-105 duration-[0.4s]" style={{ flex: '40%' }}>
+                                <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-105 duration-[0.4s] primary-hover" style={{ flex: '40%', cursor: 'pointer' }}>
                                     <div className="flex flex-col gap-10">
                                         <div>
-                                            <img src={projectPic} alt="" className="lg:w-[450px] md:w-full sm:w-full" style={{ width: '100%', cursor: 'pointer' }} />
+                                            <img src={projectPic} alt="" className="lg:w-[450px] md:w-full sm:w-full" style={{ width: '100%' }} />
                                         </div>
                                         <div className="flex flex-col gap-10">
                                             <Text className="text-2xl font-bold">Medical Supply System</Text>
@@ -102,10 +76,10 @@ const[projectCategory, setProjectCategory] = useState([]);
                                     </div>
                                 </div>
 
-                                <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-105 duration-[0.4s]" style={{ flex: '40%' }}>
+                                <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-105 duration-[0.4s] primary-hover" style={{ flex: '40%', cursor: 'pointer' }}>
                                     <div className="flex flex-col gap-10">
                                         <div>
-                                            <img src={projectPic} alt="" className="lg:w-[450px] md:w-full sm:w-full" style={{ width: '100%', cursor: 'pointer' }} />
+                                            <img src={projectPic} alt="" className="lg:w-[450px] md:w-full sm:w-full" style={{ width: '100%' }} />
                                         </div>
                                         <div className="flex flex-col gap-10">
                                             <Text className="text-2xl font-bold">Medical Supply System</Text>
@@ -124,10 +98,10 @@ const[projectCategory, setProjectCategory] = useState([]);
                                     </div>
                                 </div>
 
-                                <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-105 duration-[0.4s]" style={{ flex: '40%' }}>
+                                <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-105 duration-[0.4s] primary-hover" style={{ flex: '40%', cursor: 'pointer' }}>
                                     <div className="flex flex-col gap-10">
                                         <div>
-                                            <img src={projectPic} alt="" className="lg:w-[450px] md:w-full sm:w-full" style={{ width: '100%', cursor: 'pointer' }} />
+                                            <img src={projectPic} alt="" className="lg:w-[450px] md:w-full sm:w-full" style={{ width: '100%' }} />
                                         </div>
                                         <div className="flex flex-col gap-10">
                                             <Text className="text-2xl font-bold">Medical Supply System</Text>
@@ -146,10 +120,10 @@ const[projectCategory, setProjectCategory] = useState([]);
                                     </div>
                                 </div>
 
-                                <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-105 duration-[0.4s]" style={{ flex: '40%' }}>
+                                <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-105 duration-[0.4s] primary-hover" style={{ flex: '40%', cursor: 'pointer' }}>
                                     <div className="flex flex-col gap-10">
                                         <div>
-                                            <img src={projectPic} alt="" className="lg:w-[450px] md:w-full sm:w-full" style={{ width: '100%', cursor: 'pointer' }} />
+                                            <img src={projectPic} alt="" className="lg:w-[450px] md:w-full sm:w-full" style={{ width: '100%' }} />
                                         </div>
                                         <div className="flex flex-col gap-10">
                                             <Text className="text-2xl font-bold">Medical Supply System</Text>

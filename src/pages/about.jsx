@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useState } from "react";
 import '../index.css';
-import { Text, HStack } from "@chakra-ui/react";
+import { Text, HStack, Flex } from "@chakra-ui/react";
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import aqilahPassport from '../images/aqilah-passport.jpg';
 import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
@@ -33,12 +33,12 @@ export const About = () => {
     //     }
     // }
 
-    const[employmentHistory,setEmploymentHistory] = useState([]);
-    useEffect(()=>{
+    const [employmentHistory, setEmploymentHistory] = useState([]);
+    useEffect(() => {
         getEmploymentHistoryList();
-    },[])
+    }, [])
     const getEmploymentHistoryList = () => {
-        globalApi.getEmploymentHistory().then(resp=>{
+        globalApi.getEmploymentHistory().then(resp => {
             // console.log(resp.employmentHistories);
             setEmploymentHistory(resp.employmentHistories.reverse());
         })
@@ -54,7 +54,7 @@ export const About = () => {
             <section className="flex flex-col justify-center items-center text-left py-10 gap-10">
                 <div className="rowToCol gap-20 justify-center primary-flex">
                     <div className="w-2/4">
-                        <img src={aqilahPassport} width="100%" className="wBorderImg" />
+                        <img src={aqilahPassport} className="wBorderImg lg:w-full max-md:w-2/4" />
                         {/* <div className="flex flex-col gap-10 flex-box primary-flex w-full">
                             <div className="flex flex-row gap-5 justify-start items-center">
                                 <BiRename color="#7D12FF" />
@@ -75,13 +75,24 @@ export const About = () => {
                         <Text>Inspired by my father, I was enthusiastic to deep dive into the world of Information Technology.</Text>
                         <Text>Persevere and excel during university years to gain valuable skills, then utilize it to work at <a href="https://www.milradius.com.my/" className="link">an IT company</a>.</Text>
                         <Text>Here are few technologies that I've been working with recently:</Text>
-                        <ul className="list-marker">
-                            <li>React</li>
-                            <li>JavaScript</li>
-                            <li>TypeScript</li>
-                            <li>PHP</li>
-                            <li>WordPress</li>
-                        </ul>
+                        <Flex wrap="wrap" grow gap="9">
+                            <ul className="list-marker max-md:hidden">
+                                <li>React</li>
+                                <li>JavaScript</li>
+                                <li>TypeScript</li>
+                            </ul>
+                            <ul className="list-marker max-md:hidden">
+                                <li>PHP</li>
+                                <li>WordPress</li>
+                            </ul>
+                            <ul className="list-marker md:hidden">
+                                <li>React</li>
+                                <li>JavaScript</li>
+                                <li>TypeScript</li>
+                                <li>PHP</li>
+                                <li>WordPress</li>
+                            </ul>
+                        </Flex>
                     </div>
                 </div>
             </section>

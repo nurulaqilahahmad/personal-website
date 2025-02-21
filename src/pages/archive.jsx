@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import '../index.css';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { Text, HStack, Heading, For, Stack, Table, IconButton } from "@chakra-ui/react"
 import projectPic from "../image.png";
 import { LuExternalLink } from "react-icons/lu";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import {
+    PaginationItems,
+    PaginationPageText,
+    PaginationNextTrigger,
+    PaginationPrevTrigger,
+    PaginationRoot,
+} from "../components/ui/pagination"
+import globalApi from "../services/global-api";
+import Project from "../components/content/project";
 
 
 export const Archive = () => {
@@ -22,9 +31,19 @@ export const Archive = () => {
     function goBack() {
         if (canGoBack) {
             navigate(-1);
-         } else {
+        } else {
             navigate('/', { replace: true });
-         }
+        }
+    }
+
+    const [project, setProject] = useState([]);
+    useEffect(()=>{
+        getProjectList();
+    },[])
+    const getProjectList = () => {
+        globalApi.getProject().then(resp=>{
+            setProject(resp.projects);
+        })
     }
 
     return (
@@ -35,36 +54,11 @@ export const Archive = () => {
                 <div className="flex flex-col w-[80%]">
 
                     <div>
-                        <Text className="text-left text-[#7D12FF] hover:font-bold hover:cursor-pointer duration-[0.4s]" onClick={()=>goBack()} style={{width: 'fit-content'}}>{"< Back"}</Text>
+                        <Text className="text-left text-[#7D12FF] hover:font-bold hover:cursor-pointer duration-[0.4s]" onClick={() => goBack()} style={{ width: 'fit-content' }}>{"< Back"}</Text>
                         <Text className="heading-1 text-left">All Projects</Text>
                     </div>
 
-                    <Table.Root size="lg" showColumnBorder>
-                        <Table.Header>
-                            <Table.Row className="bg-transparent">
-                                <Table.ColumnHeader></Table.ColumnHeader>
-                                <Table.ColumnHeader>Project</Table.ColumnHeader>
-                                <Table.ColumnHeader>Technology</Table.ColumnHeader>
-                                <Table.ColumnHeader>Category</Table.ColumnHeader>
-                                <Table.ColumnHeader>Link</Table.ColumnHeader>
-                            </Table.Row>
-                        </Table.Header>
-                        <Table.Body>
-                            {items.map((item) => (
-                                <Table.Row key={item.id} className="borderColumn bg-transparent">
-                                    <Table.Cell><img src={projectPic} className="noBorderImg" style={{ width: '200px', height: '113px', zIndex: '1' }}></img></Table.Cell>
-                                    <Table.Cell>{item.name}</Table.Cell>
-                                    <Table.Cell><Text className="text-selector ">{item.technology}</Text></Table.Cell>
-                                    <Table.Cell>{item.category}</Table.Cell>
-                                    <Table.Cell>
-                                        <NavLink className="duration-500" to="/projects"><IconButton color="#7D12FF" aria-label="Projects">
-                                            <LuExternalLink />
-                                        </IconButton></NavLink>
-                                    </Table.Cell>
-                                </Table.Row>
-                            ))}
-                        </Table.Body>
-                    </Table.Root>
+                    <Project project={project} />
                 </div>
             </section>
 

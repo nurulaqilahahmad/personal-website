@@ -42,6 +42,14 @@ body {
   padding: 4rem 0;
 }
 
+.primary-hover{
+  background-color: inherit;
+}
+
+.primary-hover:hover {
+  background-color: #2F0553;
+}
+
 img.wBorderImg {
   border: none;
   /* Optional: Removes default borders */

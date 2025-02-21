@@ -32,8 +32,48 @@ const getProjectCategory = async () => {
         id
         name
         description
-        icon
+        icon {
+          html
+        }
         subSlug
+      }
+    }
+    `
+
+  const result = await request(MASTER_URL, query)
+
+  return result
+}
+
+const getProject = async () => {
+  const query = gql`
+    query Project {
+      projects {
+        id
+        title
+        image {
+          url
+          id
+        }
+        projectCategory {
+          id
+          name
+        }
+        description
+        link
+        slug
+        task {
+          id
+          explanation
+          file {
+            id
+            url
+          }
+        }
+        skill {
+          id
+          name
+        }
       }
     }
     `
@@ -45,5 +85,6 @@ const getProjectCategory = async () => {
 
 export default {
   getEmploymentHistory,
-  getProjectCategory
+  getProjectCategory,
+  getProject
 }
