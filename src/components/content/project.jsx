@@ -14,7 +14,7 @@ import {
 } from "../ui/pagination";
 
 function Project({ project }) {
-    const pageSize = 3;
+    const pageSize = 5;
     const count = project.length;
     const [page, setPage] = useState(1);
     const startRange = (page - 1) * pageSize;
@@ -22,7 +22,7 @@ function Project({ project }) {
     const visibleProject = project.slice(startRange, endRange);
 
     return (
-        <Stack width="full" gap="5">
+        <Stack width="full" gap="5" height="50rem">
             <Table.Root size="lg">
                 <Table.Header>
                     <Table.Row className="bg-transparent">
