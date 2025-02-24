@@ -8,6 +8,7 @@ import { Button } from "../components/ui/button";
 import { Link, Tabs } from "@chakra-ui/react"
 import { BsWindow } from "react-icons/bs";
 import globalApi from "../services/global-api";
+import Project from "../components/content/project";
 import ProjectCategory from "../components/content/project-category";
 
 export const Projects = () => {
@@ -18,13 +19,24 @@ export const Projects = () => {
         deleteSpeed: 80,
     });
 
-const[projectCategory, setProjectCategory] = useState([]);
-    useEffect(()=>{
+
+    const [projectCategory, setProjectCategory] = useState([]);
+    useEffect(() => {
         getProjectCategoryList();
-    },[])
+    }, [])
     const getProjectCategoryList = () => {
-        globalApi.getProjectCategory().then(resp=>{
+        globalApi.getProjectCategory().then(resp => {
             setProjectCategory(resp.projectCategories);
+        })
+    }
+
+    const [project, setProject] = useState([]);
+    useEffect(() => {
+        getProjectList();
+    }, [])
+    const getProjectList = () => {
+        globalApi.getProject().then(resp => {
+            setProject(resp.projects);
         })
     }
 
@@ -44,104 +56,16 @@ const[projectCategory, setProjectCategory] = useState([]);
                             </Tabs.Trigger>
                             {projectCategory.map((projCat, index) => (
                                 <Tabs.Trigger value={projCat.subSlug} asChild className="duration-[0.4s]">
-                                <Link unstyled href={"#"+projCat.subSlug} style={{ fontSize: '1rem' }}>
-                                    {/* {projCat.icon.html} */}
-                                    {projCat.name}
-                                </Link>
-                            </Tabs.Trigger>
+                                    <Link unstyled href={"#" + projCat.subSlug} style={{ fontSize: '1rem' }}>
+                                        {/* {projCat.icon.html} */}
+                                        {projCat.name}
+                                    </Link>
+                                </Tabs.Trigger>
                             ))}
                         </Tabs.List>
 
                         <Tabs.Content value="all">
-                            <div className="flex lg:flex-row flex-col gap-10 primary-flex w-full flex-wrap">
-                                <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-105 duration-[0.4s] primary-hover" style={{ flex: '40%', cursor: 'pointer' }}>
-                                    <div className="flex flex-col gap-10">
-                                        <div>
-                                            <img src={projectPic} alt="" className="lg:w-[450px] md:w-full sm:w-full" style={{ width: '100%' }} />
-                                        </div>
-                                        <div className="flex flex-col gap-10">
-                                            <Text className="text-2xl font-bold">Medical Supply System</Text>
-                                            <Text className="">A web application to provide medical facilities such as face masks, hand gloves, PPE and non-surgical gowns for hospitals, clinics or other medical centres.</Text>
-                                            <div className="flex flex-row gap-2 flex-wrap">
-                                                <Text className="text-selector ">HTML</Text>
-                                                <Text className="text-selector ">PHP</Text>
-                                                <Text className="text-selector ">Bootstrap</Text>
-                                                <Text className="text-selector ">MySQL</Text>
-                                                <Text className="text-selector ">MySQL</Text>
-                                                <Text className="text-selector ">MySQL</Text>
-                                                <Text className="text-selector ">MySQL</Text>
-                                                <Text className="text-selector ">MySQL</Text>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-105 duration-[0.4s] primary-hover" style={{ flex: '40%', cursor: 'pointer' }}>
-                                    <div className="flex flex-col gap-10">
-                                        <div>
-                                            <img src={projectPic} alt="" className="lg:w-[450px] md:w-full sm:w-full" style={{ width: '100%' }} />
-                                        </div>
-                                        <div className="flex flex-col gap-10">
-                                            <Text className="text-2xl font-bold">Medical Supply System</Text>
-                                            <Text className="">A web application to provide medical facilities such as face masks, hand gloves, PPE and non-surgical gowns for hospitals, clinics or other medical centres.</Text>
-                                            <div className="flex flex-row gap-2 flex-wrap">
-                                                <Text className="text-selector ">HTML</Text>
-                                                <Text className="text-selector ">PHP</Text>
-                                                <Text className="text-selector ">Bootstrap</Text>
-                                                <Text className="text-selector ">MySQL</Text>
-                                                <Text className="text-selector ">MySQL</Text>
-                                                <Text className="text-selector ">MySQL</Text>
-                                                <Text className="text-selector ">MySQL</Text>
-                                                <Text className="text-selector ">MySQL</Text>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-105 duration-[0.4s] primary-hover" style={{ flex: '40%', cursor: 'pointer' }}>
-                                    <div className="flex flex-col gap-10">
-                                        <div>
-                                            <img src={projectPic} alt="" className="lg:w-[450px] md:w-full sm:w-full" style={{ width: '100%' }} />
-                                        </div>
-                                        <div className="flex flex-col gap-10">
-                                            <Text className="text-2xl font-bold">Medical Supply System</Text>
-                                            <Text className="">A web application to provide medical facilities such as face masks, hand gloves, PPE and non-surgical gowns for hospitals, clinics or other medical centres.</Text>
-                                            <div className="flex flex-row gap-2 flex-wrap">
-                                                <Text className="text-selector ">HTML</Text>
-                                                <Text className="text-selector ">PHP</Text>
-                                                <Text className="text-selector ">Bootstrap</Text>
-                                                <Text className="text-selector ">MySQL</Text>
-                                                <Text className="text-selector ">MySQL</Text>
-                                                <Text className="text-selector ">MySQL</Text>
-                                                <Text className="text-selector ">MySQL</Text>
-                                                <Text className="text-selector ">MySQL</Text>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-105 duration-[0.4s] primary-hover" style={{ flex: '40%', cursor: 'pointer' }}>
-                                    <div className="flex flex-col gap-10">
-                                        <div>
-                                            <img src={projectPic} alt="" className="lg:w-[450px] md:w-full sm:w-full" style={{ width: '100%' }} />
-                                        </div>
-                                        <div className="flex flex-col gap-10">
-                                            <Text className="text-2xl font-bold">Medical Supply System</Text>
-                                            <Text className="">A web application to provide medical facilities such as face masks, hand gloves, PPE and non-surgical gowns for hospitals, clinics or other medical centres.</Text>
-                                            <div className="flex flex-row gap-2 flex-wrap">
-                                                <Text className="text-selector ">HTML</Text>
-                                                <Text className="text-selector ">PHP</Text>
-                                                <Text className="text-selector ">Bootstrap</Text>
-                                                <Text className="text-selector ">MySQL</Text>
-                                                <Text className="text-selector ">MySQL</Text>
-                                                <Text className="text-selector ">MySQL</Text>
-                                                <Text className="text-selector ">MySQL</Text>
-                                                <Text className="text-selector ">MySQL</Text>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <Project project={project} />
                         </Tabs.Content>
 
                         <Tabs.Content value="web">Manage your web projects</Tabs.Content>
