@@ -8,6 +8,7 @@ import { ImArrowUpRight2 } from "react-icons/im";
 import projectPic from "../image.png";
 import globalApi from "../services/global-api";
 import ProjectCategory from "../components/content/project-category";
+import { Parallax, ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 
 export const Home = () => {
 
@@ -32,12 +33,12 @@ export const Home = () => {
         });
     });
 
-    const[projectCategory, setProjectCategory] = useState([]);
-    useEffect(()=>{
+    const [projectCategory, setProjectCategory] = useState([]);
+    useEffect(() => {
         getProjectCategoryList();
-    },[])
+    }, [])
     const getProjectCategoryList = () => {
-        globalApi.getProjectCategory().then(resp=>{
+        globalApi.getProjectCategory().then(resp => {
             setProjectCategory(resp.projectCategories);
         })
     }
@@ -60,16 +61,30 @@ export const Home = () => {
                 </div>
             </section>
 
-            <section className="flex flex-col justify-center items-center text-left lg:py-40 py-20 gap-10">
-                <div className="flex flex-col gap-10 w-[80%]">
-                    <div className="flex flex-row justify-between items-center gap-5 w-full">
-                        <hr className="w-full border-[rgba(167,139,250,0.4)]"></hr>
-                        <Text className="text-nowrap font-bold" color="#7D12FF">What Do I Do</Text>
-                        <hr className="w-full border-[rgba(167,139,250,0.4)]"></hr>
-                    </div>
-                    <ProjectCategory projectCategory={projectCategory} />
+            {/* <section className="flex flex-col justify-center items-center text-left lg:py-40 py-20 gap-10">
+                <div className="flex flex-col gap-10 primary-flex">
+                    <Text className="description-text font-bold" color="#7D12FF">Hello World! My name is</Text>
+                    <Text className="text-6xl font-bold slideUpAnim">Nurul Aqilah Ahmad<span className="text-[#7D12FF]">.</span></Text>
+                    <Text className="description-text">A motivated and dedicated individual with a passion for programming seeks hands-on experience with a team of professionals. Strong foundation in software development concepts and eagerness to learn new technologies.</Text>
+                    <Text className="description-text">Currently a Software Developer at <a href="https://www.milradius.com.my/" className="link">Millennium Radius</a>.</Text>
+                    <Link className="duration-500" to="/projects" style={{ display: 'inline-block', width: 'fit-content' }}><HStack>
+                        <Button className="primary-btn px-3">Check out my projects!</Button>
+                    </HStack></Link>
                 </div>
-            </section>
+            </section> */}
+
+            <Parallax speed={40} scale={[0.6, 1, 'easeInQuad']}>
+                <section className="flex flex-col justify-center items-center text-left lg:py-40 py-20 gap-10">
+                    <div className="flex flex-col gap-10 w-[80%]">
+                        <div className="flex flex-row justify-between items-center gap-5 w-full">
+                            <hr className="w-full border-[rgba(167,139,250,0.4)]"></hr>
+                            <Text className="text-nowrap font-bold" color="#7D12FF">What Do I Do</Text>
+                            <hr className="w-full border-[rgba(167,139,250,0.4)]"></hr>
+                        </div>
+                        <ProjectCategory projectCategory={projectCategory} />
+                    </div>
+                </section>
+            </Parallax>
 
             <section className="flex flex-col justify-center items-center text-left lg:py-40 py-20 gap-10">
                 <div className="flex flex-col gap-10 primary-flex">

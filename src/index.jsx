@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from "./components/ui/provider"
 import { BrowserRouter } from 'react-router-dom';
 import ScrollToTop from './components/scroll-to-top'
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,7 +15,10 @@ root.render(
   <BrowserRouter>
     <Provider>
       <ScrollToTop />
+      <ParallaxProvider>
         <App />
+      </ParallaxProvider>
+
     </Provider>
   </BrowserRouter>
   // </React.StrictMode>

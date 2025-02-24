@@ -28,8 +28,6 @@ function SingleProject({ project }) {
             <section className="flex flex-col justify-center items-center text-left lg:py-10 gap-10">
                 <div className="flex flex-col w-[80%] gap-10">
                     <div>
-                        {/* <div className="flex flex-row justify-between items-center md:gap-20 max-md:flex-col max-md:items-start"> */}
-                        {/* <Text className="text-left text-[#7D12FF] hover:font-bold hover:cursor-pointer duration-[0.4s]" onClick={() => goBack()} style={{ width: 'fit-content' }}>{"< Back"}</Text> */}
                         <Breadcrumb.Root className="duration-500" size={"md"}>
                             <Breadcrumb.List className="max-md:flex-col max-md:items-start">
                                 <Breadcrumb.Item>
@@ -46,9 +44,7 @@ function SingleProject({ project }) {
                                 </Breadcrumb.Item>
                             </Breadcrumb.List>
                         </Breadcrumb.Root>
-                        {/* </div> */}
                         <div className="flex flex-row justify-start items-center md:gap-20 max-md:flex-col max-md:items-start">
-                            {/* <Text className="text-left text-[#7D12FF] hover:font-bold hover:cursor-pointer duration-[0.4s]" onClick={() => goBack()} style={{ width: 'fit-content' }}><MdArrowBackIosNew /></Text> */}
                             <Text className="heading-1 text-left">{project.title}</Text>
                             <Tooltip className="duration-500" content="Project Link" positioning={{ placement: "right-end-center" }} openDelay={100} closeDelay={100} contentProps={{ css: { "--tooltip-bg": "rgba(125, 18, 255, 0.4)", "color": "rgba(255, 255, 255, 0.9)" } }}>
                                 <Link className="duration-500" to={project.link} target="_blank"><HStack>
