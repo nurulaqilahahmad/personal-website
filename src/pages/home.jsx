@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Text, HStack } from "@chakra-ui/react";
 import { Button } from "../components/ui/button";
 import '../index.css';
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ImArrowUpRight2 } from "react-icons/im";
 import projectPic from "../image.png";
 import globalApi from "../services/global-api";
@@ -54,9 +54,9 @@ export const Home = () => {
                     <Text className="text-6xl font-bold slideUpAnim">Nurul Aqilah Ahmad<span className="text-[#7D12FF]">.</span></Text>
                     <Text className="description-text">A motivated and dedicated individual with a passion for programming seeks hands-on experience with a team of professionals. Strong foundation in software development concepts and eagerness to learn new technologies.</Text>
                     <Text className="description-text">Currently a Software Developer at <a href="https://www.milradius.com.my/" className="link">Millennium Radius</a>.</Text>
-                    <NavLink className="duration-500" to="/projects" style={{ display: 'inline-block', width: 'fit-content' }}><HStack>
+                    <Link className="duration-500" to="/projects" style={{ display: 'inline-block', width: 'fit-content' }}><HStack>
                         <Button className="primary-btn px-3">Check out my projects!</Button>
-                    </HStack></NavLink>
+                    </HStack></Link>
                 </div>
             </section>
 
@@ -120,9 +120,9 @@ export const Home = () => {
                         </div>
                     </div>
                     <div className="flex justify-center pt-5">
-                        <NavLink className="duration-500" to="/archive" style={{ display: 'inline-block', width: 'fit-content' }}><HStack>
+                        <Link className="duration-500" to="/archive" style={{ display: 'inline-block', width: 'fit-content' }}><HStack>
                             <Button className="primary-btn px-3">View Archive</Button>
-                        </HStack></NavLink>
+                        </HStack></Link>
                     </div>
                 </div>
             </section>
@@ -131,9 +131,9 @@ export const Home = () => {
                 <div className="flex flex-col gap-10 primary-flex justify-center items-center">
                     <Text className="font-bold" color="#7D12FF">Let's Keep In Touch!</Text>
                     <Text className="w-1/2">I've still got lots of things to learn and master. Advices and motivations are welcomed.</Text>
-                    <NavLink className="duration-500" to="mailto:nrlaqilahahmd@gmail.com" style={{ display: 'inline-block', width: 'fit-content' }}><HStack>
+                    <Link className="duration-500" to="mailto:nrlaqilahahmd@gmail.com" style={{ display: 'inline-block', width: 'fit-content' }}><HStack>
                         <Button className="secondary-btn px-3">Say Hello</Button>
-                    </HStack></NavLink>
+                    </HStack></Link>
                 </div>
             </section>
 

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Text, HStack, Stack, Table, IconButton } from "@chakra-ui/react";
 import { Button } from "../ui/button";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { ImArrowUpRight2 } from "react-icons/im";
 import projectPic from "../../image.png";
+import { Link } from "react-router-dom";
 import { LuExternalLink } from "react-icons/lu";
 import {
     PaginationItems,
@@ -21,6 +22,11 @@ function Project({ project }) {
     const endRange = startRange + pageSize;
     const visibleProject = project.slice(startRange, endRange);
 
+    const navigate = useNavigate();
+    function goToSingleProj(url) {
+        navigate(url);
+    }
+
     return (
         <Stack width="full" gap="5" height="50rem">
             <Table.Root size="lg">
@@ -35,23 +41,23 @@ function Project({ project }) {
                 </Table.Header>
                 <Table.Body>
                     {visibleProject.map((proj) => (
-                        <Table.Row key={proj.id} className="borderColumn bg-transparent hover:bg-[#2F0553] hover:cursor-pointer duration-[0.4s]">
-                            <Table.Cell><img src={proj.image.url} className="noBorderImg" style={{ width: '200px', height: '113px', zIndex: '1' }}></img></Table.Cell>
-                            <Table.Cell>{proj.title}</Table.Cell>
-                            <Table.Cell>
-                                <div className="flex flex-row gap-4 flex-wrap justify-start align-middle" style={{ flex: '5%' }}>
-                                    {proj.skill.map((projSkill) => (
-                                        <Text className="text-selector ">{projSkill.name}</Text>
-                                    ))}
-                                </div>
+                        <Table.Row key={proj.id} className="borderColumn bg-transparent hover:bg-[#2F0553] hover:cursor-pointer duration-[0.4s]" onClick={() => goToSingleProj("/project/" + proj.slug)}>
+                                <Table.Cell><img src={proj.image.url} className="noBorderImg" style={{ width: '200px', height: '113px', zIndex: '1' }}></img></Table.Cell>
+                                <Table.Cell>{proj.title}</Table.Cell>
+                                <Table.Cell>
+                                    <div className="flex flex-row gap-4 flex-wrap justify-start align-middle" style={{ flex: '5%' }}>
+                                        {proj.skill.map((projSkill) => (
+                                            <Text className="text-selector ">{projSkill.name}</Text>
+                                        ))}
+                                    </div>
 
-                            </Table.Cell>
-                            <Table.Cell>{proj.projectCategory.name}</Table.Cell>
-                            <Table.Cell>
-                                <NavLink className="duration-500" to="/projects"><IconButton color="#7D12FF" aria-label="Projects">
-                                    <LuExternalLink />
-                                </IconButton></NavLink>
-                            </Table.Cell>
+                                </Table.Cell>
+                                <Table.Cell>{proj.projectCategory.name}</Table.Cell>
+                                <Table.Cell>
+                                    <NavLink className="duration-500" to="/projects"><IconButton color="#7D12FF" aria-label="Projects">
+                                        <LuExternalLink />
+                                    </IconButton></NavLink>
+                                </Table.Cell>
                         </Table.Row>
                     ))}
                 </Table.Body>

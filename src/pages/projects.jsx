@@ -45,7 +45,7 @@ const[projectCategory, setProjectCategory] = useState([]);
                             {projectCategory.map((projCat, index) => (
                                 <Tabs.Trigger value={projCat.subSlug} asChild className="duration-[0.4s]">
                                 <Link unstyled href={"#"+projCat.subSlug} style={{ fontSize: '1rem' }}>
-                                    {projCat.icon.html}
+                                    {/* {projCat.icon.html} */}
                                     {projCat.name}
                                 </Link>
                             </Tabs.Trigger>
