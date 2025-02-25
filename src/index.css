@@ -50,6 +50,11 @@ body {
   background-color: #2F0553;
 }
 
+img {
+  object-fit: cover;
+  background-color: #fff;
+}
+
 img.wBorderImg {
   border: none;
   /* Optional: Removes default borders */

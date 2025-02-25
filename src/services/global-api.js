@@ -68,6 +68,7 @@ const getProject = async () => {
           file {
             id
             url
+            fileName
           }
         }
         skill {

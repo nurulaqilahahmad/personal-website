@@ -14,6 +14,7 @@ import {
 } from "../components/ui/pagination"
 import globalApi from "../services/global-api";
 import Project from "../components/content/project";
+import { MdArrowBackIosNew } from "react-icons/md";
 
 
 export const Archive = () => {
@@ -30,11 +31,11 @@ export const Archive = () => {
     }
 
     const [project, setProject] = useState([]);
-    useEffect(()=>{
+    useEffect(() => {
         getProjectList();
-    },[])
+    }, [])
     const getProjectList = () => {
-        globalApi.getProject().then(resp=>{
+        globalApi.getProject().then(resp => {
             setProject(resp.projects);
         })
     }
@@ -45,12 +46,11 @@ export const Archive = () => {
 
             <section className="flex flex-col justify-center items-center text-left lg:py-10 gap-10">
                 <div className="flex flex-col w-[80%]">
-
-                    <div>
-                        <Text className="text-left text-[#7D12FF] hover:font-bold hover:cursor-pointer duration-[0.4s]" onClick={() => goBack()} style={{ width: 'fit-content' }}>{"< Back"}</Text>
-                        <Text className="heading-1 text-left">All Projects</Text>
+                    <div className="flex flex-row gap-1 hover:gap-2 justify-start items-center text-left text-[#7D12FF] hover:font-bold hover:cursor-pointer duration-[0.4s]" onClick={() => goBack()} style={{ width: 'fit-content' }}>
+                        <MdArrowBackIosNew />
+                        <Text>Back</Text>
                     </div>
-
+                    <Text className="heading-1 text-left">All Projects</Text>
                     <Project project={project} />
                 </div>
             </section>
