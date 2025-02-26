@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './nav.css';
 import '../index.css';
 import { Link, NavLink } from "react-router-dom";
@@ -9,6 +9,7 @@ import { IoListCircleOutline, IoInformationCircleOutline } from "react-icons/io5
 import { HiOutlineUserCircle } from "react-icons/hi2";
 import { IoMdClose } from "react-icons/io";
 import { RiMenu5Fill } from "react-icons/ri";
+import globalApi from "../services/global-api";
 
 const PDF_FILE_URL = '../resume-nurul-aqilah-ahmad.pdf';
 
@@ -19,7 +20,7 @@ export const Nav = () => {
         // const filename = url.split("/").pop();
         const aTag = document.createElement('a');
         aTag.href = url;
-        aTag.setAttribute('download', 'Resume - Nurul Aqilah Ahmad');
+        aTag.setAttribute('download', 'CV - Nurul Aqilah Ahmad');
         document.body.appendChild(aTag);
         aTag.click();
         aTag.remove();

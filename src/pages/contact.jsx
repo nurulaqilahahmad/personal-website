@@ -3,6 +3,7 @@ import '../index.css';
 import { Text, HStack } from "@chakra-ui/react";
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { HiInboxIn, HiOutlineLocationMarker, HiOutlineMail, HiOutlineUsers } from "react-icons/hi";
+import { ContactForm } from "../components/contact-form";
 
 export const Contact = () => {
     const [title] = useTypewriter({
@@ -22,9 +23,10 @@ export const Contact = () => {
                 <div className="flex lg:flex-row flex-col gap-10 w-[60%]">
                     {/* Contact Form */}
                     <div className="flex flex-col gap-10 primary-flex w-full flex-wrap">
-                        <div className="flex flex-col flex-box-primary gap-10 hover:scale-110 duration-[0.4s] md:min-h-96 p-10 w-full" style={{ flex: '5%' }}>
+                        <div className="flex flex-col flex-box-primary gap-10 duration-[0.4s] md:min-h-96 p-10 w-full" style={{ flex: '5%' }}>
                             <HiInboxIn className="text-[#7D12FF] text-5xl" />
-                            <Text className="">I am based in Sungai Buloh, Selangor.</Text>
+                            <ContactForm />
+                            {/* <Text className="">I am based in Sungai Buloh, Selangor.</Text> */}
                         </div>
                     </div>
                     {/* Additional Details */}
@@ -47,21 +49,6 @@ export const Contact = () => {
                     </div>
                 </div>
             </section>
-
-            {/* <div className="flex flex-col justify-center items-center text-left inset-x-full py-10 gap-10">
-                <div className="flex flex-col gap-10 flex-box primary-flex">
-                    <div className="flex flex-row gap-5 justify-start items-center">
-                        <IoLocationOutline color="#7D12FF" />
-                        <Text className="description-text">I am based in Sungai Buloh, Selangor.</Text>
-                    </div>
-                    <div className="flex flex-row gap-5 justify-start items-center">
-                        <IoMailOutline  color="#7D12FF" />
-                        <Text className="description-text">Email me at <a href="mailto:nrlaqilahahmd@gmail.com" className="link">nrlaqilahahmd@gmail.com</a>.</Text>
-                    </div>
-                    <Text>I also have enthusiasm in editing videos and selling preloved. Check out my <a href="https://www.youtube.com/@qel_unggu0496?sub_confirmation=1" className="link">Youtube</a> and <a href="#" className="link">Carousell</a>.</Text>
-
-                </div>
-            </div> */}
 
         </div>
     );

@@ -73,7 +73,7 @@ export const Home = () => {
                 </div>
             </section> */}
 
-            <Parallax speed={40} scale={[0.6, 1, 'easeInQuad']}>
+            {/* <Parallax speed={40} scale={[0.6, 1, 'easeInQuad']}> */}
                 <section className="flex flex-col justify-center items-center text-left lg:py-40 py-20 gap-10">
                     <div className="flex flex-col gap-10 w-[80%]">
                         <div className="flex flex-row justify-between items-center gap-5 w-full">
@@ -84,7 +84,7 @@ export const Home = () => {
                         <ProjectCategory projectCategory={projectCategory} />
                     </div>
                 </section>
-            </Parallax>
+            {/* </Parallax> */}
 
             <section className="flex flex-col justify-center items-center text-left lg:py-40 py-20 gap-10">
                 <div className="flex flex-col gap-10 primary-flex">
