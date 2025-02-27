@@ -1,13 +1,7 @@
 import React, { useState } from "react";
-import { Text, HStack, Stack, Table, IconButton } from "@chakra-ui/react";
-import { Button } from "../ui/button";
-import { NavLink, useNavigate, useLocation } from "react-router-dom";
-import { ImArrowUpRight2 } from "react-icons/im";
-import projectPic from "../../image.png";
-import { Link } from "react-router-dom";
-import { LuExternalLink } from "react-icons/lu";
+import { Text, HStack, Stack, Table } from "@chakra-ui/react";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
-    PaginationItems,
     PaginationPageText,
     PaginationNextTrigger,
     PaginationPrevTrigger,
@@ -15,6 +9,12 @@ import {
 } from "../ui/pagination";
 
 function Project({ project }) {
+    // Home - Latest projects
+    const startProj = 0;
+    const endProj = 3;
+    const latestProject = project.slice(startProj, endProj);
+
+    // Archive - pagination
     const pageSize = 5;
     const count = project.length;
     const [page, setPage] = useState(1);
@@ -28,7 +28,57 @@ function Project({ project }) {
         navigate(url, { state: { from: location.pathname } });
     }
 
-    if (location.pathname == '/archive') {
+    if (location.pathname == '/') {
+        return (
+            <div className="flex w-full flex-col gap-10">
+                {latestProject.map((proj) => (
+                    <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-110 duration-[0.4s] primary-hover"  style={{ cursor: 'pointer' }} onClick={() => goToSingleProj("/project/" + proj.slug)}>
+                        <div className="flex flex-col sm:flex-col lg:flex-row gap-10">
+                            <div className="w-[450px]">
+                                <img src={proj.image.url} alt="Project Image" style={{ height: '100%' }} />
+                            </div>
+                            <div className="flex flex-col gap-10 lg:w-[60%] md:w-full sm:w-full">
+                                <Text className="text-2xl font-bold">{proj.title}</Text>
+                                <Text className="">{proj.description}</Text>
+                                <div className="flex flex-row gap-2 flex-wrap">
+                                    {proj.skill.map((projSkill) => (
+                                        <Text className="text-selector ">{projSkill.name}</Text>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        )
+    }
+
+    else if (location.pathname == '/projects') {
+        return (
+            <div className="flex lg:flex-row flex-col gap-10 primary-flex w-full flex-wrap">
+                {project.map((proj) => (
+                    <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-105 duration-[0.4s] primary-hover" style={{ flex: '40%', cursor: 'pointer' }} onClick={() => goToSingleProj("/project/" + proj.slug)}>
+                        <div className="flex flex-col gap-10">
+                            <div className="h-[450px]">
+                                <img src={proj.image.url} alt="Project Image" style={{ height: '100%' }} />
+                            </div>
+                            <div className="flex flex-col gap-10">
+                                <Text className="text-2xl font-bold">{proj.title}</Text>
+                                <Text className="">{proj.description}</Text>
+                                <div className="flex flex-row gap-2 flex-wrap">
+                                    {proj.skill.map((projSkill) => (
+                                        <Text className="text-selector ">{projSkill.name}</Text>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        )
+    }
+
+    else if (location.pathname == '/archive') {
         return (
             <Stack width="full" gap="5" height="50rem">
                 <Table.Root size="lg">
@@ -72,31 +122,6 @@ function Project({ project }) {
                     </HStack>
                 </PaginationRoot>
             </Stack>
-        )
-    }
-
-    else {
-        return (
-            <div className="flex lg:flex-row flex-col gap-10 primary-flex w-full flex-wrap">
-                {project.map((proj) => (
-                    <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-105 duration-[0.4s] primary-hover" style={{ flex: '40%', cursor: 'pointer' }}  onClick={() => goToSingleProj("/project/" + proj.slug)}>
-                        <div className="flex flex-col gap-10">
-                            <div className="h-[450px]">
-                                <img src={proj.image.url} alt="" style={{height: '100%'}} />
-                            </div>
-                            <div className="flex flex-col gap-10">
-                                <Text className="text-2xl font-bold">{proj.title}</Text>
-                                <Text className="">{proj.description}</Text>
-                                <div className="flex flex-row gap-2 flex-wrap">
-                                    {proj.skill.map((projSkill) => (
-                                        <Text className="text-selector ">{projSkill.name}</Text>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
         )
     }
 }

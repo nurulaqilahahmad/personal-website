@@ -1,12 +1,12 @@
 import React from "react";
-import { Text, HStack, Heading, For, Stack, Table, IconButton, Flex } from "@chakra-ui/react";
+import { Text, HStack, Flex } from "@chakra-ui/react";
 import { Button } from "../components/ui/button"
 import { Tooltip } from "../components/ui/tooltip"
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { LuExternalLink } from "react-icons/lu";
 import { Breadcrumb } from "@chakra-ui/react"
 import { HiOutlineHome } from "react-icons/hi";
-import { MdArrowBackIosNew } from "react-icons/md";
+import { format } from 'date-fns';
 import Task from "../components/content/task";
 
 function SingleProject({ project }) {
@@ -36,7 +36,7 @@ function SingleProject({ project }) {
                                 </Breadcrumb.Item>
                                 <Breadcrumb.Separator />
                                 <Breadcrumb.Item>
-                                    {location.state?.from?.pathname !== '/archive' ? <Breadcrumb.Link href="/projects" className="duration-[0.4s]">Projects</Breadcrumb.Link> : <Breadcrumb.Link href="/archive" className="duration-[0.4s]">Archive</Breadcrumb.Link>}
+                                    {location.state?.from !== '/archive' ? <Breadcrumb.Link href="/projects" className="duration-[0.4s]">Projects</Breadcrumb.Link> : <Breadcrumb.Link href="/archive" className="duration-[0.4s]">Archive</Breadcrumb.Link>}
                                     {/* <Breadcrumb.Link href="/projects">Projects</Breadcrumb.Link> */}
                                 </Breadcrumb.Item>
                                 <Breadcrumb.Separator />
@@ -82,6 +82,15 @@ function SingleProject({ project }) {
                                 {project.skill.map((projSkill) => (
                                     <Text className="text-selector ">{projSkill.name}</Text>
                                 ))}
+                            </Flex>
+                        </Flex>
+                        <Flex className="flex-col gap-6">
+                            <Flex className="flex-row justify-start items-center gap-4">
+                                <Text className="text-nowrap font-bold" color="#7D12FF">Year Created</Text>
+                                <hr className="w-full border-[rgba(167,139,250,0.4)]"></hr>
+                            </Flex>
+                            <Flex>
+                                {project.dateCreated ? format(new Date(project.dateCreated), 'yyyy') : ''}
                             </Flex>
                         </Flex>
                     </div>
