@@ -10,69 +10,43 @@ import { Toaster, toaster } from "../components/ui/toaster";
 export const ContactForm = () => {
     const form = useRef();
 
-    // const promise = new Promise((resolve) => {
-    //     setTimeout(() => resolve())
-    // })
+    const sendEmail = (e) => {
+        e.preventDefault();
 
-    const promise = new Promise((sendEmail) => {
-        setTimeout(() => sendEmail = (e) => {
-            e.preventDefault();
-    
-            emailjs
-                .sendForm('contact_service', 'contact_form', form.current, {
-                    publicKey: 'BpkhDzjzQCIaClztr',
-                })
-                .then(
-                    () => {
-                        showToaster();
-                        console.log('SUCCESS!');
-                    },
-                    (error) => {
-                        showToaster();
-                        console.log('FAILED...', error.text);
-                    },
-                );
-        })
-    })
+        const promise = new Promise((resolve) => {
+            setTimeout(() => {
+                emailjs
+                    .sendForm('contact_service', 'contact_form', form.current, {
+                        publicKey: 'BpkhDzjzQCIaClztr',
+                    })
+                    .then(
+                        () => {
+                            resolve();
+                            console.log('SUCCESS!');
+                            setTimeout(() => {document.getElementById('contact_form').reset();}, 1000);
+                        },
+                        (error) => {
+                            console.log('FAILED...', error.text);
+                        },
+                    );
+            }, 4000)
+        });
 
-    function showToaster() {
         toaster.promise(promise, {
             success: {
                 title: "Message sent!",
                 description: "It has been sent to my inbox.",
-                action: window.location.reload(),
-
             },
             error: {
                 title: "Message failed!",
                 description: "Something wrong.",
-                action: window.location.reload(),
             },
             loading: { title: "Sending...", description: "Please wait" },
         })
-    }
-
-    const sendEmail = (e) => {
-        e.preventDefault();
-
-        emailjs
-            .sendForm('contact_service', 'contact_form', form.current, {
-                publicKey: 'BpkhDzjzQCIaClztr',
-            })
-            .then(
-                () => {
-                    showToaster();
-                    console.log('SUCCESS!');
-                },
-                (error) => {
-                    showToaster();
-                    console.log('FAILED...', error.text);
-                },
-            );
     };
 
     return (
-        <form ref={form} onSubmit={sendEmail} action="/contact">
+        <form ref={form} onSubmit={sendEmail} id="contact_form">
             <Field.Root colorPalette="purple" className="mt-6 gap-20" >
                 <Toaster />
                 <Input type="hidden" name="contact_number" value="697483" />
@@ -97,26 +71,7 @@ export const ContactForm = () => {
                     <FieldErrorText className="px-2">This is a required field!</FieldErrorText>
                 </div>
                 <div className="flex justify-center">
-                    <Button type="submit" className="primary-btn px-3"
-                        // onClick={() => {
-                        //     const promise = new Promise((resolve) => {
-                        //         setTimeout(() => resolve(), 2000)
-                        //     })
-
-                        //     toaster.promise(promise, {
-                        //         success: {
-                        //             title: "Message sent!",
-                        //             description: "It has been sent to my inbox.",
-
-                        //         },
-                        //         error: {
-                        //             title: "Message failed!",
-                        //             description: "Something wrong.",
-                        //         },
-                        //         loading: { title: "Sending...", description: "Please wait" },
-                        //     })
-                        // }}
-                        >Send</Button>
+                    <Input type="submit" className="primary-btn px-3" value="Send" />
                 </div>
             </Field.Root>
         </form>
