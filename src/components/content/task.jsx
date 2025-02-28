@@ -15,8 +15,13 @@ import {
 } from "../ui/pagination";
 
 function Task({ task }) {
-    const isImage = ['.gif', '.jpg', '.jpeg', '.png']; //you can add more
-    const isVideo = ['.mpg', '.mp2', '.mpeg', '.mpe', '.mpv', '.mp4'] // you can add more extention
+    const isImage = ['gif', 'jpg', 'jpeg', 'png']; //you can add more
+    const isVideo = ['mpg', 'mp2', 'mpeg', 'mpe', 'mpv', 'mp4'] // you can add more extention
+
+    // function getFileName(fileName) {
+    //     console.log(fileName);
+    //     console.log(fileName.split(".")[1]);
+    // }
 
     return (
         <Table.Root size="lg" variant={"outline"}>
@@ -30,8 +35,8 @@ function Task({ task }) {
                 {task.map((t) => (
                     <Table.Row key={t.id} className="duration-[0.4s]">
                         <Table.Cell>
-                            {isImage?.includes(t.file.fileName) && <img className="noBorderImg" src={t.file.url} style={{ zIndex: '1'}} />}
-                            {isVideo?.includes(t.file.fileName) && <video src={t.file.url} />}
+                            {isImage?.includes(t.file.fileName.split(".")[1]) && <img className="noBorderImg" alt="Task Image" src={t.file.url} style={{ zIndex: '1'}} /> }
+                            {isVideo?.includes(t.file.fileName.split(".")[1]) && <video autoplay style={{ zIndex: '1'}}><source src={t.file.url}  />Your browser does not support the video tag.</video> }
                         </Table.Cell>
                         <Table.Cell>{t.explanation}</Table.Cell>
                     </Table.Row>
