@@ -25,6 +25,52 @@ const getEmploymentHistory = async () => {
   return result
 }
 
+const getEducationalBackground = async () => {
+  const query = gql`
+    query EducationalBackground {
+      educationalBackgrounds {
+        id
+        institutionName
+        courseName
+        institutionLogo {
+          id
+          url
+          fileName
+        }
+        startDate
+        endDate
+        link
+      }
+    }
+    `
+
+  const result = await request(MASTER_URL, query)
+
+  return result
+}
+
+const getCertification = async () => {
+  const query = gql`
+    query Certification {
+      certifications {
+        id
+        name
+        organization
+        date
+        badge {
+          id
+          fileName
+          url
+        }
+      }
+    }
+    `
+
+  const result = await request(MASTER_URL, query)
+
+  return result
+}
+
 const getProjectCategory = async () => {
   const query = gql`
     query ProjectCategory {
@@ -87,6 +133,8 @@ const getProject = async () => {
 
 export default {
   getEmploymentHistory,
+  getEducationalBackground,
+  getCertification,
   getProjectCategory,
   getProject
 }

@@ -4,8 +4,10 @@ import '../index.css';
 import { Text, HStack, Flex } from "@chakra-ui/react";
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import aqilahPassport from '../images/aqilah-passport.jpg';
-import EmploymentHistory from "../components/content/employment-history";
 import globalApi from "../services/global-api";
+import EmploymentHistory from "../components/content/employment-history";
+import EducationalBackground from "../components/content/educational-background";
+import Certification from "../components/content/certification";
 
 export const About = () => {
     const [title] = useTypewriter({
@@ -16,15 +18,35 @@ export const About = () => {
     });
 
     const [employmentHistory, setEmploymentHistory] = useState([]);
-    useEffect(() => {
-        getEmploymentHistoryList();
-    }, [])
     const getEmploymentHistoryList = () => {
         globalApi.getEmploymentHistory().then(resp => {
             // console.log(resp.employmentHistories);
             setEmploymentHistory(resp.employmentHistories.reverse());
         })
     }
+
+    const [educationalBackground, setEducationalBackground] = useState([]);
+    const getEducationalBackgroundList = () => {
+        globalApi.getEducationalBackground().then(resp => {
+            // console.log(resp.employmentHistories);
+            setEducationalBackground(resp.educationalBackgrounds.reverse());
+        })
+    }
+
+    const [certification, setCertification] = useState([]);
+    const getCertificationList = () => {
+        globalApi.getCertification().then(resp => {
+            // console.log(resp.employmentHistories);
+            setCertification(resp.certifications.reverse());
+        })
+    }
+
+    useEffect(() => {
+        getEmploymentHistoryList();
+        getEducationalBackgroundList();
+        getCertificationList();
+    }, [])
+
 
     return (
         <div className="indent">
@@ -65,15 +87,37 @@ export const About = () => {
                 </div>
             </section>
 
-            <section className="flex flex-col justify-center items-center text-left py-40 gap-10">
+            <section className="flex flex-col justify-center items-center text-left pt-40 gap-10">
                 <div className="flex flex-col gap-10 primary-flex justify-center items-center">
                     <div className="flex flex-row justify-between items-center gap-5 w-full">
                         <hr className="w-full border-violet-400"></hr>
-                        <Text className="text-nowrap font-bold" color="#7D12FF">Employment History</Text>
+                        <Text className="md:text-nowrap text-center font-bold" color="#7D12FF">Employment History</Text>
                         <hr className="w-full border-violet-400"></hr>
                     </div>
                     <EmploymentHistory employmentHistory={employmentHistory} />
                 </div>
+            </section>
+
+            <section className="flex flex-col justify-center items-center text-left py-40 gap-10">
+                <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-40 lg:gap-10 lg:w-[70%]">
+                    <div className="flex flex-col gap-10 primary-flex justify-center items-center lg:w-[50%]">
+                        <div className="flex flex-row justify-between items-center gap-5 w-full">
+                            {/* <hr className="w-full border-violet-400"></hr> */}
+                            <Text className="font-bold" color="#7D12FF">Certification</Text>
+                            <hr className="w-full border-violet-400"></hr>
+                        </div>
+                        <Certification certification={certification} />
+                    </div>
+                    <div className="flex flex-col gap-10 primary-flex justify-center items-center lg:w-[50%]">
+                        <div className="flex flex-row justify-between items-center gap-5 w-full">
+                            <hr className="w-full border-violet-400"></hr>
+                            <Text className="md:text-nowrap font-bold" color="#7D12FF">Educational Background</Text>
+                            {/* <hr className="w-full border-violet-400"></hr> */}
+                        </div>
+                        <EducationalBackground educationalBackground={educationalBackground} />
+                    </div>
+                </div>
+
             </section>
 
         </div>
