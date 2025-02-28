@@ -26,7 +26,6 @@ export const Contact = () => {
                         <div className="flex flex-col flex-box-primary gap-10 duration-[0.4s] md:min-h-fit p-10 w-full" style={{ flex: '5%' }}>
                             <HiInboxIn className="text-[#7D12FF] text-5xl" />
                             <ContactForm />
-                            {/* <Text className="">I am based in Sungai Buloh, Selangor.</Text> */}
                         </div>
                     </div>
                     {/* Additional Details */}

@@ -18,6 +18,11 @@ function Task({ task }) {
     const isImage = ['gif', 'jpg', 'jpeg', 'png']; //you can add more
     const isVideo = ['mpg', 'mp2', 'mpeg', 'mpe', 'mpv', 'mp4'] // you can add more extention
 
+    const videos = document.querySelectorAll('video');
+    for(var i=0; i<videos.length; i++) {
+        videos[i].play();
+    }
+
     // function getFileName(fileName) {
     //     console.log(fileName);
     //     console.log(fileName.split(".")[1]);
@@ -36,7 +41,7 @@ function Task({ task }) {
                     <Table.Row key={t.id} className="duration-[0.4s]">
                         <Table.Cell>
                             {isImage?.includes(t.file.fileName.split(".")[1]) && <img className="noBorderImg" alt="Task Image" src={t.file.url} style={{ zIndex: '1'}} /> }
-                            {isVideo?.includes(t.file.fileName.split(".")[1]) && <video autoplay style={{ zIndex: '1'}}><source src={t.file.url}  />Your browser does not support the video tag.</video> }
+                            {isVideo?.includes(t.file.fileName.split(".")[1]) && <video autoplay muted loop controls><source src={t.file.url}  type={"video/"+t.file.fileName.split(".")[1]} />Your browser does not support the video tag.</video> }
                         </Table.Cell>
                         <Table.Cell>{t.explanation}</Table.Cell>
                     </Table.Row>

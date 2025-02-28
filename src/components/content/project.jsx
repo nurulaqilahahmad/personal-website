@@ -88,7 +88,6 @@ function Project({ project }) {
                             <Table.ColumnHeader>Project</Table.ColumnHeader>
                             <Table.ColumnHeader>Technology</Table.ColumnHeader>
                             <Table.ColumnHeader>Category</Table.ColumnHeader>
-                            {/* <Table.ColumnHeader>Link</Table.ColumnHeader> */}
                         </Table.Row>
                     </Table.Header>
                     <Table.Body>
@@ -105,11 +104,6 @@ function Project({ project }) {
 
                                 </Table.Cell>
                                 <Table.Cell>{proj.projectCategory.name}</Table.Cell>
-                                {/* <Table.Cell>
-                                    <NavLink className="duration-500" to="/projects"><IconButton color="#7D12FF" aria-label="Projects">
-                                        <LuExternalLink />
-                                    </IconButton></NavLink>
-                                </Table.Cell> */}
                             </Table.Row>
                         ))}
                     </Table.Body>

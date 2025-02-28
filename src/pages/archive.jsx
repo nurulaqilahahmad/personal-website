@@ -1,21 +1,13 @@
 import React, { useEffect, useState } from "react";
 import '../index.css';
-import { useTypewriter, Cursor } from 'react-simple-typewriter';
-import { Text, HStack, Heading, For, Stack, Table, IconButton } from "@chakra-ui/react"
-import projectPic from "../image.png";
-import { LuExternalLink } from "react-icons/lu";
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
-import {
-    PaginationItems,
-    PaginationPageText,
-    PaginationNextTrigger,
-    PaginationPrevTrigger,
-    PaginationRoot,
-} from "../components/ui/pagination"
+import { Text } from "@chakra-ui/react"
+import { useLocation, useNavigate } from "react-router-dom";
 import globalApi from "../services/global-api";
 import Project from "../components/content/project";
 import { MdArrowBackIosNew } from "react-icons/md";
-
+import { InputGroup } from "../components/ui/input-group"
+import { Textarea, Input, Field, FieldErrorText } from "@chakra-ui/react";
+import { ImSearch } from "react-icons/im";
 
 export const Archive = () => {
 
@@ -29,6 +21,12 @@ export const Archive = () => {
             navigate('/', { replace: true });
         }
     }
+
+    const [inputText, setInputText] = useState("");
+    let inputHandler = (e) => {
+        var lowerCase = e.target.value.toLowerCase();
+        setInputText(lowerCase);
+    };
 
     const [project, setProject] = useState([]);
     useEffect(() => {
@@ -50,8 +48,25 @@ export const Archive = () => {
                         <MdArrowBackIosNew />
                         <Text>Back</Text>
                     </div>
-                    <Text className="heading-1 text-left">All Projects</Text>
-                    <Project project={project} />
+                    <div className="flex flex-row gap-10 justify-between items-center">
+                        <Text className="text-nowrap heading-1 text-left">All Projects</Text>
+                        <div>
+                            <InputGroup flex="1" startElement={<ImSearch color="#7D12FF" />}>
+                                <Input type="text" placeholder="Search..." onChange={inputHandler} variant="flushed" className="p-2 h-[3rem] bg-transparent border-b-[0.1rem] border-b-[#7D12FF]" />
+                            </InputGroup>
+                        </div>
+                    </div>
+                    <Project project={
+                        project.filter((proj) => {
+                            if(inputText === '') {
+                                return proj;
+                            } else {
+                                console.log(proj.title.toLowerCase().includes(inputText));
+                                return proj.title.toLowerCase().includes(inputText) || proj.projectCategory.name.toLowerCase().includes(inputText) || proj.skill.map((projSkill) => { console.log(projSkill.name.toLowerCase().includes(inputText)); return projSkill.name.toLowerCase().includes(inputText)});
+                                // return proj.title.toLowerCase().includes(inputText) || proj.projectCategory.name.toLowerCase().includes(inputText);
+                            }
+                        })
+                    } />
                 </div>
             </section>
 

@@ -29,7 +29,7 @@ export const ContactForm = () => {
                             console.log('FAILED...', error.text);
                         },
                     );
-            }, 4000)
+            }, 1000)
         });
 
         toaster.promise(promise, {
