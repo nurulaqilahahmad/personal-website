@@ -51,7 +51,7 @@ export const About = () => {
     return (
         <div className="indent">
 
-            <title>About – Nurul Aqilah Ahmad</title>
+            <title>About | Nurul Aqilah Ahmad</title>
 
             <Text className="title">{title}<Cursor cursorColor="#7D12FF" /></Text>
 

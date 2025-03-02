@@ -40,7 +40,7 @@ export const Archive = () => {
 
     return (
         <div className="indent">
-            <title>Archive – Nurul Aqilah Ahmad</title>
+            <title>Archive | Nurul Aqilah Ahmad</title>
 
             <section className="flex flex-col justify-center items-center text-left lg:py-10 gap-10">
                 <div className="flex flex-col w-[80%]">
@@ -61,8 +61,10 @@ export const Archive = () => {
                             if(inputText === '') {
                                 return proj;
                             } else {
-                                console.log(proj.title.toLowerCase().includes(inputText));
-                                return proj.title.toLowerCase().includes(inputText) || proj.projectCategory.name.toLowerCase().includes(inputText) || proj.skill.map((projSkill) => { console.log(projSkill.name.toLowerCase().includes(inputText)); return projSkill.name.toLowerCase().includes(inputText)});
+                                proj.skill.map((projSkill) => {
+                                    return proj.title.toLowerCase().includes(inputText) || proj.projectCategory.name.toLowerCase().includes(inputText) || projSkill.name.toLowerCase().includes(inputText);
+                                })
+                                // return proj.title.toLowerCase().includes(inputText) || proj.projectCategory.name.toLowerCase().includes(inputText);
                                 // return proj.title.toLowerCase().includes(inputText) || proj.projectCategory.name.toLowerCase().includes(inputText);
                             }
                         })

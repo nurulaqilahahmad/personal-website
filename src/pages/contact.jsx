@@ -15,7 +15,7 @@ export const Contact = () => {
     return (
         <div className="indent">
 
-            <title>Contact – Nurul Aqilah Ahmad</title>
+            <title>Contact | Nurul Aqilah Ahmad</title>
 
             <Text className="title">{title}<Cursor cursorColor="#7D12FF" /></Text>
 

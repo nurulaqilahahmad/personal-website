@@ -24,7 +24,7 @@ function SingleProject({ project }) {
 
     return (
         <div className="indent">
-            <title>{project.title} – Nurul Aqilah Ahmad</title>
+            <title>{project.title} | Nurul Aqilah Ahmad</title>
 
             <section className="flex flex-col items-center text-left lg:py-10 gap-10">
                 <div className="flex flex-col w-[80%] gap-10">

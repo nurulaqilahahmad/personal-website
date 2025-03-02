@@ -55,7 +55,7 @@ export const Home = () => {
 
         <div className="indent">
 
-            <title>Home – Nurul Aqilah Ahmad</title>
+            <title>Nurul Aqilah Ahmad</title>
 
             <section className="flex flex-col justify-center items-center text-left lg:py-40 py-20 gap-10">
                 <div className="flex flex-col gap-10 primary-flex">

@@ -40,7 +40,7 @@ export const Projects = () => {
 
     return (
         <div className="indent">
-            <title>Projects – Nurul Aqilah Ahmad</title>
+            <title>Projects | Nurul Aqilah Ahmad</title>
             <Text className="title">{title}<Cursor cursorColor="#7D12FF" /></Text>
 
             <section className="flex flex-col justify-center items-center text-left pt-10 pb-[5.4rem] gap-10">
