@@ -61,11 +61,7 @@ export const Archive = () => {
                             if(inputText === '') {
                                 return proj;
                             } else {
-                                proj.skill.map((projSkill) => {
-                                    return proj.title.toLowerCase().includes(inputText) || proj.projectCategory.name.toLowerCase().includes(inputText) || projSkill.name.toLowerCase().includes(inputText);
-                                })
-                                // return proj.title.toLowerCase().includes(inputText) || proj.projectCategory.name.toLowerCase().includes(inputText);
-                                // return proj.title.toLowerCase().includes(inputText) || proj.projectCategory.name.toLowerCase().includes(inputText);
+                                return proj.title.toLowerCase().includes(inputText) || proj.projectCategory.name.toLowerCase().includes(inputText) || proj.skill.some(skill => skill.name?.toLowerCase().includes(inputText));
                             }
                         })
                     } />
