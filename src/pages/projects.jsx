@@ -71,7 +71,7 @@ export const Projects = () => {
                                     animationDuration: "120ms",
                                 }}>
                                 {/* Manage your {projCat.name} projects */}
-                                <Project project={project.filter((proj) => { return proj.projectCategory.name == projCat.name })} />
+                                <Project project={project.filter((proj) => { return proj.projectCategory.name === projCat.name })} />
                             </Tabs.Content>
                         ))}
 

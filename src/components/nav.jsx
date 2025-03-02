@@ -36,7 +36,7 @@ export const Nav = () => {
                     <RiMenu5Fill />
                 </IconButton>
             </div>
-            <ul className={openMenu ? "open" : "close"}>
+            <ul className={openMenu ? "open" : ""}>
                 <li className="close-menu">
                     <IconButton aria-label="Close" onClick={() => setOpenMenu(false)}>
                         <IoMdClose />
