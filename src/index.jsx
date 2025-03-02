@@ -18,7 +18,6 @@ root.render(
       <ParallaxProvider>
         <App />
       </ParallaxProvider>
-
     </Provider>
   </BrowserRouter>
   // </React.StrictMode>

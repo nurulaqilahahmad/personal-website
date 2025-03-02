@@ -31,12 +31,12 @@ export const Nav = () => {
             <Link to="/">
                 <div className="logo"><Text className="text-2xl font-bold px-3 py-2">Q</Text></div>
             </Link>
-            <div className="menu" onClick={() => setOpenMenu(!openMenu)}>
+            <div className="menu" onClick={() => setOpenMenu(true)}>
                 <IconButton color="#7D12FF" aria-label="Menu">
                     <RiMenu5Fill />
                 </IconButton>
             </div>
-            <ul className={openMenu ? "open" : ""}>
+            <ul className={openMenu ? "open" : "close"}>
                 <li className="close-menu">
                     <IconButton aria-label="Close" onClick={() => setOpenMenu(false)}>
                         <IoMdClose />

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import './index.css';
 import { Nav } from "./components/nav";
 import { Footer } from "./components/footer";
 import { Routes, Route } from "react-router-dom";

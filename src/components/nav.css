@@ -3,8 +3,9 @@ nav {
     top: 0;
     z-index: 1000; /* Ensure it's above other content */
     width: 100%;
-    backdrop-filter: blur(15px); /* Creates the acrylic blur effect */
-    -webkit-backdrop-filter: blur(15px); /* For Safari compatibility */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.06);
 }
 
 nav .logo {
@@ -82,24 +83,21 @@ nav .resume-download:hover {
         right: 0;
         width: 80%;
         height: 100vh;
-        /* background-color: rgba(92, 46, 126, 0.5); */
-        background-color: rgba(44, 31, 59, 0.4);
+        background-color: rgba(44, 31, 59);
         flex-direction: column;
         align-items: start;
-        backdrop-filter: blur(15px); /* Creates the acrylic blur effect */
-        -webkit-backdrop-filter: blur(15px); /* For Chrome compatibility */
-        /* transition: transform 0.4s ease-in-out; */
-        box-shadow: -4px 0 10px rgba(0, 0, 0, 0.04); /* Adds shadow to create a pop-out effect */
+        transition: transform 0.4s ease-in-out;
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.04);
     }
 
     nav ul.open {
         display: flex;
-        /* transform: translateX(0%); */
+        transform: translateX(0%);
     }
 
-    /* nav ul.close {
+    nav ul.close {
         transform: translateX(100%);
-    } */
+    }
 
     nav ul li {
         padding: 0px 20px;
