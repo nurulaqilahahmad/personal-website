@@ -4,7 +4,7 @@ import './index.css';
 import { Nav } from "./components/nav";
 import { Footer } from "./components/footer";
 import { Routes, Route } from "react-router-dom";
-import { Home, About, Projects, Archive, Contact } from "./pages/index";
+import { Home, About, Projects, Archive, Contact, NotFound } from "./pages/index";
 import { ScrollToTopButton } from "./components/scroll-to-top-button";
 import globalApi from "./services/global-api";
 import SingleProject from './pages/single-project';
@@ -12,14 +12,14 @@ import SingleProject from './pages/single-project';
 function App({ Component, pageProps }) {
 
   const [project, setProject] = useState([]);
-      useEffect(()=>{
-          getProjectList();
-      },[])
-      const getProjectList = () => {
-          globalApi.getProject().then(resp=>{
-              setProject(resp.projects);
-          })
-      }
+  useEffect(() => {
+    getProjectList();
+  }, [])
+  const getProjectList = () => {
+    globalApi.getProject().then(resp => {
+      setProject(resp.projects);
+    })
+  }
 
   return (
     <div className="App">
@@ -31,8 +31,12 @@ function App({ Component, pageProps }) {
         <Route path="/archive" element={<Archive />} />
         <Route path="/contact" element={<Contact />} />
         {project.map((proj) => (
-          <Route path={"/project/"+proj.slug} element={<SingleProject project={proj} />} />
+          <Route path={"/project/" + proj.slug} element={<SingleProject project={proj} />} />
         ))}
+        <Route
+          path="*"
+          element={<NotFound />}
+        />
       </Routes>
       <ScrollToTopButton />
       <Footer></Footer>
