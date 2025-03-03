@@ -43,14 +43,14 @@ export const Archive = () => {
             <title>Archive | Nurul Aqilah Ahmad</title>
 
             <section className="flex flex-col justify-center items-center text-left lg:py-10 gap-10">
-                <div className="flex flex-col w-[80%]">
+                <div className="flex flex-col w-[80%] gap-10">
                     <div className="flex flex-row gap-1 hover:gap-2 justify-start items-center text-left text-[#7D12FF] hover:font-bold hover:cursor-pointer duration-[0.4s]" onClick={() => goBack()} style={{ width: 'fit-content' }}>
                         <MdArrowBackIosNew />
                         <Text>Back</Text>
                     </div>
-                    <div className="flex flex-row gap-10 justify-between items-center">
-                        <Text className="text-nowrap heading-1 text-left">All Projects</Text>
-                        <div>
+                    <div className="flex flex-row max-md:flex-col gap-4 justify-between items-center">
+                        <Text className="heading-1 text-left max-sm:text-center">All Projects</Text>
+                        <div className="flex">
                             <InputGroup flex="1" startElement={<ImSearch color="#7D12FF" />}>
                                 <Input type="text" placeholder="Search..." onChange={inputHandler} variant="flushed" className="p-2 h-[3rem] bg-transparent border-b-[0.1rem] border-b-[#7D12FF]" />
                             </InputGroup>

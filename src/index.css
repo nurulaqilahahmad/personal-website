@@ -201,9 +201,13 @@ article {
     flex-direction: column;
     width: 100vw;
   }
+
+  .flex-box {
+    padding: 1rem;
+  }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
   .primary-flex {
     width: 90%;
   }

@@ -62,8 +62,8 @@ function SingleProject({ project }) {
                     </figure>
                 </div>
 
-                <div className="flex lg:flex-row flex-col gap-10 primary-flex w-[80%] flex-wrap mt-10">
-                    <div className="flex flex-col flex-box-primary gap-20 duration-[0.4s] md:min-h-96 w-full" style={{ flex: '5%' }}>
+                <div className="flex flex-row max-2xl:flex-col gap-10 primary-flex w-[80%] flex-wrap mt-10">
+                    <div className="flex flex-col flex-box-primary max-lg:p-[2rem] gap-20 duration-[0.4s] md:min-h-96 w-full" style={{ flex: '5%' }}>
                         <Flex className="flex-col gap-6">
                             <Flex className="flex-row justify-start items-center gap-4">
                                 <Text className="text-nowrap font-bold" color="#7D12FF">Description</Text>

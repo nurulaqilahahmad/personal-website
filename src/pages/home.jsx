@@ -63,9 +63,11 @@ export const Home = () => {
                     <Text className="text-6xl font-bold slideUpAnim">Nurul Aqilah Ahmad<span className="text-[#7D12FF]">.</span></Text>
                     <Text className="description-text">A motivated and dedicated individual with a passion for programming seeks hands-on experience with a team of professionals. Strong foundation in software development concepts and eagerness to learn new technologies.</Text>
                     <Text className="description-text">Currently a Software Developer at <a href="https://www.milradius.com.my/" className="link">Millennium Radius</a>.</Text>
-                    <Link className="duration-500" to="/projects" style={{ display: 'inline-block', width: 'fit-content' }}><HStack>
-                        <Button className="primary-btn px-3">Check out my projects!</Button>
-                    </HStack></Link>
+                    <Link className="duration-500" to="/projects" style={{ width: 'fit-content' }}>
+                        <HStack>
+                            <Button className="text-wrap primary-btn px-3">Check out my projects!</Button>
+                        </HStack>
+                    </Link>
                 </div>
             </section>
 

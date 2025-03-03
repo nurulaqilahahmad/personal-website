@@ -20,7 +20,7 @@ export const Contact = () => {
             <Text className="title">{title}<Cursor cursorColor="#7D12FF" /></Text>
 
             <section className="flex flex-col justify-center items-center text-left pt-10 pb-[5.4rem] gap-10">
-                <div className="flex lg:flex-row flex-col gap-10 w-[60%]">
+                <div className="flex lg:flex-row flex-col gap-10 w-[90%] 2xl:w-[60%]">
                     {/* Contact Form */}
                     <div className="flex flex-col gap-10 primary-flex w-full flex-wrap">
                         <div className="flex flex-col flex-box-primary gap-10 duration-[0.4s] md:min-h-fit p-10 w-full" style={{ flex: '5%' }}>

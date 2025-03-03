@@ -56,9 +56,9 @@ export const About = () => {
             <Text className="title">{title}<Cursor cursorColor="#7D12FF" /></Text>
 
             <section className="flex flex-col justify-center items-center text-left py-10 gap-10">
-                <div className="rowToCol gap-20 justify-center primary-flex">
-                    <div className="w-2/4">
-                        <img src={aqilahPassport} className="wBorderImg lg:w-full max-md:w-2/4" />
+                <div className="rowToCol gap-20 justify-center items-start max-md:items-center primary-flex">
+                    <div className="flex justify-center items-center w-1/2">
+                        <img src={aqilahPassport} className="wBorderImg w-full" />
                     </div>
                     <div className="flex flex-col text-left gap-5">
                         <Text>Hi, I'm Aqilah.</Text>

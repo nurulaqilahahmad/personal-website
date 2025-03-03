@@ -49,29 +49,24 @@ export const ContactForm = () => {
         <form ref={form} onSubmit={sendEmail} id="contact_form">
             <Field.Root colorPalette="purple" className="mt-6 gap-20" >
                 <Toaster />
-                <Input type="hidden" name="contact_number" value="697483" />
                 <div className="w-full">
-                    <Field.Label className="px-2">Name</Field.Label>
+                    <Field.Label className="px-2">Name <span className="text-red-400">*</span></Field.Label>
                     <Input type="text" required placeholder="Enter your name" id="user_name" name="user_name" variant="flushed" className="p-2 h-[3rem] bg-transparent border-b-[0.1rem] border-b-[#7D12FF]" />
-                    <FieldErrorText className="px-2">This is a required field!</FieldErrorText>
                 </div>
                 <div className="w-full">
-                    <Field.Label className="px-2">Email</Field.Label>
+                    <Field.Label className="px-2">Email <span className="text-red-400">*</span></Field.Label>
                     <Input type="email" required placeholder="Enter your email" id="user_email" name="user_email" variant="flushed" className="p-2 h-[3rem] bg-transparent border-b-[0.1rem] border-b-[#7D12FF]" />
-                    <FieldErrorText className="px-2">This is a required field!</FieldErrorText>
                 </div>
                 <div className="w-full">
-                    <Field.Label className="px-2">Subject</Field.Label>
+                    <Field.Label className="px-2">Subject <span className="text-red-400">*</span></Field.Label>
                     <Input type="text" required placeholder="Enter the subject" id="subject" name="subject" variant="flushed" className="p-2 h-[3rem] bg-transparent border-b-[0.1rem] border-b-[#7D12FF]" />
-                    <FieldErrorText className="px-2">This is a required field!</FieldErrorText>
                 </div>
                 <div className="w-full">
-                    <Field.Label className="px-2">Message</Field.Label>
+                    <Field.Label className="px-2">Message <span className="text-red-400">*</span></Field.Label>
                     <Textarea required placeholder="Enter your message" id="message" name="message" resize="vertical" autoresize minH="10lh" variant="flushed" className="p-2 h-[3rem] bg-transparent border-b-[0.1rem] border-b-[#7D12FF]" />
-                    <FieldErrorText className="px-2">This is a required field!</FieldErrorText>
                 </div>
-                <div className="flex justify-center">
-                    <Input type="submit" className="primary-btn px-3" value="Send" />
+                <div>
+                    <Input type="submit" className="hover:cursor-pointer justify-right primary-btn px-3" value="Send" />
                 </div>
             </Field.Root>
         </form>
