@@ -10,7 +10,7 @@ import Project from "../components/content/project";
 
 export const Home = () => {
 
-    document.addEventListener("DOMContentLoaded", () => {
+    // document.addEventListener("DOMContentLoaded", () => {
         const animatedSections = document.querySelectorAll(".animate");
 
         const observer = new IntersectionObserver(
@@ -29,7 +29,7 @@ export const Home = () => {
         animatedSections.forEach((section) => {
             observer.observe(section);
         });
-    });
+    // });
 
     const [projectCategory, setProjectCategory] = useState([]);
     useEffect(() => {
@@ -57,7 +57,7 @@ export const Home = () => {
 
             <title>Nurul Aqilah Ahmad</title>
 
-            <section className="flex flex-col justify-center items-center text-left lg:py-40 py-20 gap-10">
+            <section className="flex flex-col justify-center items-center text-left lg:py-56 py-20 gap-10 animate">
                 <div className="flex flex-col gap-10 primary-flex">
                     <Text className="description-text font-bold" color="#7D12FF">Hello World! My name is</Text>
                     <Text className="text-6xl font-bold slideUpAnim">Nurul Aqilah Ahmad<span className="text-[#7D12FF]">.</span></Text>
@@ -71,7 +71,7 @@ export const Home = () => {
                 </div>
             </section>
 
-            <section className="flex flex-col justify-center items-center text-left lg:py-40 py-20 gap-10">
+            <section className="flex flex-col justify-center items-center text-left lg:py-40 py-20 gap-10 animate">
                 <div className="flex flex-col gap-10 w-[80%]">
                     <div className="flex flex-row justify-between items-center gap-5 w-full">
                         <hr className="w-full border-[rgba(167,139,250,0.4)]"></hr>
@@ -79,10 +79,11 @@ export const Home = () => {
                         <hr className="w-full border-[rgba(167,139,250,0.4)]"></hr>
                     </div>
                     <ProjectCategory projectCategory={projectCategory} />
+                    
                 </div>
             </section>
 
-            <section className="flex flex-col justify-center items-center text-left lg:py-40 py-20 gap-10">
+            <section className="flex flex-col justify-center items-center text-left lg:py-40 py-20 gap-10 animate">
                 <div className="flex flex-col gap-10 primary-flex">
                     <div className="flex flex-row justify-between items-center gap-5 w-full">
                         <hr className="w-full border-[rgba(167,139,250,0.4)]"></hr>
@@ -97,7 +98,7 @@ export const Home = () => {
                 </div>
             </section>
 
-            <section className="flex flex-col justify-center items-center lg:py-40 py-20 gap-10">
+            <section className="flex flex-col justify-center items-center lg:py-40 py-20 gap-10 animate">
                 <div className="flex flex-col gap-10 primary-flex justify-center items-center">
                     <Text className="font-bold" color="#7D12FF">Let's Keep In Touch!</Text>
                     <Text className="w-1/2">I've still got lots of things to learn and master. Advices and motivations are welcomed.</Text>
