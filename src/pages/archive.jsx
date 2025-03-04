@@ -57,7 +57,7 @@ export const Archive = () => {
                         </div>
                     </div>
                     <Project project={
-                        project.filter((proj) => {
+                        project.sort((a, b) => new Date(b.dateCreated) - new Date(a.dateCreated)).filter((proj) => {
                             if(inputText === '') {
                                 return proj;
                             } else {
