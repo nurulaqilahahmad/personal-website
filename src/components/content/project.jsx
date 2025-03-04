@@ -57,8 +57,8 @@ function Project({ project }) {
 
     else if (location.pathname == '/projects') {
         return (
-            <div className="flex lg:flex-row flex-col gap-10 primary-flex w-full flex-wrap">
-                {project.map((proj) => (
+            <div className="flex lg:flex-row flex-col justify-center gap-10 primary-flex w-full flex-wrap">
+                {project.length > 0 ? project.map((proj) => (
                     <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-105 duration-[0.4s] primary-hover" style={{ flex: '48%', cursor: 'pointer' }} onClick={() => goToSingleProj("/project/" + proj.slug)}>
                         <div className="flex flex-col gap-10">
                             <div className="w-full h-[30rem]">
@@ -75,7 +75,7 @@ function Project({ project }) {
                             </div>
                         </div>
                     </div>
-                ))}
+                )) : <div className="py-6 text-center text-[#6B7280]">Nothing here...</div>}
             </div>
         )
     }
@@ -94,7 +94,7 @@ function Project({ project }) {
                         </Table.Row>
                     </Table.Header>
                     <Table.Body>
-                        {visibleProject.map((proj) => (
+                        {visibleProject.length > 0 ? visibleProject.map((proj) => (
                             <Table.Row key={proj.id} className="borderColumn bg-transparent hover:bg-[#2F0553] hover:cursor-pointer duration-[0.4s]" onClick={() => goToSingleProj("/project/" + proj.slug)}>
                                 <Table.Cell className="hidden lg:flex"><img src={proj.image.url} className="noBorderImg" style={{ width: '200px', height: '113px', zIndex: '1' }}></img></Table.Cell>
                                 <Table.Cell>{proj.title}</Table.Cell>
@@ -113,7 +113,9 @@ function Project({ project }) {
                                     </IconButton>
                                 </Table.Cell>
                             </Table.Row>
-                        ))}
+                        )) : <Table.Row className="borderColumn bg-transparent hover:bg-[#2F0553] hover:cursor-pointer duration-[0.4s]">
+                            <Table.Cell colSpan={4}><div className="py-6 text-center text-[#6B7280]">Nothing here...</div></Table.Cell>
+                        </Table.Row>}
                     </Table.Body>
                 </Table.Root>
                 <PaginationRoot className="flex justify-center items-center" page={page} count={count} pageSize={pageSize} onPageChange={(e) => setPage(e.page)}>
