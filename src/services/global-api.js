@@ -116,6 +116,7 @@ const getProject = async () => {
             url
             fileName
           }
+          link
         }
         skill {
           id
