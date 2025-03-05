@@ -28,7 +28,7 @@ export const Nav = () => {
 
     return (
         <nav className="flex justify-between align-center px-10 py-8 sticky top-0">
-            <Link to="/">
+            <Link to="/" onClick={() => setOpenMenu(false)}>
                 <div className="logo"><Text className="text-2xl font-bold px-3 py-2">Q</Text></div>
             </Link>
             <div className="menu" onClick={() => setOpenMenu(true)}>
@@ -43,17 +43,17 @@ export const Nav = () => {
                     </IconButton>
                 </li>
                 <li>
-                    <NavLink className="duration-500" to="/about"><IconButton color="#7D12FF" aria-label="About">
+                    <NavLink className="duration-500" to="/about" onClick={() => setOpenMenu(false)}><IconButton color="#7D12FF" aria-label="About">
                         <HiOutlineUserCircle />
                     </IconButton>About</NavLink>
                 </li>
                 <li>
-                    <NavLink className="duration-500" to="/projects"><IconButton color="#7D12FF" aria-label="Projects">
+                    <NavLink className="duration-500" to="/projects" onClick={() => setOpenMenu(false)}><IconButton color="#7D12FF" aria-label="Projects">
                         <IoListCircleOutline />
                     </IconButton>Projects</NavLink>
                 </li>
                 <li>
-                    <NavLink className="duration-500" to="/contact"><IconButton color="#7D12FF" aria-label="Contact">
+                    <NavLink className="duration-500" to="/contact" onClick={() => setOpenMenu(false)}><IconButton color="#7D12FF" aria-label="Contact">
                         <IoInformationCircleOutline />
                     </IconButton>Contact</NavLink>
                 </li>

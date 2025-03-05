@@ -153,7 +153,7 @@ article {
 
 .flex-box {
   padding: 4rem;
-  background: rgba(44, 31, 59, 0.4);
+  background: rgba(44, 31, 59, 0.6);
   border-radius: 0.4rem;
   backdrop-filter: blur(15px);  /* Creates the acrylic blur effect */
   -webkit-backdrop-filter: blur(15px);  /* For Chrome compatibility */
@@ -161,7 +161,7 @@ article {
 
 .flex-box-primary {
   padding: 2rem;
-  background: rgba(44, 31, 59, 0.4);
+  background: rgba(44, 31, 59, 0.6);
   border-radius: 0.4rem;
   backdrop-filter: blur(15px);  /* Creates the acrylic blur effect */
   -webkit-backdrop-filter: blur(15px);  /* For Chrome compatibility */
@@ -203,7 +203,7 @@ article {
   }
 
   .flex-box {
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .title {
@@ -248,7 +248,7 @@ section {
 
 .text-selector {
   color: #7D12FF;
-  background-color: rgba(44, 31, 59, 0.6);
+  background-color: rgba(44, 31, 59);
   font-size: 1rem;
   padding: 0 0.5rem;
   width: fit-content;

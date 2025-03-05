@@ -35,16 +35,16 @@ function Project({ project }) {
             <div className="flex w-full flex-col gap-10">
                 {latestProject.map((proj) => (
                     <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-110 duration-[0.4s] primary-hover" style={{ cursor: 'pointer' }} onClick={() => goToSingleProj("/project/" + proj.slug)}>
-                        <div className="flex flex-col lg:flex-row gap-10">
-                            <div className="lg:w-[25rem] lg:h-[15rem] w-full">
+                        <div className="flex flex-col 2xl:flex-row gap-10">
+                            <div className="2xl:w-[25rem] lg:h-[15rem] w-full">
                                 <img src={proj.image.url} alt="Project Image" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
                             </div>
-                            <div className="flex flex-col gap-10 lg:w-[60%] md:w-full sm:w-full">
+                            <div className="flex flex-col gap-10 2xl:w-[60%] w-full">
                                 <Text className="text-2xl font-bold">{proj.title}</Text>
                                 <Text className="">{proj.description}</Text>
                                 <div className="flex flex-row gap-2 flex-wrap">
                                     {proj.skill.map((projSkill) => (
-                                        <Text className="text-selector ">{projSkill.name}</Text>
+                                        <Text className="text-selector">{projSkill.name}</Text>
                                     ))}
                                 </div>
                             </div>
@@ -61,8 +61,8 @@ function Project({ project }) {
                 {project.length > 0 ? project.map((proj) => (
                     <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-105 duration-[0.4s] primary-hover" style={{ flex: '48%', cursor: 'pointer' }} onClick={() => goToSingleProj("/project/" + proj.slug)}>
                         <div className="flex flex-col gap-10">
-                            <div className="w-full h-[30rem]">
-                                <img src={proj.image.url} alt="Project Image" style={{ width: '100%', height: '100%' }} />
+                            <div className="lg:h-[15rem] w-full">
+                                <img src={proj.image.url} alt="Project Image" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
                             </div>
                             <div className="flex flex-col gap-10">
                                 <Text className="text-2xl font-bold">{proj.title}</Text>
