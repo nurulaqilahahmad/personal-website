@@ -36,7 +36,7 @@ function Project({ project }) {
                 {latestProject.map((proj) => (
                     <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-110 duration-[0.4s] primary-hover" style={{ cursor: 'pointer' }} onClick={() => goToSingleProj("/project/" + proj.slug)}>
                         <div className="flex flex-col 2xl:flex-row gap-10">
-                            <div className="2xl:w-[25rem] lg:h-[15rem] w-full">
+                            <div className="2xl:w-[25rem] xl:h-[15rem] max-lg:h-full w-full">
                                 <img src={proj.image.url} alt="Project Image" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
                             </div>
                             <div className="flex flex-col gap-10 2xl:w-[60%] w-full">
@@ -61,7 +61,7 @@ function Project({ project }) {
                 {project.length > 0 ? project.map((proj) => (
                     <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-105 duration-[0.4s] primary-hover" style={{ flex: '48%', cursor: 'pointer' }} onClick={() => goToSingleProj("/project/" + proj.slug)}>
                         <div className="flex flex-col gap-10">
-                            <div className="lg:h-[15rem] w-full">
+                            <div className="2xl:h-[20rem] xl:h-[15rem] max-lg:h-full w-full">
                                 <img src={proj.image.url} alt="Project Image" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
                             </div>
                             <div className="flex flex-col gap-10">
