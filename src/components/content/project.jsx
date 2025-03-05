@@ -86,11 +86,11 @@ function Project({ project }) {
                 <Table.Root size="lg">
                     <Table.Header>
                         <Table.Row className="bg-transparent">
-                            <Table.ColumnHeader className="hidden lg:flex"></Table.ColumnHeader>
-                            <Table.ColumnHeader>Project</Table.ColumnHeader>
-                            <Table.ColumnHeader className="max-sm:hidden">Technology</Table.ColumnHeader>
-                            <Table.ColumnHeader className="max-sm:hidden">Category</Table.ColumnHeader>
-                            <Table.ColumnHeader className="lg:hidden"></Table.ColumnHeader>
+                            <Table.ColumnHeader className="hidden lg:flex" style={{ color: "white" }}></Table.ColumnHeader>
+                            <Table.ColumnHeader style={{ color: "white" }}>Project</Table.ColumnHeader>
+                            <Table.ColumnHeader className="max-sm:hidden" style={{ color: "white" }}>Technology</Table.ColumnHeader>
+                            <Table.ColumnHeader className="max-sm:hidden" style={{ color: "white" }}>Category</Table.ColumnHeader>
+                            <Table.ColumnHeader className="lg:hidden" style={{ color: "white" }}></Table.ColumnHeader>
                         </Table.Row>
                     </Table.Header>
                     <Table.Body>

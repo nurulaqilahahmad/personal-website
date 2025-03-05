@@ -13,10 +13,10 @@ function EducationalBackground({ educationalBackground }) {
 
     return (
         <div className="flex flex-col gap-10 primary-flex w-full justify-center">
-            <TimelineRoot size="xl" variant="subtle" colorPalette="purple" className="gap-6">
+            <TimelineRoot size="xl" variant="solid" className="gap-6">
                 {educationalBackground.map((education, index) => (
                     <TimelineItem key={index} className="flex max-sm:flex-col ">
-                        <TimelineConnector className="mr-6 w-[6rem] h-[6rem]">
+                        <TimelineConnector className="mr-6 w-[6rem] h-[6rem]" bg={{ base: "#2F0553" }}>
                             <div className="p-4 w-full">
                                 <img src={education.institutionLogo.url} style={{ backgroundColor: 'transparent' }} />
                             </div>

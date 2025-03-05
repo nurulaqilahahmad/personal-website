@@ -30,13 +30,13 @@ function Task({ task }) {
 
     return (
         <Table.Root size="lg" variant={"outline"}>
-            <Table.Header>
+            <Table.Header className="bg-transparent">
                 <Table.Row className="max-2xl:hidden">
-                    <Table.ColumnHeader>Result</Table.ColumnHeader>
-                    <Table.ColumnHeader>Explanation</Table.ColumnHeader>
+                    <Table.ColumnHeader style={{ color: "white" }}>Result</Table.ColumnHeader>
+                    <Table.ColumnHeader style={{ color: "white" }}>Explanation</Table.ColumnHeader>
                 </Table.Row>
             </Table.Header>
-            <Table.Body className="">
+            <Table.Body>
                 {task.map((t) => (
                     <Table.Row key={t.id} className="duration-[0.4s]">
                         <Table.Cell className="max-2xl:hidden">
