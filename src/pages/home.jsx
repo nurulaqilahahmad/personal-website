@@ -57,8 +57,8 @@ export const Home = () => {
 
             <title>Nurul Aqilah Ahmad</title>
 
-            <section className="flex flex-col justify-center items-center text-left lg:py-56 py-20 gap-10 animate">
-                <div className="flex flex-col gap-10 primary-flex">
+            <section className="flex flex-col justify-center items-center text-left 2xl:py-56 max-2xl:py-24 gap-10 animate">
+                <div className="flex flex-col gap-10 2xl:w-[50%] max-2xl:w-[90%]">
                     <Text className="description-text font-bold" color="#7D12FF">Hello World! My name is</Text>
                     <Text className="text-6xl font-bold slideUpAnim">Nurul Aqilah Ahmad<span className="text-[#7D12FF]">.</span></Text>
                     <Text className="description-text">A motivated and dedicated individual with a passion for programming seeks hands-on experience with a team of professionals. Strong foundation in software development concepts and eagerness to learn new technologies.</Text>
