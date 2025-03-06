@@ -99,8 +99,8 @@ export const About = () => {
             </section>
 
             <section className="flex flex-col justify-center items-center text-left py-40 gap-10">
-                <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-40 lg:gap-10 lg:w-[70%]">
-                    <div className="flex flex-col gap-10 primary-flex justify-center items-center lg:w-[50%]">
+                <div className="flex flex-col xl:flex-row primary-flex justify-center items-center xl:items-start gap-40 xl:gap-10 xl:w-[70%] ">
+                    <div className="flex flex-col gap-10 primary-flex justify-center items-center xl:w-[50%]">
                         <div className="flex flex-row justify-between items-center gap-5 w-full">
                             {/* <hr className="w-full border-violet-400"></hr> */}
                             <Text className="font-bold" color="#7D12FF">Certification</Text>
@@ -108,7 +108,7 @@ export const About = () => {
                         </div>
                         <Certification certification={certification} />
                     </div>
-                    <div className="flex flex-col gap-10 primary-flex justify-center items-center lg:w-[50%]">
+                    <div className="flex flex-col gap-10 primary-flex justify-center items-center xl:w-[50%]">
                         <div className="flex flex-row justify-between items-center gap-5 w-full">
                             <hr className="w-full border-violet-400"></hr>
                             <Text className="md:text-nowrap font-bold" color="#7D12FF">Educational Background</Text>
