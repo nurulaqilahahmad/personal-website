@@ -1,11 +1,12 @@
 nav {
     position: sticky;
     top: 0;
-    z-index: 1000; /* Ensure it's above other content */
+    z-index: 1000;
+    /* Ensure it's above other content */
     width: 100%;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.06);
+    /* box-shadow: 0 10px 6px rgba(0, 0, 0, 0.06); */
     color: white;
 }
 
@@ -35,9 +36,16 @@ nav ul {
     position: absolute;
     padding: 0.75rem;
     gap: 1.5rem;
-    position: static; /* Default for larger screens */
-    transform: none; /* No transform on larger screens */
-    transition: none; /* No transition on larger screens */
+    position: static;
+    /* Default for larger screens */
+    transform: none;
+    /* No transform on larger screens */
+    transition: none;
+    /* No transition on larger screens */
+}
+
+nav ul li {
+    font-weight: 900;
 }
 
 nav ul li a {
@@ -86,6 +94,8 @@ nav .resume-download:hover {
         height: 100vh;
         gap: 4rem;
         background-color: rgba(44, 31, 59);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(15px);
         flex-direction: column;
         align-items: start;
         transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;

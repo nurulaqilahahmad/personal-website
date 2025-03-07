@@ -17,6 +17,25 @@ export const About = () => {
         deleteSpeed: 80,
     });
 
+    const animatedSections = document.querySelectorAll(".animate");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animActive");
+                } else {
+                    entry.target.classList.remove("animActive");
+                }
+            });
+        },
+        { threshold: 0.1 }
+    );
+
+    animatedSections.forEach((section) => {
+        observer.observe(section);
+    });
+
     const [employmentHistory, setEmploymentHistory] = useState([]);
     const getEmploymentHistoryList = () => {
         globalApi.getEmploymentHistory().then(resp => {
@@ -55,7 +74,7 @@ export const About = () => {
 
             <Text className="title">{title}<Cursor cursorColor="#7D12FF" /></Text>
 
-            <section className="flex flex-col justify-center items-center text-left py-10 gap-10">
+            <section className="flex flex-col justify-center items-center text-left py-10 gap-10 animate">
                 <div className="rowToCol gap-20 justify-center items-start max-md:items-center primary-flex">
                     <div className="flex justify-center items-center w-1/2">
                         <img src={aqilahPassport} className="wBorderImg w-full" />
@@ -87,7 +106,7 @@ export const About = () => {
                 </div>
             </section>
 
-            <section className="flex flex-col justify-center items-center text-left pt-40 gap-10">
+            <section className="flex flex-col justify-center items-center text-left pt-40 gap-10 animate">
                 <div className="flex flex-col gap-10 primary-flex justify-center items-center">
                     <div className="flex flex-row justify-between items-center gap-5 w-full">
                         <hr className="w-full border-violet-400"></hr>
@@ -98,7 +117,7 @@ export const About = () => {
                 </div>
             </section>
 
-            <section className="flex flex-col justify-center items-center text-left py-40 gap-10">
+            <section className="flex flex-col justify-center items-center text-left py-40 gap-10 animate">
                 <div className="flex flex-col xl:flex-row primary-flex justify-center items-center xl:items-start gap-40 xl:gap-10 xl:w-[70%] ">
                     <div className="flex flex-col gap-10 primary-flex justify-center items-center xl:w-[50%]">
                         <div className="flex flex-row justify-between items-center gap-5 w-full">

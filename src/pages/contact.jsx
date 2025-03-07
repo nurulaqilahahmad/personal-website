@@ -12,6 +12,26 @@ export const Contact = () => {
         typeSpeed: 120,
         deleteSpeed: 80,
     });
+
+    const animatedSections = document.querySelectorAll(".animate");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animActive");
+                } else {
+                    entry.target.classList.remove("animActive");
+                }
+            });
+        },
+        { threshold: 0.1 }
+    );
+
+    animatedSections.forEach((section) => {
+        observer.observe(section);
+    });
+
     return (
         <div className="indent">
 
@@ -19,7 +39,7 @@ export const Contact = () => {
 
             <Text className="title">{title}<Cursor cursorColor="#7D12FF" /></Text>
 
-            <section className="flex flex-col justify-center items-center text-left pt-10 pb-[5.4rem] gap-10">
+            <section className="flex flex-col justify-center items-center text-left pt-10 pb-[5.4rem] gap-10 animate">
                 <div className="flex lg:flex-row flex-col gap-10 w-[90%] 2xl:w-[60%]">
                     {/* Contact Form */}
                     <div className="flex flex-col gap-10 primary-flex w-full flex-wrap">

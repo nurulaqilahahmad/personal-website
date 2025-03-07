@@ -4,9 +4,11 @@
 
 .App {
   text-align: center;
-  /* background-color: rgba(44, 31, 59); */
-  background-color: rgba(23,18,30,255);
+  background-color: rgba(44, 31, 59);
+  /* background-color: rgba(23, 18, 30); */
   min-height: 100vh;
+  /* background: rgb(23,18,30); */
+background: radial-gradient(circle, rgba(23,18,30,1) 0%, rgba(36,21,54,1) 89%, rgba(50,22,84,1) 100%);
 }
 
 .App-logo {
@@ -44,13 +46,14 @@
 .App-link:hover {
   background: #D09CFA;
   color: rgb(92, 46, 126);
-  
+
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -60,8 +63,10 @@
   position: absolute;
   width: 40rem;
   height: 40rem;
-  background-color: rgb(44, 31, 59); /* No solid fill */
-  box-shadow: 0 0 50px 40px rgb(44, 31, 59); /* Blurred shadow */
+  background-color: rgb(44, 31, 59);
+  /* No solid fill */
+  box-shadow: 0 0 50px 40px rgb(44, 31, 59);
+  /* Blurred shadow */
   z-index: -1;
   border-radius: 100%;
   mix-blend-mode: color;
