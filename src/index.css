@@ -13,7 +13,7 @@ body {
   font-family: 'Roboto Mono';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgba(44, 31, 59);
+  /* background-color: rgba(44, 31, 59); */
   width: 100%;
   height: 100vh;
   color: white;
@@ -204,7 +204,6 @@ article {
   .rowToCol {
     display: flex;
     flex-direction: column;
-    width: 100vw;
   }
 
   .flex-box {
@@ -218,7 +217,7 @@ article {
 
 @media (max-width: 1280px) {
   .primary-flex {
-    width: 90%;
+    width: 80%;
   }
 }
 

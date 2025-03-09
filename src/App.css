@@ -4,11 +4,12 @@
 
 .App {
   text-align: center;
-  background-color: rgba(44, 31, 59);
+  /* background-color: rgba(44, 31, 59); */
   /* background-color: rgba(23, 18, 30); */
   min-height: 100vh;
   /* background: rgb(23,18,30); */
-background: radial-gradient(circle, rgba(23,18,30,1) 0%, rgba(36,21,54,1) 89%, rgba(50,22,84,1) 100%);
+  background: rgb(9,3,15);
+background: radial-gradient(circle, rgba(9,3,15,1) 0%, rgba(36,21,54,1) 80%, rgba(44,19,74,1) 100%);
 }
 
 .App-logo {

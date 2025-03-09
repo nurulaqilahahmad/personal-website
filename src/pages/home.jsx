@@ -56,8 +56,8 @@ export const Home = () => {
             <title>Nurul Aqilah Ahmad</title>
 
             <main>
-                <section className="flex flex-col justify-center items-center h-screen text-left animate">
-                    <div className="flex flex-col gap-10 max-sm:gap-6 2xl:w-[50%] max-2xl:w-[80%]">
+                <section className="flex flex-col justify-center items-center py-40 max-xl:py-20 text-left animate">
+                    <div className="flex flex-col gap-10 max-sm:gap-6 xl:w-[50%] max-xl:w-[80%]">
                         <Text className="description-text font-bold" color="#7D12FF">Hello World! My name is</Text>
                         <Text className="text-6xl font-bold slideUpAnim">Nurul Aqilah Ahmad<span className="text-[#7D12FF]">.</span></Text>
                         <Text className="description-text">A motivated and dedicated individual with a passion for programming seeks hands-on experience with a team of professionals. Strong foundation in software development concepts and eagerness to learn new technologies.</Text>
@@ -70,7 +70,7 @@ export const Home = () => {
                     </div>
                 </section>
 
-                <section className="flex flex-col justify-center items-center text-left lg:py-40 py-20 gap-10 animate">
+                <section className="flex flex-col justify-center items-center text-left py-40 max-xl:py-20 gap-10 animate">
                     <div className="flex flex-col gap-10 w-[80%]">
                         <div className="flex flex-row justify-between items-center gap-5 w-full">
                             <hr className="w-full border-[rgba(167,139,250,0.4)]"></hr>
@@ -82,8 +82,8 @@ export const Home = () => {
                     </div>
                 </section>
 
-                <section className="flex flex-col justify-center items-center text-left lg:py-40 py-20 gap-10 animate">
-                    <div className="flex flex-col gap-10 primary-flex">
+                <section className="flex flex-col justify-center items-center text-left py-40 max-xl:py-20 gap-10 animate">
+                    <div className="flex flex-col gap-10 w-[50%] max-xl:w-[80%]">
                         <div className="flex flex-row justify-between items-center gap-5 w-full">
                             <hr className="w-full border-[rgba(167,139,250,0.4)]"></hr>
                             <Text className="text-nowrap font-bold" color="#7D12FF">Projects I've Done</Text>
@@ -97,7 +97,7 @@ export const Home = () => {
                     </div>
                 </section>
 
-                <section className="flex flex-col justify-center items-center lg:py-40 py-20 gap-10 animate">
+                <section className="flex flex-col justify-center items-center py-40 max-xl:py-20 gap-10 animate">
                     <div className="flex flex-col gap-10 primary-flex justify-center items-center">
                         <Text className="font-bold" color="#7D12FF">Let's Keep In Touch!</Text>
                         <Text className="w-1/2">I've still got lots of things to learn and master. Advices and motivations are welcomed.</Text>

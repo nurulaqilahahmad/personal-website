@@ -61,7 +61,7 @@ function Project({ project }) {
                 {project.length > 0 ? project.map((proj) => (
                     <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-105 duration-[0.4s] primary-hover" style={{ flex: '48%', cursor: 'pointer' }} onClick={() => goToSingleProj("/project/" + proj.slug)}>
                         <div className="flex flex-col gap-10">
-                            <div className="2xl:h-[20rem] xl:h-[15rem] max-lg:h-full w-full">
+                            <div className="2xl:h-[20rem] md-[20rem] max-md:h-full w-full">
                                 <img src={proj.image.url} alt="Project Image" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
                             </div>
                             <div className="flex flex-col gap-10">

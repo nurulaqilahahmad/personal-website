@@ -76,7 +76,7 @@ export const About = () => {
 
             <section className="flex flex-col justify-center items-center text-left py-10 gap-10 animate">
                 <div className="rowToCol gap-20 justify-center items-start max-md:items-center primary-flex">
-                    <div className="flex justify-center items-center w-1/2">
+                    <div className="flex justify-center items-center w-1/2 max-2xl:xl:w-full">
                         <img src={aqilahPassport} className="wBorderImg w-full" />
                     </div>
                     <div className="flex flex-col text-left gap-5">
@@ -110,7 +110,7 @@ export const About = () => {
                 <div className="flex flex-col gap-10 primary-flex justify-center items-center">
                     <div className="flex flex-row justify-between items-center gap-5 w-full">
                         <hr className="w-full border-violet-400"></hr>
-                        <Text className="md:text-nowrap text-center font-bold" color="#7D12FF">Employment History</Text>
+                        <Text className="sm:text-nowrap text-center font-bold" color="#7D12FF">Employment History</Text>
                         <hr className="w-full border-violet-400"></hr>
                     </div>
                     <EmploymentHistory employmentHistory={employmentHistory} />
@@ -118,8 +118,8 @@ export const About = () => {
             </section>
 
             <section className="flex flex-col justify-center items-center text-left py-40 gap-10 animate">
-                <div className="flex flex-col xl:flex-row primary-flex justify-center items-center xl:items-start gap-40 xl:gap-10 xl:w-[70%] ">
-                    <div className="flex flex-col gap-10 primary-flex justify-center items-center xl:w-[50%]">
+                <div className="flex flex-col xl:flex-row xl:w-[80%] max-xl:w-[80%] justify-center items-center xl:items-start gap-40 xl:gap-10">
+                    <div className="flex flex-col gap-10 justify-center items-center w-full xl:w-[50%]">
                         <div className="flex flex-row justify-between items-center gap-5 w-full">
                             {/* <hr className="w-full border-violet-400"></hr> */}
                             <Text className="font-bold" color="#7D12FF">Certification</Text>
@@ -127,10 +127,10 @@ export const About = () => {
                         </div>
                         <Certification certification={certification} />
                     </div>
-                    <div className="flex flex-col gap-10 primary-flex justify-center items-center xl:w-[50%]">
+                    <div className="flex flex-col gap-10 justify-center items-center w-full xl:w-[50%]">
                         <div className="flex flex-row justify-between items-center gap-5 w-full">
                             <hr className="w-full border-violet-400"></hr>
-                            <Text className="md:text-nowrap font-bold" color="#7D12FF">Educational Background</Text>
+                            <Text className="sm:text-nowrap text-right font-bold" color="#7D12FF">Educational Background</Text>
                             {/* <hr className="w-full border-violet-400"></hr> */}
                         </div>
                         <EducationalBackground educationalBackground={educationalBackground} />
