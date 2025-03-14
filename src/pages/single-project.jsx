@@ -86,6 +86,15 @@ function SingleProject({ project }) {
                         </Flex>
                         <Flex className="flex-col gap-6">
                             <Flex className="flex-row justify-start items-center gap-4">
+                                <Text className="text-nowrap font-bold" color="#7D12FF">Client</Text>
+                                <hr className="w-full border-[rgba(167,139,250,0.4)]"></hr>
+                            </Flex>
+                            <Flex>
+                                {project.client ? project.client : <div className="text-[#6B7280]">N/A</div>}
+                            </Flex>
+                        </Flex>
+                        <Flex className="flex-col gap-6">
+                            <Flex className="flex-row justify-start items-center gap-4">
                                 <Text className="text-nowrap font-bold" color="#7D12FF">Year Created</Text>
                                 <hr className="w-full border-[rgba(167,139,250,0.4)]"></hr>
                             </Flex>

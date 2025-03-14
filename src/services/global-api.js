@@ -123,6 +123,7 @@ const getProject = async () => {
           name
         }
         dateCreated
+        client
       }
     }
     `
