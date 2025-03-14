@@ -87,19 +87,19 @@ export const About = () => {
                         <Flex wrap="wrap" grow gap="9">
                             <ul className="list-marker max-md:hidden">
                                 <li>React</li>
-                                <li>JavaScript</li>
-                                <li>TypeScript</li>
+                                <li>Angular</li>
+                                <li>Wordpress</li>
                             </ul>
                             <ul className="list-marker max-md:hidden">
-                                <li>PHP</li>
-                                <li>WordPress</li>
+                                <li>JavaScript</li>
+                                <li>TypeScript</li>
                             </ul>
                             <ul className="list-marker md:hidden">
                                 <li>React</li>
+                                <li>Angular</li>
+                                <li>Wordpress</li>
                                 <li>JavaScript</li>
                                 <li>TypeScript</li>
-                                <li>PHP</li>
-                                <li>WordPress</li>
                             </ul>
                         </Flex>
                     </div>
