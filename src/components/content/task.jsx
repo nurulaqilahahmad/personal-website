@@ -42,13 +42,13 @@ function Task({ task }) {
                         <Table.Cell className="max-2xl:hidden">
                             {t.file ? isImage?.includes(t.file.fileName.split(".")[1]) && <img className="noBorderImg" alt="Task Image" src={t.file.url} style={{ zIndex: '1' }} /> : ''}
                             {t.file ? isVideo?.includes(t.file.fileName.split(".")[1]) && <video autoplay muted loop controls><source src={t.file.url} type={"video/" + t.file.fileName.split(".")[1]} />Your browser does not support the video tag.</video> : ''}
-                            {t.link && <iframe src={t.link} width="420" height="315" title="Iframe for Project"></iframe>}
+                            {t.link && <iframe src={t.link} title="Iframe for Project" className="max-sm:w-[100%]"></iframe>}
                         </Table.Cell>
                         <Table.Cell className="max-2xl:hidden">{t.explanation}</Table.Cell>
                         <Table.Cell className="2xl:hidden">
                             {t.file ? isImage?.includes(t.file.fileName.split(".")[1]) && <img className="noBorderImg" alt="Task Image" src={t.file.url} style={{ zIndex: '1' }} /> : ''}
                             {t.file ? isVideo?.includes(t.file.fileName.split(".")[1]) && <video autoplay muted loop controls><source src={t.file.url} type={"video/" + t.file.fileName.split(".")[1]} />Your browser does not support the video tag.</video> : ''}
-                            {t.link && <iframe src={t.link} width="420" height="315" title="Iframe for Project"></iframe>}
+                            {t.link && <iframe src={t.link} title="Iframe for Project" className="max-sm:w-[100%]"></iframe>}
                             <br />
                             {t.explanation}
                         </Table.Cell>
