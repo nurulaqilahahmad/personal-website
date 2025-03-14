@@ -31,13 +31,13 @@ function ProjectCategory({ projectCategory }) {
     else if (location.pathname == '/projects') {
         return (
             <Tabs.List className="flex flex-wrap borderColumn">
-                <Tabs.Trigger value="all" asChild className="px-10 py-6 duration-[0.4s]">
+                <Tabs.Trigger value="all" asChild className="px-10 py-6 duration-[0.4s]" bg={{ base: "transparent", _hover:"#2F0553", _selected: "#2F0553" }}>
                     <Link unstyled href="#all">
                         All
                     </Link>
                 </Tabs.Trigger>
                 {projectCategory.map((projCat, index) => (
-                    <Tabs.Trigger key={index} value={projCat.subSlug} asChild className="px-10 py-6 duration-[0.4s]">
+                    <Tabs.Trigger key={index} value={projCat.subSlug} asChild className="px-10 py-6 duration-[0.4s]" bg={{ base: "transparent", _hover:"#2F0553", _selected: "#2F0553" }}>
                         <Link unstyled href={"#" + projCat.subSlug} style={{ fontSize: '1rem' }}>
                             {/* {projCat.icon.html} */}
                             {projCat.name}
