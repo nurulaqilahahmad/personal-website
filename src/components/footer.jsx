@@ -43,7 +43,7 @@ export const Footer = () => {
                     <li>
                         <a href="mailto:nrlaqilahahmd@gmail.com" className="social-link">
                             <IconButton aria-label="GitHub">
-                                <FiMail  className="social-icon" />
+                                <FiMail className="social-icon" />
                             </IconButton>
                         </a>
                     </li>
@@ -65,6 +65,7 @@ export const Footer = () => {
                 <hr className="w-20 border border-[rgba(250,250,250,0.4)]"></hr>
             </div>
 
+            <div className="py-9 justify-center items-center text-center text-xs text-[#6B7280]">Built by Nurul Aqilah Ahmad</div>
         </footer>
     );
 };
