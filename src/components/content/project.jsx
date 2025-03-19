@@ -52,7 +52,7 @@ function Project({ project }) {
     const pageSize = 5;
 
     // Filter projects before paginate
-    const filteredProject = project.sort((a, b) => new Date(b.dateCreated) - new Date(a.dateCreated)).filter((proj) => {
+    const filteredProject = project.sort((a, b) => new Date(b.dateCompleted) - new Date(a.dateCompleted)).filter((proj) => {
         if (inputText === '') {
             return true;
         } else {

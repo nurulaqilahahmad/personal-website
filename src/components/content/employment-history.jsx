@@ -21,7 +21,7 @@ function EmploymentHistory({ employmentHistory }) {
                                 <span className="text-lg">{employment.startDate ? format(new Date(employment.startDate), 'MMMM yyyy') : ''} - {employment.endDate ? format(new Date(employment.endDate), 'MMMM yyyy') : 'Present'}</span>
                             </Text>
                         </AccordionItemTrigger>
-                        <AccordionItemContent className="duration-[0.4s]">
+                        <AccordionItemContent className="duration-[0.4s] pb-0">
                             <ul className="list-marker">
                                 {employment.workDescription.map((workDesc, index) => (
                                     <li key={index}>{workDesc.explanation}</li>

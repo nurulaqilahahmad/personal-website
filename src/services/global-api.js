@@ -122,7 +122,7 @@ const getProject = async () => {
           id
           name
         }
-        dateCreated
+        dateCompleted
         client
       }
     }

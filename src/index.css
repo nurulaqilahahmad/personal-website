@@ -264,6 +264,14 @@ ul.list-marker {
   padding: 0px;
 }
 
+ul.list-marker li {
+  padding-top: 1rem;
+}
+
+ul.list-no-padding li {
+  padding-top: 0rem;
+}
+
 ul.list-marker li::marker {
   content: "▶ ";
   font-size: 0.9rem;

@@ -21,7 +21,7 @@ export const Archive = () => {
             <title>Archive | Nurul Aqilah Ahmad</title>
 
             <section className="flex flex-col justify-center items-center text-left lg:py-10 gap-10">
-                <Project project={project} />
+                <Project project={project.sort((a, b) => new Date(b.dateCompleted) - new Date(a.dateCompleted))} />
             </section>
 
         </div>

@@ -88,7 +88,7 @@ export const Home = () => {
                             <hr className="w-full border-[rgba(167,139,250,0.4)]"></hr>
                             <Text className="text-nowrap font-bold" color="#7D12FF">Projects I've Done</Text>
                         </div>
-                        <Project project={project.sort((a, b) => new Date(b.dateCreated) - new Date(a.dateCreated))} />
+                        <Project project={project.sort((a, b) => new Date(b.dateCompleted) - new Date(a.dateCompleted))} />
                         <div className="flex justify-center pt-5">
                             <Link className="duration-500" to="/archive" style={{ display: 'inline-block', width: 'fit-content' }}><HStack>
                                 <Button className="primary-btn px-3">View Archive</Button>

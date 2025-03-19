@@ -57,7 +57,7 @@ export const Projects = () => {
                                 animationName: "fade-out, scale-out",
                                 animationDuration: "120ms",
                             }}>
-                            <Project project={project} />
+                            <Project project={project.sort((a, b) => new Date(b.dateCompleted) - new Date(a.dateCompleted))} />
                         </Tabs.Content>
 
                         {projectCategory.map((projCat, index) => (
@@ -71,7 +71,7 @@ export const Projects = () => {
                                     animationDuration: "120ms",
                                 }}>
                                 {/* Manage your {projCat.name} projects */}
-                                <Project project={project.sort((a, b) => new Date(b.dateCreated) - new Date(a.dateCreated)).filter((proj) => { return proj.projectCategory.name === projCat.name })} />
+                                <Project project={project.sort((a, b) => new Date(b.dateCompleted) - new Date(a.dateCompleted)).filter((proj) => { return proj.projectCategory.name === projCat.name })} />
                             </Tabs.Content>
                         ))}
 
