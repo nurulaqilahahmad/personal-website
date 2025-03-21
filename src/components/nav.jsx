@@ -20,7 +20,7 @@ export const Nav = () => {
         // const filename = url.split("/").pop();
         const aTag = document.createElement('a');
         aTag.href = url;
-        aTag.setAttribute('download', 'CV - Nurul Aqilah Ahmad');
+        aTag.setAttribute('download', 'CV - Nurul Aqilah Ahmad.pdf');
         document.body.appendChild(aTag);
         aTag.click();
         aTag.remove();
