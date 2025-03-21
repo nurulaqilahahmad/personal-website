@@ -85,21 +85,21 @@ export const About = () => {
                         <Text>Persevere and excel during university years to gain valuable skills, then utilize it to work at <a href="https://www.milradius.com.my/" className="link">an IT company</a>.</Text>
                         <Text>Here are few technologies that I've been working with recently:</Text>
                         <Flex wrap="wrap" grow gap="9">
-                            <ul className="list-marker max-md:hidden">
+                            <ul className="list-marker max-md:hidden list-no-padding">
                                 <li>React</li>
+                                <li>Angular</li>
+                                <li>Wordpress</li>
+                            </ul>
+                            <ul className="list-marker max-md:hidden list-no-padding">
                                 <li>JavaScript</li>
                                 <li>TypeScript</li>
                             </ul>
-                            <ul className="list-marker max-md:hidden">
-                                <li>PHP</li>
-                                <li>WordPress</li>
-                            </ul>
-                            <ul className="list-marker md:hidden">
+                            <ul className="list-marker md:hidden list-no-padding">
                                 <li>React</li>
+                                <li>Angular</li>
+                                <li>Wordpress</li>
                                 <li>JavaScript</li>
                                 <li>TypeScript</li>
-                                <li>PHP</li>
-                                <li>WordPress</li>
                             </ul>
                         </Flex>
                     </div>

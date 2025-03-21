@@ -262,6 +262,15 @@ section {
 ul.list-marker {
   list-style-position: inside;
   padding: 0px;
+  list-style-type: "▶ ";
+}
+
+ul.list-marker li {
+  padding-top: 1rem;
+}
+
+ul.list-no-padding li {
+  padding-top: 0rem;
 }
 
 ul.list-marker li::marker {

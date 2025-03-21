@@ -30,7 +30,7 @@ function SingleProject({ project }) {
                 <div className="flex flex-col w-[80%] gap-10">
                     <div>
                         <Breadcrumb.Root size={"md"}>
-                            <Breadcrumb.List className="max-md:flex-col max-md:items-start">
+                            <Breadcrumb.List className="max-md:flex-wrap max-md:items-start">
                                 <Breadcrumb.Item>
                                     <Breadcrumb.Link href="/" className="duration-[0.4s]"><HiOutlineHome /></Breadcrumb.Link>
                                 </Breadcrumb.Item>
@@ -86,11 +86,20 @@ function SingleProject({ project }) {
                         </Flex>
                         <Flex className="flex-col gap-6">
                             <Flex className="flex-row justify-start items-center gap-4">
-                                <Text className="text-nowrap font-bold" color="#7D12FF">Year Created</Text>
+                                <Text className="text-nowrap font-bold" color="#7D12FF">Client</Text>
                                 <hr className="w-full border-[rgba(167,139,250,0.4)]"></hr>
                             </Flex>
                             <Flex>
-                                {project.dateCreated ? format(new Date(project.dateCreated), 'yyyy') : ''}
+                                {project.client ? project.client : <div className="text-[#6B7280]">N/A</div>}
+                            </Flex>
+                        </Flex>
+                        <Flex className="flex-col gap-6">
+                            <Flex className="flex-row justify-start items-center gap-4">
+                                <Text className="text-nowrap font-bold" color="#7D12FF">Year Completed</Text>
+                                <hr className="w-full border-[rgba(167,139,250,0.4)]"></hr>
+                            </Flex>
+                            <Flex>
+                                {project.dateCompleted ? format(new Date(project.dateCompleted), 'yyyy') : ''}
                             </Flex>
                         </Flex>
                     </div>
