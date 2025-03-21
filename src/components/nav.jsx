@@ -11,7 +11,7 @@ import { IoMdClose } from "react-icons/io";
 import { RiMenu5Fill } from "react-icons/ri";
 import globalApi from "../services/global-api";
 
-const PDF_FILE_URL = '../cv-nurul-aqilah-ahmad.pdf';
+const PDF_FILE_URL = '../resume-nurul-aqilah-ahmad.pdf';
 
 export const Nav = () => {
     const [openMenu, setOpenMenu] = useState(false);
@@ -20,7 +20,7 @@ export const Nav = () => {
         // const filename = url.split("/").pop();
         const aTag = document.createElement('a');
         aTag.href = url;
-        aTag.setAttribute('download', 'CV - Nurul Aqilah Ahmad.pdf');
+        aTag.setAttribute('download', 'CV - Nurul Aqilah Ahmad');
         document.body.appendChild(aTag);
         aTag.click();
         aTag.remove();
