@@ -2,7 +2,7 @@ import React from "react";
 import { Text, HStack, Flex } from "@chakra-ui/react";
 import { Button } from "../components/ui/button"
 import { Tooltip } from "../components/ui/tooltip"
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { LuExternalLink } from "react-icons/lu";
 import { Breadcrumb } from "@chakra-ui/react"
 import { HiOutlineHome } from "react-icons/hi";
@@ -11,16 +11,6 @@ import Task from "../components/content/task";
 
 function SingleProject({ project }) {
     const location = useLocation();     // does not rely on window history
-    const canGoBack = location.key !== 'default';
-    // const isNotArchive = location.state?.from?.pathname !== '/archive';
-    const navigate = useNavigate();
-    function goBack() {
-        if (canGoBack) {
-            navigate(-1);
-        } else {
-            navigate('/', { replace: true });
-        }
-    }
 
     return (
         <div className="indent">
@@ -58,7 +48,7 @@ function SingleProject({ project }) {
 
                 <div className="flex w-full m-0 h-[500px]">
                     <figure className="flex w-full">
-                        <img src={project.image.url} alt="Project Image" className="w-full"></img>
+                        <img src={project.image.url} alt={project.title} className="w-full"></img>
                     </figure>
                 </div>
 

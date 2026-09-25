@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import '../index.css';
-import { useLocation, useNavigate } from "react-router-dom";
 import globalApi from "../services/global-api";
 import Project from "../components/content/project";
 

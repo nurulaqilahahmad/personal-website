@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Text, HStack, Stack, Table } from "@chakra-ui/react";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
@@ -65,14 +65,14 @@ function Project({ project }) {
     const endRange = startRange + pageSize;
     const visibleProject = filteredProject.slice(startRange, endRange);
 
-    if (location.pathname == '/') {
+    if (location.pathname === '/') {
         return (
             <div className="flex w-full flex-col gap-10">
                 {latestProject.map((proj) => (
                     <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-110 duration-[0.4s] primary-hover" style={{ cursor: 'pointer' }} onClick={() => goToSingleProj("/project/" + proj.slug)}>
                         <div className="flex flex-col 2xl:flex-row gap-10">
                             <div className="2xl:w-[25rem] xl:h-[15rem] max-lg:h-full w-full">
-                                <img src={proj.image.url} alt="Project Image" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+                                <img src={proj.image.url} alt={proj.title} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
                             </div>
                             <div className="flex flex-col gap-10 2xl:w-[60%] w-full">
                                 <Text className="text-2xl font-bold">{proj.title}</Text>
@@ -90,14 +90,14 @@ function Project({ project }) {
         )
     }
 
-    else if (location.pathname == '/projects') {
+    else if (location.pathname === '/projects') {
         return (
             <div className="flex lg:flex-row flex-col justify-center gap-10 primary-flex w-full flex-wrap">
                 {projLatest.length > 0 ? projLatest.map((proj) => (
                     <div className="flex flex-col gap-10 primary-flex align-center w-full flex-box hover:scale-105 duration-[0.4s] primary-hover" style={{ flex: '48%', cursor: 'pointer' }} onClick={() => goToSingleProj("/project/" + proj.slug)}>
                         <div className="flex flex-col gap-10">
                             <div className="2xl:h-[20rem] md-[20rem] max-md:h-full w-full">
-                                <img src={proj.image.url} alt="Project Image" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+                                <img src={proj.image.url} alt={proj.title} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
                             </div>
                             <div className="flex flex-col gap-10">
                                 <Text className="text-2xl font-bold">{proj.title}</Text>
@@ -115,7 +115,7 @@ function Project({ project }) {
         )
     }
 
-    else if (location.pathname == '/archive') {
+    else if (location.pathname === '/archive') {
         return (
             <div className="flex flex-col w-[80%] gap-10">
                 <div className="flex flex-row gap-1 hover:gap-2 justify-start items-center text-left text-[#7D12FF] hover:font-bold hover:cursor-pointer duration-[0.4s]" onClick={() => goBack()} style={{ width: 'fit-content' }}>
@@ -144,7 +144,7 @@ function Project({ project }) {
                         <Table.Body>
                             {visibleProject.length > 0 ? visibleProject.map((proj) => (
                                 <Table.Row key={proj.id} className="borderColumn bg-transparent hover:bg-[#2F0553] hover:cursor-pointer duration-[0.4s]" onClick={() => goToSingleProj("/project/" + proj.slug)}>
-                                    <Table.Cell className="hidden lg:flex"><img src={proj.image.url} className="noBorderImg" style={{ width: '200px', height: '113px', zIndex: '1' }}></img></Table.Cell>
+                                    <Table.Cell className="hidden lg:flex"><img src={proj.image.url} alt={proj.title} className="noBorderImg" style={{ width: '200px', height: '113px', zIndex: '1' }}></img></Table.Cell>
                                     <Table.Cell>{proj.title}</Table.Cell>
                                     <Table.Cell className="max-sm:hidden">
                                         <div className="flex flex-row gap-4 flex-wrap justify-start align-middle" style={{ flex: '5%' }}>

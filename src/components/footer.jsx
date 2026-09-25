@@ -18,14 +18,14 @@ export const Footer = () => {
                 </ul>
                 <ul className="flex flex-row justify-center items-center gap-2">
                     <li>
-                        <a href="https://github.com/nurulaqilahahmad" target="_blank" className="social-link">
+                        <a href="https://github.com/nurulaqilahahmad" target="_blank" rel="noreferrer"className="social-link">
                             <IconButton aria-label="GitHub">
                                 <FiGithub className="social-icon" />
                             </IconButton>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/nurul-aqilah-ahmad-604b90216/" target="_blank" className="social-link">
+                        <a href="https://www.linkedin.com/in/nurul-aqilah-ahmad-604b90216/" target="_blank" rel="noreferrer"className="social-link">
                             <IconButton aria-label="Linkedin">
                                 <FiLinkedin className="social-icon" />
                             </IconButton>
@@ -48,14 +48,14 @@ export const Footer = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/nurulaqilahahmad" target="_blank" className="social-link">
+                        <a href="https://github.com/nurulaqilahahmad" target="_blank" rel="noreferrer"className="social-link">
                             <IconButton aria-label="GitHub">
                                 <FiGithub className="social-icon" />
                             </IconButton>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/nurul-aqilah-ahmad-604b90216/" target="_blank" className="social-link">
+                        <a href="https://www.linkedin.com/in/nurul-aqilah-ahmad-604b90216/" target="_blank" rel="noreferrer"className="social-link">
                             <IconButton aria-label="Linkedin">
                                 <FiLinkedin className="social-icon" />
                             </IconButton>

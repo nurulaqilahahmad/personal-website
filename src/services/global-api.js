@@ -153,7 +153,7 @@ const getCV = async () => {
   return result
 }
 
-export default {
+const globalApi = {
   getEmploymentHistory,
   getEducationalBackground,
   getCertification,
@@ -161,3 +161,5 @@ export default {
   getProject,
   getCV
 }
+
+export default globalApi

@@ -1,18 +1,4 @@
-import React, { useState } from "react";
-import { Text, HStack, Stack, Table, IconButton } from "@chakra-ui/react";
-import { Button } from "../ui/button";
-import { NavLink, useNavigate, useLocation } from "react-router-dom";
-import { ImArrowU2xlght2 } from "react-icons/im";
-import projectPic from "../../image.png";
-import { Link } from "react-router-dom";
-import { LuExternalLink } from "react-icons/lu";
-import {
-    PaginationItems,
-    PaginationPageText,
-    PaginationNextTrigger,
-    PaginationPrevTrigger,
-    PaginationRoot,
-} from "../ui/pagination";
+import { Table } from "@chakra-ui/react";
 
 function Task({ task }) {
     const isImage = ['gif', 'jpg', 'jpeg', 'png']; //you can add more
@@ -40,13 +26,13 @@ function Task({ task }) {
                 {task.map((t) => (
                     <Table.Row key={t.id} className="duration-[0.4s]">
                         <Table.Cell className="max-2xl:hidden">
-                            {t.file ? isImage?.includes(t.file.fileName.split(".")[1]) && <img className="noBorderImg" alt="Task Image" src={t.file.url} style={{ zIndex: '1' }} /> : ''}
+                            {t.file ? isImage?.includes(t.file.fileName.split(".")[1]) && <img className="noBorderImg" alt={t.file.fileName} src={t.file.url} style={{ zIndex: '1' }} /> : ''}
                             {t.file ? isVideo?.includes(t.file.fileName.split(".")[1]) && <video autoplay muted loop controls><source src={t.file.url} type={"video/" + t.file.fileName.split(".")[1]} />Your browser does not support the video tag.</video> : ''}
                             {t.link && <iframe src={t.link} title="Iframe for Project" className="max-sm:w-[100%]"></iframe>}
                         </Table.Cell>
                         <Table.Cell className="max-2xl:hidden">{t.explanation}</Table.Cell>
                         <Table.Cell className="2xl:hidden">
-                            {t.file ? isImage?.includes(t.file.fileName.split(".")[1]) && <img className="noBorderImg" alt="Task Image" src={t.file.url} style={{ zIndex: '1' }} /> : ''}
+                            {t.file ? isImage?.includes(t.file.fileName.split(".")[1]) && <img className="noBorderImg" alt={t.file.fileName} src={t.file.url} style={{ zIndex: '1' }} /> : ''}
                             {t.file ? isVideo?.includes(t.file.fileName.split(".")[1]) && <video autoplay muted loop controls><source src={t.file.url} type={"video/" + t.file.fileName.split(".")[1]} />Your browser does not support the video tag.</video> : ''}
                             {t.link && <iframe src={t.link} title="Iframe for Project" className="max-sm:w-[100%]"></iframe>}
                             <br />

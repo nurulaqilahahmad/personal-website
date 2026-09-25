@@ -1,6 +1,6 @@
 import React from "react";
 import '../index.css';
-import { Text, HStack } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { HiInboxIn, HiOutlineLocationMarker, HiOutlineMail, HiOutlineUsers } from "react-icons/hi";
 import { ContactForm } from "../components/contact-form";
@@ -62,8 +62,8 @@ export const Contact = () => {
                         <div className="flex flex-col flex-box-primary gap-10 hover:scale-110 duration-[0.4s] md:min-h-fit p-10 w-full primary-hover" style={{ flex: '5%' }}>
                             <HiOutlineUsers className="text-[#7D12FF] text-5xl" />
                             <Text className="">Let's Connect through my socials:</Text>
-                            <Text className=""><a href="https://www.linkedin.com/in/nurul-aqilah-ahmad-604b90216/" target="_blank" className="link">LinkedIn</a></Text>
-                            <Text className=""><a href="https://github.com/nurulaqilahahmad" target="_blank" className="link">GitHub</a></Text>
+                            <Text className=""><a href="https://www.linkedin.com/in/nurul-aqilah-ahmad-604b90216/" target="_blank" rel="noreferrer"className="link">LinkedIn</a></Text>
+                            <Text className=""><a href="https://github.com/nurulaqilahahmad" target="_blank" rel="noreferrer"className="link">GitHub</a></Text>
                         </div>
                     </div>
                 </div>

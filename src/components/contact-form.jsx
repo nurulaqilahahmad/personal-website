@@ -1,9 +1,8 @@
 "use client"
-import React, { useRef } from "react";
+import { useRef } from "react";
 import './nav.css';
 import '../index.css';
-import { Button } from "./ui/button"
-import { Textarea, Input, Field, FieldErrorText } from "@chakra-ui/react";
+import { Textarea, Input, Field } from "@chakra-ui/react";
 import emailjs from '@emailjs/browser';
 import { Toaster, toaster } from "../components/ui/toaster";
 

@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useState } from "react";
 import '../index.css';
-import { Text, HStack, Flex } from "@chakra-ui/react";
+import { Text, Flex } from "@chakra-ui/react";
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import aqilahPassport from '../images/aqilah-passport.jpg';
 import globalApi from "../services/global-api";
@@ -77,7 +77,7 @@ export const About = () => {
             <section className="flex flex-col justify-center items-center text-left py-10 gap-10 animate">
                 <div className="rowToCol gap-20 justify-center items-start max-md:items-center primary-flex">
                     <div className="flex justify-center items-center w-1/2 max-2xl:xl:w-full">
-                        <img src={aqilahPassport} className="wBorderImg w-full" />
+                        <img src={aqilahPassport} alt="This is Aqilah's passport" className="wBorderImg w-full" />
                     </div>
                     <div className="flex flex-col text-left gap-5">
                         <Text>Hi, I'm Aqilah.</Text>

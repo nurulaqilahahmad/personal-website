@@ -1,6 +1,6 @@
 import '../index.css';
 import { Link } from "react-router-dom";
-import { Text, HStack } from "@chakra-ui/react";
+import { HStack } from "@chakra-ui/react";
 import { Button } from "../components/ui/button";
 
 export const NotFound = () => {

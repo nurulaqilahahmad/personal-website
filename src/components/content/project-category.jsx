@@ -12,7 +12,7 @@ function ProjectCategory({ projectCategory }) {
         navigate(url, { state: { from: subSlug } });
     }
 
-    if (location.pathname == '/') {
+    if (location.pathname === '/') {
         return (
             <div className="flex lg:flex-row flex-col gap-10 primary-flex w-full flex-wrap">
                 {projectCategory.map((projCat, index) => (
@@ -28,7 +28,7 @@ function ProjectCategory({ projectCategory }) {
         )
     }
 
-    else if (location.pathname == '/projects') {
+    else if (location.pathname === '/projects') {
         return (
             <Tabs.List className="flex flex-wrap borderColumn">
                 <Tabs.Trigger value="all" asChild className="px-10 py-6 duration-[0.4s]" bg={{ base: "transparent", _hover:"#2F0553", _selected: "#2F0553" }}>

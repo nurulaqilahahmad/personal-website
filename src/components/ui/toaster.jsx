@@ -23,7 +23,12 @@ function _optionalChain(ops) {
       lastAccessLHS = value
       value = fn(value)
     } else if (op === 'call' || op === 'optionalCall') {
-      value = fn((...args) => value.call(lastAccessLHS, ...args))
+      const currentValue = value
+      const currentLastAccessLHS = lastAccessLHS
+
+      value = fn((...args) =>
+        currentValue.call(currentLastAccessLHS, ...args)
+      )
       lastAccessLHS = undefined
     }
   }
