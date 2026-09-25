@@ -16,6 +16,16 @@ const PDF_FILE_URL = '../cv-nurul-aqilah-ahmad.pdf';
 export const Nav = () => {
     const [openMenu, setOpenMenu] = useState(false);
 
+    const [cv, setCV] = useState([]);
+        useEffect(() => {
+            getCVList();
+        }, [])
+    const getCVList = () => {
+        globalApi.getCV().then(resp => {
+            setCV(resp.cvs);
+        })
+    }
+
     const downloadFileAtUrl= (url) => {
         // const filename = url.split("/").pop();
         const aTag = document.createElement('a');
@@ -59,7 +69,9 @@ export const Nav = () => {
                 </li>
                 <li>
                     <NavLink className="duration-500"><HStack>
-                        <Button className="primary-btn px-3" onClick={() => {downloadFileAtUrl(PDF_FILE_URL)}}>Resume/CV</Button>
+                        {cv.length ? cv.map((updatedCV) => (
+                            <Button className="primary-btn px-3" onClick={() => {downloadFileAtUrl(updatedCV.file.url)}}>CV/Resume</Button>
+                        )) : <Button className="primary-btn px-3" onClick={() => {downloadFileAtUrl(PDF_FILE_URL)}}>CV/Resume</Button>}
                     </HStack></NavLink>
                 </li>
             </ul>

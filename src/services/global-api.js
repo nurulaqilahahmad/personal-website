@@ -133,10 +133,31 @@ const getProject = async () => {
   return result
 }
 
+const getCV = async () => {
+  const query = gql`
+    query CV {
+      cvs {
+        id
+        file {
+          fileName
+          size
+          url
+          updatedAt
+        }
+      }
+    }
+    `
+
+  const result = await request(MASTER_URL, query)
+
+  return result
+}
+
 export default {
   getEmploymentHistory,
   getEducationalBackground,
   getCertification,
   getProjectCategory,
-  getProject
+  getProject,
+  getCV
 }
