@@ -26,15 +26,33 @@ export const Nav = () => {
         })
     }
 
-    const downloadFileAtUrl= (url) => {
-        // const filename = url.split("/").pop();
-        const aTag = document.createElement('a');
-        aTag.href = url;
-        aTag.setAttribute('download', 'CV - Nurul Aqilah Ahmad');
+    const downloadFileAtUrl = async (url) => {
+    try {
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error("Failed to download file");
+        }
+
+        const blob = await response.blob();
+
+        const blobUrl = window.URL.createObjectURL(blob);
+
+        const aTag = document.createElement("a");
+
+        aTag.href = blobUrl;
+        aTag.download = "CV - Nurul Aqilah Ahmad.pdf";
+
         document.body.appendChild(aTag);
         aTag.click();
+
         aTag.remove();
+
+        window.URL.revokeObjectURL(blobUrl);
+    } catch (error) {
+        console.error("Download failed:", error);
     }
+};
 
     return (
         <nav className="flex justify-between align-center px-10 py-8 sticky top-0">
